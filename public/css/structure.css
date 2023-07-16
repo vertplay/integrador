@@ -97,9 +97,9 @@ i{
 }
 .container-blocks{
 	float:left;
-	width:100%;
+	width:calc(100% - 2px);
 	height:calc(300px - 25px);
-	
+	margin:2px;
 	border-width:2px;
 	transition:0.3s;
 }
