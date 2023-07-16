@@ -1,0 +1,1034 @@
+ERROR - 2022-05-29 09:26:30 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:26:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:27:00 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:27:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:27:07 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:27:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:31:51 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:31:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:31:52 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:31:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:32:30 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:32:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:33:14 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:33:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:33:15 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:33:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:37:57 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:37:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:39:03 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+CRITICAL - 2022-05-29 09:39:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:40:55 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:40:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:51 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:52 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:52 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:53 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:53 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:54 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:54 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:55 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:55 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:56 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:57 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:55:57 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:55:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:56:48 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:56:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:56:49 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:56:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:57:15 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:57:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:57:16 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:57:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:07 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:08 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:08 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:09 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:09 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:09 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:09 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 09:59:10 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 09:59:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:44 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:44 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:00:59 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:00:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:03:37 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:03:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:03:38 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:03:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:03:38 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:03:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:03:39 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:03:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:03:39 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:03:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:31 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:31 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:33 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:37 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:37 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:37 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:38 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:43 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:43 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:44 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:44 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:46 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:46 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:46 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:47 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:47 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:47 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:47 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:48 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:48 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:49 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:49 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:49 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:50 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:50 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:09:50 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:09:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:25 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:27 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:27 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:27 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:28 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:28 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:28 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:28 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:28 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:13:29 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:13:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:03 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:04 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:04 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:04 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:04 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:05 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:05 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-05-29 10:14:05 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2022-05-29 10:14:05 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\projetov2\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\projetov2\app\Models\MainModel.php(10): CodeIgniter\Database\BaseConnection->query('\r\n\t\tSELECT id, ...')
+#2 C:\xampp\htdocs\projetov2\app\Controllers\Home.php(15): App\Models\MainModel->index()
+#3 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projetov2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projetov2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

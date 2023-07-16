@@ -1,0 +1,142 @@
+body{
+	background:#111111;
+	background-image:url("../img/bg.png");
+	/*background-attachment:fixed;*/
+}
+/*-----------------------MENU-----------------------------*/
+#menu-bar{/*BARRA DE MENU*/
+	background:#252525;
+	color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-color:#444;
+}
+#menu-bar a{/*LINKS DO MENU ('HOME')*/
+	color:#ffffff;
+	transition:0.3s;
+}
+#menu-bar a:hover{
+	background:#181818;
+	color:#87cefa;
+}
+i{/*BARRA DE MENU -> GRUPO DE BOTÕES DE MENU -> BOTÃO*/
+	background:#252525;
+	color:#ffffff;
+}
+i:hover{
+	color:#87cefa;
+}
+i:active{
+	color:#00bfff;
+}
+.menu-block{/*BOTÂO(CLICK) -> BLOCO DE MENU*/
+	background:#333333;
+	border-style:solid;
+	border-color:#111111;
+}
+.menu-block .line{/*BLOCO DE MENU -> LINHA DE TÍTULO*/
+	background:#444444;
+	border-bottom-style:solid;
+	border-bottom-color:#222222;
+}
+.menu-block .menu-btn-theme{/*BLOCO DE MENU -> BOTÃO PARA ALTERAR TEMA*/
+	background:#444444;
+	color:#ffffff;
+	border-style:solid;
+	border-color:#00bfff;
+}
+.menu-block .menu-btn-theme:hover{
+	background:#555555;
+}
+.menu-block .menu-btn-theme:active{
+	background:#00bfff;
+}
+/*---------------------BARRA DE PESQUISA---------------------*/
+#search-bar{
+	background:#252525;
+	background-image:url('../img/search-white.png');
+	background-size:36px 36px;
+	background-position:0px 9px;
+	background-repeat:no-repeat;
+	color:#ffffff;
+	border-color:#111111;
+}
+/*---------------------BLOCO CENTRAL------------------------*/
+#container-principal{/*BLOCO PRINCIPAL (NO CENTRO)*/
+	background:#333;
+	color:#ffffff;
+	border-style:solid;
+	border-color:#101010;
+	box-shadow: 0px 0px 20px 6px #333333;
+}
+.container-blocks{
+	background:#666666;
+	border-style:solid;
+	border-color:#555555;
+}
+	.container-blocks:hover{
+		border-color:#00bfff;
+	}
+.container-block-text{
+	background:#444444;
+	color:#ffffff;
+}
+	.container-blocks:hover .container-block-text{
+		color:#00bfff;
+	}
+
+/*------------------------ALBUM-PAGE-------------------------*/
+#album-block{
+	
+}
+#album-block-img{
+	border-color:#000000;
+}
+#album-block img{
+	border-color:#000000;
+}
+#album-block .title{
+	border-color:#000000;
+}
+#album-block .info{
+	border-color:#000000;
+}
+#music-list{
+	
+}
+#music-list .item{
+	border-color:#000000;
+	background:#707070;
+}
+#music-list .item .name{
+	
+}
+#music-list .item:nth-child(2n+0){
+	background:#858585;
+}
+#music-list .item i{
+	background:transparent;
+}
+/*-----------------------PLAY-BAR----------------------------*/
+#play-bar{
+	background:#252525;
+	background:linear-gradient(#252525, #808080, #252525);
+	border-color:#555555;
+	color:#ffffff;
+}
+#play-bar i{
+	background:transparent;
+}
+#playlist{
+	background:#808080;
+	border-color:#555555;
+}
+#audio-progress{
+	border-color:#555555;
+}
+/*------------------------FOOTER-----------------------------*/
+footer{/*RODAPÉ*/
+	background:#252525;
+	color:#ffffff;
+	border-top-style:solid;
+	border-top-color:#444;
+}
