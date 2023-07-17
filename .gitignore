@@ -1,7 +1,10 @@
-
+*.json
+*.json
+*.log
+writable/*
+tests/*
+system/*
 writable/debugbar/debugbar_1689551343.json
-*.json
-*.json
 writable/debugbar/debugbar_1689547666.json
 writable/debugbar/debugbar_1689547666.json
 writable/debugbar/debugbar_1689547666.json
@@ -12,4 +15,9 @@ writable/debugbar/debugbar_1689547673.json
 writable/session/ci_sessionfqs0cu40eobrm8mskmch0c2ipvmr1arh
 writable/session/ci_session5ftt92jgk13rokie0igjbu7trbn9fn52
 *.log
+writable/session/ci_session5ftt92jgk13rokie0igjbu7trbn9fn52
+writable/debugbar/debugbar_1689547666.json
+writable/debugbar/debugbar_1689547666.json
+writable/debugbar/debugbar_1689547673.json
+writable/logs/log-2023-07-16.log
 writable/session/ci_session5ftt92jgk13rokie0igjbu7trbn9fn52
