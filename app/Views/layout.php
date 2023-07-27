@@ -93,6 +93,7 @@
 			</div>
 		<script src="<?=base_url('/js/menu.js')?>" type="text/javascript"></script>
 		<!--FIM MENU-->
+		
         <div id="container-principal">
             <?= $this->renderSection('content') ?>
         </div>

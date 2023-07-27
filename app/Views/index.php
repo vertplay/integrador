@@ -1,17 +1,13 @@
 <?php $this->extend('layout')?>
 		
 	<?=$this->section('content')?>
+		<div id="index-center">
+		
 	
-		<?php foreach($dados as $dado){ ?>
-
-			<a class="container-blocks" href="<?=base_url('/user/'.$dado['id'])?>">
-				<img src="<?=base_url('/img/'.$dado['id'])?>"/>
-				<div class="container-block-text">
-					<?=$dado['nome']?>
-				</div>
-			</a>
-			
-		<?php } ?>
+			<span id="index-cross" class="material-icons">emergency</span>
+			<a href="<?=base_url('list')?>">Lista</a>
+		</div>
+		
 
 
 	<?=$this->endSection()?>

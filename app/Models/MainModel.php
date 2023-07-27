@@ -5,12 +5,12 @@ use CodeIgniter\Model;
 class MainModel extends Model{
 
 
-    public function index() : array{
+    public function list() : array{
         $db = \Config\Database::connect();
 		$dados = $db->query("
 		SELECT id, nome
 		FROM usuarios
-		LIMIT 0, 10")->getResultArray();
+		LIMIT 0, 20")->getResultArray();
 		$db->close();
         return $dados;
     }
