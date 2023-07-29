@@ -3,9 +3,11 @@
 	<?=$this->section('content')?>
 		<div id="index-center">
 		
-	
-			<span id="index-cross" class="material-icons">emergency</span>
-			<a href="<?=base_url('list')?>">Lista</a>
+			<div id="index-text">
+				<h1>AraClín: Catálogo de Clínicas Médicas</h1>
+				<h2>Seu guia confiável para cuidar da sua saúde!</h2>
+				<a href="<?=base_url('list')?>">Lista</a>
+			</div>
 		</div>
 		
 

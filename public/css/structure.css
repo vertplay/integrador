@@ -23,14 +23,21 @@ body{
 	width:100%;
 	min-height:80vh;
 	text-align:center;
+	background-image:url("../img/4.png");
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position-x:right;
+	background-position-y:center;
+	background-size:contain;
 	
 }
 
-#index-cross{
-	font-size:1000px;
+#index-text{
+	display:block;
+	width:90%;
+	margin-top:40vh;
 	
-	color:#006b6d;
-	background:#00CED1;
 	/*box-shadow: 0px 0px 20px 6px #666666;*/
   	
 }
@@ -115,7 +122,7 @@ body{
 #container-principal{/*BLOCO PRINCIPAL (NO CENTRO)*/
 	float:left;
 	width:100%;
-	margin-top:120px;
+	margin-top:50px;
 	/*width:80%;
 	margin:55px 10% 5px 10%;*/
 	min-height:100vh;

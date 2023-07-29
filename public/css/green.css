@@ -72,7 +72,7 @@ i:active{
 }
 /*---------------------BLOCO CENTRAL------------------------*/
 #container-principal{/*BLOCO PRINCIPAL (NO CENTRO)*/
-	background:var(--menu-color);
+	/*background:var(--menu-color);*/
 	color:#000000;
 	border-style:solid;
 	border-color:#666666;
