@@ -8,33 +8,7 @@ body{
 	/*background-attachment:fixed;*/
 }
 /*-----------------------MENU-----------------------------*/
-#menu-bar{/*BARRA DE MENU*/
-	background:var(--menu-color);
-	color:#000000;
-	border-bottom-style:solid;
-	border-bottom-color:#004e4e;
-}
-#menu-bar a{/*LINKS DO MENU ('HOME')*/
-	color:#ffffff;
-	transition:0.3s;
-	font-family:"Sofia", sans-serif;
-	font-style:italic;
-	font-weight:900;
-}
-#menu-bar a:hover{
-	background:#87cefa;
-	color:#000000;
-}
-i{/*BARRA DE MENU -> GRUPO DE BOTÕES DE MENU -> BOTÃO*/
-	background:var(--menu-color);
-	color:#ffffff;
-}
-i:hover{
-	color:#87cefa;
-}
-i:active{
-	color:#00bfff;
-}
+
 .menu-block{/*BOTÂO(CLICK) -> BLOCO DE MENU*/
 	background:#ffffff;
 	border-style:solid;
@@ -57,19 +31,7 @@ i:active{
 .menu-block .menu-btn-theme:active{
 	background:#00bfff;
 }
-/*---------------------BARRA DE PESQUISA---------------------*/
-#search-bar{
-	background:var(--menu-color);
-	background-image:url('../img/search-white.png');
-	background-size:36px 36px;
-	background-position:0px 9px;
-	background-repeat:no-repeat;
-	color:#ffffff;
-	border-color:#ffffff;
-}
-::placeholder{
-	color:#ffffff
-}
+
 /*---------------------BLOCO CENTRAL------------------------*/
 #container-principal{/*BLOCO PRINCIPAL (NO CENTRO)*/
 	/*background:var(--menu-color);*/

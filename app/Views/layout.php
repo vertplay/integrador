@@ -50,14 +50,18 @@
 			
 			<!--GRUPO DE BOTÕES-->
 			<div id="btn-group">
-				<a id="menu-btn-user">Perfil Pessoal</a>
-				<a id="menu-btn-emp">Perfil Empresarial</a>
+				<a href="" id="menu-btn-user">Perfil Pessoal</a>
+				<a href="" id="menu-btn-emp">Perfil Empresarial</a>
 			</div>
 			
 			
 		</nav>
-		<!--BLOCOS DE MENU-->
-			<!--USER-->
+
+
+		<!---
+		
+		-BLOCOS DE MENU-->
+			<!--USER--
 		<?php
 			if((bool)session()->isLoggedIn != true){
 				echo '
@@ -85,15 +89,11 @@
 			}
 
 		?>
-			<!--MENU-->
-			<div class="menu-block" id="menu-block-menu">
-				<div class="line">THEME/TEMA</div>
-				<button type="button" class="menu-btn-theme" id="menu-btn-theme-dark">DARK</button>
-				<button type="button" class="menu-btn-theme" id="menu-btn-theme-light">LIGHT</button>
-			</div>
 		<script src="<?=base_url('/js/menu.js')?>" type="text/javascript"></script>
-		<!--FIM MENU-->
 		
+		-->
+
+
         <div id="container-principal">
             <?= $this->renderSection('content') ?>
         </div>

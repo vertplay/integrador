@@ -11,15 +11,14 @@ class Home extends BaseController
 	//página inicial, listagem de usuários que possuem músicas
 	public function index()
 	{
-		
-		return view('index');
+		$home = new MainModel();
+		$enviar['dados'] = $home->list();
+		return view('index', $enviar);
 		
 	}
 
 	public function list(){
-		$home = new MainModel();
-		$enviar['dados'] = $home->list();
-		return view('list', $enviar);
+		
 	}
 
 	//página de usuario/perfil
