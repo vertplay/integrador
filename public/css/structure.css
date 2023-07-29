@@ -34,12 +34,20 @@ body{
 }
 
 #index-text{
-	display:block;
+	float:right;
+	background-color:transparent;
 	width:90%;
-	margin-top:40vh;
-	
-	/*box-shadow: 0px 0px 20px 6px #666666;*/
+	text-align:left;
+	margin-top:35vh;
+	color:#ffffff;
   	
+}
+#index-text a{
+	display:inline-block;
+	padding:20px;
+	margin-top:40px;
+	color:#ffffff;
+	background:#004e4e;
 }
 
 #index > a{
