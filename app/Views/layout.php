@@ -43,15 +43,15 @@
 	<body>
 		<!--MENU-->
 		<nav id="menu-bar">
-			<a href="<?php echo base_url()?>">AraClin</a>
+			<a id="home-link" href="<?php echo base_url()?>">AraClin</a>
 			
 			<!--BARRA DE PESQUISA-->
-			<input id="search-bar" type="text" placeholder="Pesquisar..."/>
+			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->
 			
 			<!--GRUPO DE BOTÕES-->
 			<div id="btn-group">
-				<i class="material-icons" id="menu-btn-user">account_box</i>
-				<i class="material-icons" id="menu-btn-menu">menu</i>
+				<a id="menu-btn-user">Perfil Pessoal</a>
+				<a id="menu-btn-emp">Perfil Empresarial</a>
 			</div>
 			
 			

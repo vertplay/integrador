@@ -12,7 +12,7 @@ body{
 	background:var(--menu-color);
 	color:#000000;
 	border-bottom-style:solid;
-	border-bottom-color:#ffffff;
+	border-bottom-color:#004e4e;
 }
 #menu-bar a{/*LINKS DO MENU ('HOME')*/
 	color:#ffffff;
