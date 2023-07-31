@@ -43,60 +43,28 @@
 	<body>
 		<!--MENU-->
 		<nav id="menu-bar">
-			<a id="home-link" href="<?php echo base_url()?>">AraClin</a>
+			<a id="home-link" href="<?=base_url()?>">AraClin</a>
 			
 			<!--BARRA DE PESQUISA-->
 			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->
 			
 			<!--GRUPO DE BOTÕES-->
 			<div id="btn-group">
-				<a href="" id="menu-btn-user">Perfil Pessoal</a>
+				<a href="<?=base_url('login')?>" id="menu-btn-user">Perfil Pessoal</a>
 				<a href="" id="menu-btn-emp">Perfil Empresarial</a>
 			</div>
 			
 			
 		</nav>
-
-
-		<!---
 		
-		-BLOCOS DE MENU-->
-			<!--USER--
-		<?php
-			if((bool)session()->isLoggedIn != true){
-				echo '
-				<div class="menu-block" id="menu-block-user">
-				<form action="./login" method="POST" enctype="multipart/form-data">
-				<label for="login">Login</label>
-					<input type="text" name="login" id="login" required><br>
-				<label for="senha">Senha</label>
-					<input type="password" name="senha" id="senha" required><br>
-					<input type="file" name="arquivo" required><br>
-					<button type="submit" name="registrar">Enviar</button>
-				</form>
-				</div>
-				
-				';
-			}
-			else{
-				echo '
-				<div class="menu-block" id="menu-block-user">
-				Conectado
-				<a href="./logout">Sair</a>
-				</div>
-				
-				';
-			}
-
-		?>
-		<script src="<?=base_url('/js/menu.js')?>" type="text/javascript"></script>
 		
-		-->
 
 
         <div id="container-principal">
             <?= $this->renderSection('content') ?>
         </div>
+
+
 		<!--FOOTER-->
 		<footer>
 			&copy;2023

@@ -10,7 +10,7 @@ class MainModel extends Model{
 		$dados = $db->query("
 		SELECT id, nome
 		FROM usuarios
-		LIMIT 0, 20")->getResultArray();
+		")->getResultArray();
 		$db->close();
         return $dados;
     }

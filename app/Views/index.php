@@ -20,6 +20,10 @@
 					<img src="<?=base_url('/img/'.$dado['id'])?>"/>
 					<div class="container-block-text">
 						<?=$dado['nome']?>
+						<div class="block-text-sub">Saiba Mais</div>
+					</div>
+					<div class="container-block-text2">
+						3,5
 					</div>
 				</a>
 				

@@ -40,6 +40,10 @@ class Home extends BaseController
 		return view('user',$enviar);
 	}
 
+	public function login(){
+		return view('user/login');
+	}
+
 	//Gera imagem
 	public function img($id){
 		$img = new MainModel();

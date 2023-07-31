@@ -75,6 +75,7 @@ body{
 
 /*-----------------------MENU-----------------------------*/
 #menu-bar{/*BARRA DE MENU*/
+	min-width:750px;
 	width:100%;
 	height:var(--menu-heigth);
 	border-bottom-width:4px;
@@ -182,6 +183,10 @@ color:#444444;
 	margin:15px;
 	border-width:2px;
 	transition:0.3s;
+	background:#666666;
+	border-style:solid;
+	border-color:#ffffff;
+	/*box-shadow: 0px 0px 4px 3px #666666;*/
 }
 	@media (min-width:840px){
 		.container-blocks{
@@ -196,6 +201,12 @@ color:#444444;
 			height:calc(350px - 25px);
 		}
 	}
+.container-blocks:hover{
+	border-color:#004e4e;
+}
+	.container-blocks:hover > .container-block-text{
+		color:#000000;
+	}
 .container-blocks img{
 	width:100%;
 	height:100%;
@@ -204,22 +215,50 @@ color:#444444;
 }
 .container-block-text{
 	word-wrap: break-word;
+	text-transform:uppercase;
+	text-align:justify;
+	text-indent:15%;
+	font-family:"garet";
+	font-size:17px;
 	display:block;
 	position:relative;
+	min-width:40%;
+	width:40%;
+	max-width:100%;
+	height:60px;
+	margin-top:-60px;
+	overflow:hidden;
+	opacity:0.9;
+	transition:0.3s;
+	background:#004e4e;
+	color:#ffffff;
+}
+.block-text-sub{
 	width:100%;
-	height:20px;
-	margin-top:-20px;
-	
-	text-align:left;
+	height:50%;
+	margin-bottom:0;
+	font-size:14px;
+	font-family:"garet";
+}
+.container-block-text2{
+	position:relative;
+	float:right;
+	width:80px;
+	max-width:100%;
+	height:30px;
+	margin-top:calc(-350px + 29px);
+	text-align:center;
 	overflow:hidden;
 	font-size:17px;
 	opacity:0.9;
 	transition:0.3s;
+	background:#004e4e;
+	color:#ffffff;
 }
-.container-blocks:hover .container-block-text{
+/*.container-blocks:hover .container-block-text{
 	height:80px;
 	margin-top:-80px;
-}
+}*/
 /*---------------------------ALBUM PAGE-----------------------*/
 #album-block{
 	width:100%;
