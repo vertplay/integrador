@@ -9,6 +9,7 @@ class User extends BaseController{
     public function index(){
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
+        $nome = $this->request->getPost('nome');
         $img = $this->request->getFile('arquivo');
         
         
@@ -20,8 +21,9 @@ class User extends BaseController{
                 $parametros = [
                     'login' => $login,
                     'senha' => $senha,
-                    'img' => base64_encode($img),
-                    'imgtype' => $img->getMimeType();
+                    'nome' => $nome,
+                    'img' => base64_encode(file_get_contents($img)),
+                    'imgtype' => $img->getMimeType()
                 ];
 
                 $inserir = new UserModel();

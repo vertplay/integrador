@@ -11,8 +11,8 @@ class UserModel extends Model{
     
         $dados = $db->query('
             INSERT INTO usuarios
-            (login, senha, img, imgtype)
-            VALUES(:login:, :senha:, ":img:", :imgtype:)
+            (login, senha, nome, img, imgtype)
+            VALUES(:login:, :senha:, :nome:, ":img:", :imgtype:)
             ', $parametros);
         if($dados){
             $erros[] .= "sucesso";
