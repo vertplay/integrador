@@ -9,6 +9,7 @@
 :root{
 	--menu-color:#00CED1;
 	--menu-heigth:80px;
+	--background-color:#e2f1f1;
 }
 *{
 	margin:0;
@@ -28,6 +29,7 @@ i{
 }
 body{
 	max-width:100%;
+	background-color:var(--background-color);
 }
 /*-----------------index---------------------------------*/
 #index-center{
@@ -155,6 +157,7 @@ body{
 	font-size:20px;
 	color:#333333;
 	border-color: #555555;
+	background-color:var(--background-color);
 	background-image:url('../img/search-black.png');
 	background-size:36px 36px;
 	background-position:0px 9px;
@@ -162,7 +165,7 @@ body{
 	
 }
 ::placeholder{
-color:#444444;
+	color:#444444;
 }
 
 /*---------------------BLOCO CENTRAL------------------------*/
@@ -170,10 +173,9 @@ color:#444444;
 	float:left;
 	width:100%;
 	margin-top:var(--menu-heigth);
-	background-color:#ffffff;
 	/*width:80%;
 	margin:55px 10% 5px 10%;*/
-	min-height:100vh;
+	min-height:calc(100vh - 160px);
 	border-width:0px;
 }
 .container-blocks{
@@ -183,9 +185,9 @@ color:#444444;
 	margin:15px;
 	border-width:2px;
 	transition:0.3s;
-	background:#666666;
+	background:var(--background-color);
 	border-style:solid;
-	border-color:#ffffff;
+	border-color:var(--background-color);
 	/*box-shadow: 0px 0px 4px 3px #666666;*/
 }
 	@media (min-width:840px){
@@ -205,6 +207,7 @@ color:#444444;
 	border-color:#004e4e;
 }
 	.container-blocks:hover > .container-block-text{
+		text-decoration:underline;
 		color:#000000;
 	}
 .container-blocks img{
@@ -217,6 +220,7 @@ color:#444444;
 	word-wrap: break-word;
 	text-transform:uppercase;
 	text-align:justify;
+	font-weight:bold;
 	text-indent:15%;
 	font-family:"garet";
 	font-size:17px;
@@ -239,6 +243,7 @@ color:#444444;
 	margin-bottom:0;
 	font-size:14px;
 	font-family:"garet";
+	font-weight:normal;
 }
 .container-block-text2{
 	position:relative;
@@ -365,136 +370,48 @@ color:#444444;
 	font-size:40px;
 	line-height:68%;
 }
-/*-----------------------PLAY-BAR----------------------------*/
-#play-bar{
-	position:fixed;
-	bottom:0;
-	padding:0;
-	left:0;
-	line-height:80%;
-	/*height:35px;*/
-	height:8px;
-	width:100%;
-	max-width:100%;
-	border-style:solid;
-	border-width:2px;
-	border-bottom-width:0;
-	border-bottom-style:none;
-	overflow:hidden;
-	transition:0.3s;
-	z-index:10;
-}
-#playlist{
-	position:fixed;
-	/*bottom:35px;*/
-	bottom:7px;
-	left:0;
-	width:100%;
-	border-style:solid;
-	border-bottom-style:none;
-	border-width:2px;
-	overflow-Y:auto;
-	overflow-X:hidden;
-	transition:0.2s linear;
-	height:0px;
-	max-height:calc((100vh - 50px - 35px) / 1);/*possible_height / x*/
+/*-----------------------FORMULÁRIOS----------------------------*/
+.formularios{
+	display:block;
+	margin:60px auto 0px auto;
+	padding:40px;
+	width:600px;
+	max-width:95%;
+	min-height:500px;
+	border:1px solid #777777;
+	border-radius:7%;
 	text-align:center;
-	overflow:hidden;
+	color:#004e4e;
 }
-	#album-art{
-		width:100%;
-		max-width:100%;
-		height:auto;
-		
-	}
-#audio-progress{
-	height:5px;
+.formularios  label{
+	display:inline-block;
 	width:100%;
-	max-width:100%;
-	border-width:1px 2px 1px 2px;
-	border-style:solid;
-	z-index:20;
-	cursor:pointer;
-	user-select:none;
-	background:#c0c0c0;
+	text-align:left;
+	text-indent: 15%;
+	font-family: 'garet';
+	font-size:20px;
 }
-	@media (min-width:1000px){
-		#play-bar{
-			width:80%;
-			left:10%;
-		}
-		#playlist{
-			width:80%;
-			left:10%;
-		}
-		
+.formularios  input{
+	width:70%;
+	height:40px;
+	border-radius:6px;
+	margin:2px auto 10px auto;
+}
+.formularios button[type=submit]{
+	width:90px;
+	height:30px;
+	background-color:#004e4e;
+	font-family:'garet';
+	color:#ffffff;
+}
+	.formularios button[type=submit]:hover{
+		cursor:pointer;
 	}
-#atual-progress{
-	width:0;
-	max-width:100%;
-	min-height:3px;
-	height:3px;
-	max-height:3px;
-	transition:0.5s linear;
-	user-select:none;
-	background:#00bfff;
-	resize:none;
+.formularios h2{
+	color:#004e4e;
 }
-#volume-level{
-	height:5px;
-	width:100px;
-	max-width:100px;
-	border-width:1px 2px 1px 2px;
-	border-style:solid;
-	z-index:20;
-	float:left;
-	cursor:pointer;
-	user-select:none;
-	background:#c0c0c0;
-	margin-top:11px;
-}
-#atual-volume{
-	width:0;
-	max-width:100%;
-	min-height:3px;
-	height:3px;
-	max-height:3px;
-	transition:0.5s linear;
-	float:left;
-	z-index:21;
-	user-select:none;
-	background:#00bfff;
-	resize:none;
-}
-#music-name{
-	float:left;
-	width:calc(100% - 163px - 35px - 100px);
-	height:100%;
-	font-size:16px;
-	line-height:150%;
-	white-space: nowrap; 
-	overflow:hidden;
-	text-overflow:ellipsis;
-	transition:0.3s;
-}
-#music-timer{
-	float:left;
-	width:35px;
-	height:100%;
-	font-size:16px;
-	line-height:150%;
-	transition:0.3s;
-	user-select:none;
-}
-#audio-controls{
-	float:left;
-	width:163px;
-	height:100%;
-}
-#audio-controls i{
-	font-size:29px;
-	user-select:none;
-	transition:0.3s;
+.login-form{
+
 }
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/

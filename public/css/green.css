@@ -1,12 +1,7 @@
 :root{
 	--menu-color:#00CED1;
 }
-body{
-	background:#ffffff;
-	background:var(--menu-color);
-	/*background-image:url("../img/bg-light.png");*/
-	/*background-attachment:fixed;*/
-}
+
 /*-----------------------MENU-----------------------------*/
 
 .menu-block{/*BOTÂO(CLICK) -> BLOCO DE MENU*/

@@ -17,9 +17,6 @@ class Home extends BaseController
 		
 	}
 
-	public function list(){
-		
-	}
 
 	//página de usuario/perfil
 	public function user($id){
