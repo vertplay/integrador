@@ -1,6 +1,4 @@
-:root{
-	--menu-color:#00CED1;
-}
+
 
 /*-----------------------MENU-----------------------------*/
 
@@ -63,9 +61,3 @@
 	background:transparent;
 }
 /*------------------------FOOTER-----------------------------*/
-footer{/*RODAPÉ*/
-	background:#F5F5F5;
-	color:#000000;
-	border-top-style:solid;
-	border-top-color:#888888;
-}

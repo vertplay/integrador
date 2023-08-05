@@ -4,25 +4,17 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
-class User extends BaseController{
-    
-    public function index(){
-        $login = $this->request->getPost('login');
-        $senha = $this->request->getPost('senha');
-        
-        
-        
-        if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
-            
-            
-        }
-        else{
-            return redirect()->to(base_url());
-        }
-        
+class Clinica extends BaseController{
+    public function login(){
+        return view('clinicas/login');
     }
-
     public function registro(){
+        return view('clinicas/registro');
+    }
+    public function logar(){
+
+    }
+    public function registrar(){
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
         $nome = $this->request->getPost('nome');

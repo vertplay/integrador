@@ -40,6 +40,9 @@ class Home extends BaseController
 	public function login(){
 		return view('user/login');
 	}
+	public function registro(){
+		return view('user/registro');
+	}
 
 	//Gera imagem
 	public function img($id){
