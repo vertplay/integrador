@@ -4,36 +4,62 @@
 		
 		
 		
-			<div id="album-block">
-				<div id="album-block-img">
-					<img src="<?php echo base_url()?>/img/<?php echo $user["id"] ?>"/>
-				</div>
-				<div class="title"><?php echo $user["nome"] ?></div>
+			<div id="clin-block1" class="clin-block">
+				<div class="title"><?= $user["nome"] ?></div>
 				<div class="info">
-				<p>&nbsp;REOL (stylized as RΞOL) is a Japanese musical unit that consists of vocalist/lyricist Reol,
-				music arranger GigaP, and movie director/producer Okiku. The members from REOL originally worked 
-				as solo artists, but they signed to Toy's Factory as a group in 2015, using Reol's name for the project.
-				Prior to its formation, both Reol and GigaP consistently worked together, eventually releasing an album together
-				titled No Title, while Reol worked as a solo artist. However, all three members released their debut studio album,
-				Sigma, on October 19, 2016.</p>
+					<h3>Descrição:</h3>
+				<p>&nbsp;Nessa seção, o paciente ou responsável descobrirá, a partir da leitura, quais são as especialidades 
+					médicas ofertadas pela clínica, quem são os profissionais da saúde que prestam atendimento e quais exames e procedimentos são realizados. 
+					Além disso, poderá visualizar imagens do exterior e interior do estabelecimento.</p>
+				</div>
+				<div id="album-block-img">
+					<img src="<?= base_url('/img/'.$user["id"])?>"/>
+				</div>
+				<div class="info">
+					<h3>Horário de Funcionamento:</h3>
+				<p>Segunda-feira: 07:00 às 20:00.<br>
+					Terça-feira: 07:00 às 20:00.<br>
+					Quarta-feira: 07:00 às 20:00.<br>
+					Quinta-feira: 07:00 às 20:00.<br>
+					Sexta-feira: 07:00 às 20:00.<br>
+					Sábado: 07:00 às 11:00.<br>
+					Domingo: Fechado</p>
+				</div>
+				<div class="info">
+					<h3>Horário de Funcionamento:</h3>
+					<p>Segunda-feira: 07:00 às 20:00.<br>
+					Terça-feira: 07:00 às 20:00.<br>
+					Quarta-feira: 07:00 às 20:00.<br>
+					Quinta-feira: 07:00 às 20:00.<br>
+					Sexta-feira: 07:00 às 20:00.<br>
+					Sábado: 07:00 às 11:00.<br>
+					Domingo: Fechado</p>
+				</div>
+				<div class="info">
+					<h3>Contato:</h3>
+					<p>Telefone: (33)3731-1834<br>
+					WhatsApp: link.para.chat.do.whatsapp<br>
+					Intagram: link.para.perfil.do.intagram<br>
+					Email: clinicamedmaria@outlook.com</p>
 				</div>
 			</div>
-			<div id="music-list">
-				<div class="item">
-					<div class="name">Kamisama Ni Natta Hi</div>
-					<i class="material-icons" onclick="alter_music('[REOL]Kamisama Ni Natta Hi.mp3')">play_arrow</i>
+
+
+			<div id="clin-block2" class="clin-block">
+				<div class="info">
+					<h3>Endereço:</h3>
+					<p>
+					Av. das Rosas, 40 - Alto Mercado, Araçuaí - MG, 39600-000</p>
+					
 				</div>
-				<div class="item">
-					<div class="name">World's Greatest Battle Music Ever  Fortuna Redux (Fractal Dreamers)</div>
-					<i class="material-icons" onclick="music_player.change_music('[1]0.mp3','fortuna redux')">play_arrow</i>
+				<div id="mapa">
+
 				</div>
-				<div class="item">
-					<div class="name">World's Greatest Battle Music Ever  Fortuna Redux (Fractal Dreamers)</div>
-					<i class="material-icons" onclick="alter_music('[rola]Worlds Greatest Battle Music Ever  Fortuna Redux (Fractal Dreamers).mp3')">play_arrow</i>
-				</div>
-				<div class="item">
-					<div class="name">World's Greatest Battle Music Ever  Fortuna Redux (Fractal Dreamers)</div>
-					<i class="material-icons" onclick="alter_music('[rola]Worlds Greatest Battle Music Ever  Fortuna Redux (Fractal Dreamers).mp3')">play_arrow</i>
+				<div class="info">
+					<h3>Nota e Avaliações:</h3>
+					<p>
+					notas....</p>
+					
 				</div>
 			<?php
 			foreach($musicas as $musica){

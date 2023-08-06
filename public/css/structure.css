@@ -276,57 +276,53 @@ body{
 	margin-top:-80px;
 }*/
 /*---------------------------ALBUM PAGE-----------------------*/
-#album-block{
+.clin-block{
+	float:left;
 	width:100%;
 	height:auto;
-	text-align:center;
+	padding:20px;
+	text-align:left;
 }
 #album-block-img{
+	margin-top:35px;
 	width:100%;
 	height:auto;
 	text-align:center;
 	float:left;
 	padding:0;
-	border-width:1px;
-	border-style:solid;
-	border-bottom-width:0;
 }
-#album-block img{
+#clin-block1 img{
 	width:auto;
 	max-width:100%;
 	height:100%;
 	object-fit:cover;
 	margin:auto 0 auto 0;
-	border-width:1px;
-	border-style:solid;
 }
-#album-block .title{
+.clin-block .title{
 	width:100%;
 	float:left;
 	height:30px;
-	border-width:2px;
-	border-width:2px;
-	border-style:solid;
-	text-align:center;
+	text-align:left;
 	font-size:24px;
-	margin-top:-5px;
-	border-top-width:3px;
+	font-weight:bold;
+	color:teal;
 }
-#album-block .info{
+.info h3{
+	color:teal;
+	margin-bottom:10px;
+}
+.clin-block .info{
 	width:100%;
 	float:left;
-	height:220px;
-	border-width:2px;
-	border-style:solid;
-	overflow-y:auto;
-	overflow-x:hidden;
+	height:auto;
+	margin-top:20px;
 	word-wrap: break-word;
-	text-align:left;
+	text-align:justify;
 }
+
 	@media (min-width:1000px){
-		#album-block{
-		width:100%;
-		height:250px;
+		.clin-block{
+			width:50%;
 		}
 		#album-block-img{
 			width:450px;
@@ -334,23 +330,20 @@ body{
 			text-align:center;
 			border-bottom-width:1px;
 		}
-		#album-block img{
+		#clin-block1 img{
 			width:450px;
 			max-height:248px;
 		}
-		#album-block .title{
-			width:calc(100% - 450px);
-			min-width:40%;
-			height:30px;
-			margin-top:0px;
-			border-top-width:2px;
-		}
-		#album-block .info{
-			width:calc(100% - 450px);
-			min-width:40%;
-			height:220px;
-		}
+		
 	}
+#mapa{
+	float:left;
+	width:100%;
+	min-height:450px;
+	border:1px solid black;
+	height:auto;
+}
+
 #music-list{
 	width:100%;
 	float:left;
