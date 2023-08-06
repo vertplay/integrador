@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="<?=base_url('/css/structure.css')?>"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		
 			<!--THEMES-->
 			<link rel="stylesheet" href="<?=base_url('/css/green.css')?>" id="green-theme"/>
 			<!--incluir preferências de usuário-->
