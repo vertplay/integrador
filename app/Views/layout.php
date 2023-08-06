@@ -1,3 +1,4 @@
+<?php $session = session(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -49,11 +50,30 @@
 			<!--BARRA DE PESQUISA-->
 			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->
 			
+			<?php
+				if($session->has('id') && $session->get('id') != null){
+					echo '
+					<div id="btn-group">
+						<a href="'.base_url('pe/login').'" id="menu-btn-emp">Perfil</a>
+						<form action="'.base_url('/pe/logout').'" method="post"">
+						<button type="submit" name="sair">LogOut</button>
+						</form>
+					</div>
+					
+					';
+				}
+				else{
+					echo'
+					<div id="btn-group">
+						<a href="'.base_url('pp/login').'" id="menu-btn-user">Perfil Pessoal</a>
+						<a href="'.base_url('pe/login').'" id="menu-btn-emp">Perfil Empresarial</a>
+					</div>
+					';
+				}
+			?>
+
 			<!--GRUPO DE BOTÕES-->
-			<div id="btn-group">
-				<a href="<?=base_url('pp/login')?>" id="menu-btn-user">Perfil Pessoal</a>
-				<a href="<?=base_url('pe/login')?>" id="menu-btn-emp">Perfil Empresarial</a>
-			</div>
+			
 			
 			
 		</nav>

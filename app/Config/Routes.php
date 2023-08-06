@@ -53,6 +53,9 @@ $routes->post('/pp/registro','User::registro');
 $routes->get('/pe/registro','Clinica::registro');
 $routes->post('/pe/registro','Clinica::registrar');
 
+//logout
+$routes->post('/pe/logout','Clinica::logout');
+
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');
 /*

@@ -125,6 +125,7 @@ body{
 	color:var(--menu-font-color);
 	font-weight: bold;
 	font-family:'garet';
+	font-size:18px;
 	display:inline-block;
 	height:100%;
 	padding:calc(var(--menu-heigth) - 30px) 10px 0px 10px;
@@ -144,6 +145,22 @@ body{
 }
 #btn-group > #menu-btn-emp{
 	background-image:url("../img/pe2.png");
+}
+#btn-group > form{
+	display:inline-block;
+	
+}
+#btn-group > form > button{
+	background-color:var(--menu-color);
+	border:0;
+	color:var(--menu-font-color);
+	font-weight: bold;
+	font-family:'garet';
+	font-size:18px;
+}
+#btn-group > form > button:hover{
+	text-decoration:underline;
+	cursor:pointer;
 }
 /*---------------------BARRA DE PESQUISA---------------------*/
 #search-bar{

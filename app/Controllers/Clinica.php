@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\ClinicaModel;
 
 class Clinica extends BaseController{
     public function login(){
@@ -12,7 +13,16 @@ class Clinica extends BaseController{
         return view('clinicas/registro');
     }
     public function logar(){
-
+        $login = $this->request->getPost('login');
+        $senha = $this->request->getPost('senha');
+        $consulta = new ClinicaModel();
+        $dados = $consulta->login($login, $senha);
+        if($dados != null){
+            $session = session();
+            $session->set($dados[0]);
+            return redirect()->to(base_url());
+        }
+        
     }
     public function registrar(){
         $login = $this->request->getPost('login');
@@ -43,5 +53,11 @@ class Clinica extends BaseController{
 
             }
         }
+    }
+    public function logout(){
+        $session = session();
+        $array_items = ['id', 'nome'];
+        $session->remove($array_items);
+        return redirect()->to(base_url());
     }
 }
