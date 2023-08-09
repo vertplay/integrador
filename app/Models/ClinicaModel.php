@@ -12,4 +12,18 @@ class ClinicaModel extends Model{
         $query = $builder->getWhere(['login' => $login, 'senha' => $senha], $limit, $offset)->getResultArray();
         return $query;
     }
+
+    public function getClinica($id) : array{
+		$parametros = [
+			'id_usuario' => $id
+		];
+        $db = \Config\Database::connect();
+		$dados = $db->query("
+			SELECT id, nome 
+			FROM usuarios
+			WHERE id = :id_usuario:
+			", $parametros);
+        $db->close();
+        return $dados->getResultArray();
+	}
 }

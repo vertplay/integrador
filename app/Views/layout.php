@@ -54,7 +54,7 @@
 				if($session->has('id') && $session->get('id') != null){
 					echo '
 					<div id="btn-group">
-						<a href="'.base_url('pe/login').'" id="menu-btn-emp">Perfil</a>
+						<a href="'.base_url('pe/perfil').'" id="menu-btn-emp">Perfil</a>
 						<form action="'.base_url('/pe/logout').'" method="post"">
 						<button type="submit" name="sair">LogOut</button>
 						</form>

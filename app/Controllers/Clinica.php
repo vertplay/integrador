@@ -6,6 +6,21 @@ use App\Models\UserModel;
 use App\Models\ClinicaModel;
 
 class Clinica extends BaseController{
+
+    public function __construct(){
+        
+    }
+    
+    public function index(){
+        $session = session();
+        if($session->has('id') && $session->get('id') != null && $session->get('tipo')=="clinica"){
+            return view('clinicas/perfil');
+        }
+        else{
+            return redirect()->to(base_url());
+        }
+    }
+
     public function login(){
         return view('clinicas/login');
     }
@@ -20,6 +35,7 @@ class Clinica extends BaseController{
         if($dados != null){
             $session = session();
             $session->set($dados[0]);
+            $session->set('tipo', 'clinica');
             return redirect()->to(base_url());
         }
         
@@ -56,7 +72,7 @@ class Clinica extends BaseController{
     }
     public function logout(){
         $session = session();
-        $array_items = ['id', 'nome'];
+        $array_items = ['id', 'nome', 'tipo'];
         $session->remove($array_items);
         return redirect()->to(base_url());
     }

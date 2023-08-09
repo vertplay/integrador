@@ -5,7 +5,7 @@
 		
 		
 			<div id="clin-block1" class="clin-block">
-				<div class="title"><?= $user["nome"] ?></div>
+				<div class="title"><?= $clin["nome"] ?></div>
 				<div class="info">
 					<h3>Descrição:</h3>
 				<p>&nbsp;Nessa seção, o paciente ou responsável descobrirá, a partir da leitura, quais são as especialidades 
@@ -13,7 +13,7 @@
 					Além disso, poderá visualizar imagens do exterior e interior do estabelecimento.</p>
 				</div>
 				<div id="album-block-img">
-					<img src="<?= base_url('/img/'.$user["id"])?>"/>
+					<img src="<?= base_url('/img/'.$clin["id"])?>"/>
 				</div>
 				<div class="info">
 					<h3>Horário de Funcionamento:</h3>
@@ -61,16 +61,6 @@
 					notas....</p>
 					
 				</div>
-			<?php
-			foreach($musicas as $musica){
-				echo '
-					<div class="item">
-						<div class="name">'.$musica["nome"].'</div>
-						<i class="material-icons" onclick="music_player.change_music(\''.$musica["arquivo"].'\',\''.$musica["nome"].'\')">play_arrow</i>
-					</div>
-				';
-			}
-			?>
 			</div>
 	<?=$this->endSection()?>
 		

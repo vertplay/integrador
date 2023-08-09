@@ -35,8 +35,11 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 
 
-//pagina do usuário
-$routes->get('/user/(:num)','Home::user/$1');
+//pagina da clinica
+$routes->get('/clinica/(:num)','Home::clinica/$1');
+
+//perfil
+$routes->get('/pe/perfil','Clinica::index');
 
 //login
 //$routes->get('/login','User::index');

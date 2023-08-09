@@ -1,6 +1,7 @@
 <?php $this->extend('layout')?>
 		
 	<?=$this->section('content')?>
+	<?php $session = session();?>
 		<div id="index-center">
 		
 			<div id="index-text">
@@ -16,7 +17,7 @@
 			
 			<?php foreach($dados as $dado){ ?>
 
-				<a class="container-blocks" href="<?=base_url('/user/'.$dado['id'])?>">
+				<a class="container-blocks" href="<?=base_url('/clinica/'.$dado['id'])?>">
 					<img src="<?=base_url('/img/'.$dado['id'])?>"/>
 					<div class="container-block-text">
 						<?=$dado['nome']?>

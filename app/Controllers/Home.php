@@ -6,6 +6,8 @@ use App\Models\MainModel;
 
 use App\Models\UserModel;
 
+use App\Models\ClinicaModel;
+
 class Home extends BaseController
 {
 	//página inicial, listagem de usuários que possuem músicas
@@ -19,22 +21,21 @@ class Home extends BaseController
 
 
 	//página de usuario/perfil
-	public function user($id){
+	public function clinica($id){
 
-		$user = new UserModel();
-		$enviar["user"] = $user->getUser($id);
-		$enviar["musicas"] = $user->getMusicas($id);
+		$clin = new ClinicaModel();
+		$enviar["clin"] = $clin->getClinica($id);
 
 
-		if(empty($enviar["user"])){
+		if(empty($enviar["clin"])){
 			return view('errors/html/error_404');
 		}
 
-		$enviar["user"] = $enviar["user"][0];
+		$enviar["clin"] = $enviar["clin"][0];
 		
 		//print_r($enviar);
 		
-		return view('user',$enviar);
+		return view('clinica',$enviar);
 	}
 
 	public function login(){
