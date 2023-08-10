@@ -8,6 +8,8 @@ use App\Models\UserModel;
 
 use App\Models\ClinicaModel;
 
+use Config\Services\Email;
+
 class Home extends BaseController
 {
 	//página inicial, listagem de clínicas
@@ -48,6 +50,16 @@ class Home extends BaseController
 		$email = $this->request->getPost('email');
 		if($email != null){
 			echo 'sucesso';
+			$mail = \Config\Services::email();
+			$mail->setFrom('');
+			$mail->setTO($email);
+			/*$mail->setCC();
+			$mail->setBCC();*/
+
+			$mail->setSubject('teste');
+			$mail->SetMessage('testando');
+			$mail->send();
+			
 		}
 		else{
 			return view('recupera_senha');

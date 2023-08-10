@@ -33,7 +33,7 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $protocol = 'mail';
+	public $protocol = 'smtp';//'mail';
 
 	/**
 	 * The server path to Sendmail.
@@ -47,21 +47,21 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPHost;
+	public $SMTPHost = 'smtp.gmail.com';
 
 	/**
 	 * SMTP Username
 	 *
 	 * @var string
 	 */
-	public $SMTPUser;
+	public $SMTPUser = 'mailer.codeigniter@gmail.com';
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var string
 	 */
-	public $SMTPPass;
+	public $SMTPPass = 'vyxzxvockfzdgran';
 
 	/**
 	 * SMTP Port
@@ -110,7 +110,7 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $mailType = 'text';
+	public $mailType = 'html';//'text';
 
 	/**
 	 * Character set (utf-8, iso-8859-1, etc.)
@@ -124,7 +124,7 @@ class Email extends BaseConfig
 	 *
 	 * @var boolean
 	 */
-	public $validate = false;
+	public $validate = true;//false;
 
 	/**
 	 * Email Priority. 1 = highest. 5 = lowest. 3 = normal
