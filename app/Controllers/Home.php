@@ -10,7 +10,7 @@ use App\Models\ClinicaModel;
 
 class Home extends BaseController
 {
-	//página inicial, listagem de usuários que possuem músicas
+	//página inicial, listagem de clínicas
 	public function index()
 	{
 		$home = new MainModel();
@@ -43,6 +43,15 @@ class Home extends BaseController
 	}
 	public function registro(){
 		return view('user/registro');
+	}
+	public function recupera_senha(){
+		$email = $this->request->getPost('email');
+		if($email != null){
+			echo 'sucesso';
+		}
+		else{
+			return view('recupera_senha');
+		}
 	}
 
 	//Gera imagem

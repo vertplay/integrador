@@ -14,6 +14,7 @@ class Clinica extends BaseController{
     public function index(){
         $session = session();
         if($session->has('id') && $session->get('id') != null && $session->get('tipo')=="clinica"){
+            $consulta = new ClinicaModel();
             return view('clinicas/perfil');
         }
         else{

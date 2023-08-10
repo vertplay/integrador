@@ -59,6 +59,10 @@ $routes->post('/pe/registro','Clinica::registrar');
 //logout
 $routes->post('/pe/logout','Clinica::logout');
 
+//recuperação de senha
+$routes->get('/recuperacao','Home::recupera_senha');
+$routes->post('/recuperacao','Home::recupera_senha');
+
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');
 /*
