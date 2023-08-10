@@ -1,9 +1,11 @@
-window.onload = function(){
-    alert("funcionou");
-}
+window.onload = function() {
+  var userform = document.getElementById("userform");
 
-function validarSenhaForte(senha) {
-    // verificar os critérios da senha
+  userform.onsubmit = function() {
+    
+    // Verificar os critérios da senha
+    var senha = document.getElementById("senha").value;
+
     const temNumero = /[0-9]/.test(senha);
     const temLetraMaiuscula = /[A-Z]/.test(senha);
     const temLetraMinuscula = /[a-z]/.test(senha);
@@ -17,7 +19,11 @@ function validarSenhaForte(senha) {
       temCaractereEspecial &&
       senha.length >= 8; // A senha precisa ter pelo menos 8 caracteres
   
-    return senhaValida;
-  }
-  
-  
+    if (!senhaValida) { 
+      alert("senha inválida");
+      return false; 
+    }
+
+    return true; 
+  } 
+}

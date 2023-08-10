@@ -1,10 +1,9 @@
-<?php $this->extend('layout')?>
-	<script src="<?=base_url("js/validarsenha.js") ?>"> </script>	
+<?php $this->extend('layout')?>	
 	<?=$this->section('content')?>
-
+    <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
-			<form action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">
+			<form id = "userform" action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">
                 <label for="login">Usuário</label><br>
                     <input type="text" name="login" id="login" required><br>
                 <label for="nome">Nome</label><br>
