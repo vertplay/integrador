@@ -1,3 +1,7 @@
+window.onload = function(){
+    alert("funcionou");
+}
+
 function validarSenhaForte(senha) {
     // verificar os critérios da senha
     const temNumero = /[0-9]/.test(senha);

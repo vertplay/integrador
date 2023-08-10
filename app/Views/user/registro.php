@@ -1,5 +1,5 @@
 <?php $this->extend('layout')?>
-		
+	<script src="<?=base_url("js/validarsenha.js") ?>"> </script>	
 	<?=$this->section('content')?>
 
         <div class="reg-form formularios">
