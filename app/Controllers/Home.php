@@ -49,16 +49,39 @@ class Home extends BaseController
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');
 		if($email != null){
+			date_default_timezone_set('America/Sao_Paulo');
+
 			echo 'sucesso';
+			$dadosclinica = new ClinicaModel();
+			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
+			
+			//echo time() .'<br>'.date('d/m/y - H:i:s',time());
+			//dd($dadosclinica);
+			$timehelper=time();
+			$tempodevalidade = 60*30; // 30 minutos
+			$datarec = date('y-m-d H:i:s',$timehelper);
+			
+			$validade = date('y-m-d H:i:s',$timehelper + $tempodevalidade);
+			//dd($dadosclinica);
+			$tiporec = 'pe';
+			$codigo = hash('md5', $email.$timehelper);
+			$mensagem = $codigo;
+
 			$mail = \Config\Services::email();
 			$mail->setFrom('');
 			$mail->setTO($email);
+			
 			/*$mail->setCC();
 			$mail->setBCC();*/
 
 			$mail->setSubject('teste');
-			$mail->SetMessage('testando');
-			$mail->send();
+			$mail->SetMessage($mensagem);
+
+			$inserir = new MainModel();
+			$resultado = $inserir->setCodeRecuperacao($dadosclinica['ID_clinica'], $codigo, $tiporec, $datarec, $validade);
+			
+
+			//$mail->send();
 			
 		}
 		else{

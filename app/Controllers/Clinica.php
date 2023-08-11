@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\UserModel;
@@ -45,6 +44,7 @@ class Clinica extends BaseController{
         
     }
     public function registrar(){
+        $email = $this->request->getPost('email');
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
         $nome = $this->request->getPost('nome');
@@ -57,6 +57,7 @@ class Clinica extends BaseController{
                 
                 
                 $parametros = [
+                    'email' => $email,
                     'login' => $login,
                     'senha' => $senha,
                     'nome' => $nome,
