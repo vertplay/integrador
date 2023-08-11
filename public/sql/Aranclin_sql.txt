@@ -21,8 +21,8 @@ CEP VARCHAR(8)
 
 CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-ID_usuario INTEGER,
-ID_clinica INTEGER,
+ID_usuario INTEGER DEFAULT NULL,
+ID_clinica INTEGER DEFAULT NULL,
 Codigo_recuperacao VARCHAR(50),
 Tipo_recuperacao CHAR(2),
 Validade_recuperacao DATETIME,

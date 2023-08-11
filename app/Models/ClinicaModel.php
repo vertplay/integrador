@@ -35,16 +35,16 @@ class ClinicaModel extends Model{
         $limit=1;
         $offset=0;
 
-        $this->builder->select('ID_usuario, Nome_usuario');
-        $query = $this->builder->getWhere(['Email_usuario' => $login, 'Senha_usaurio' => $senha], $limit, $offset)->getResultArray();
+        $this->builder->select('ID_clinica, Nome_fantasia_clinica');
+        $query = $this->builder->getWhere(['Email_clinica' => $login, 'Senha_clinica' => $senha], $limit, $offset)->getResultArray();
         $this->db->close();
         return $query;
     }
 
     public function getClinica($id) : array{
 		
-        $this->builder->select('ID_usuario, Nome_usuario');
-        $query = $this->builder->getWhere(['ID_usuario' => $id])->getResultArray();
+        $this->builder->select('ID_clinica, Nome_fantasia_clinica');
+        $query = $this->builder->getWhere(['ID_clinica' => $id])->getResultArray();
         $this->db->close();
         return $query;
 	}

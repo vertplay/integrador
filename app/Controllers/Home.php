@@ -70,7 +70,7 @@ class Home extends BaseController
 	public function img($id){
 		$img = new MainModel();
 		$imgdata = $img->pegaimg($id);
-		$this->response->setContentType($imgdata['imgtype']);
-		echo base64_decode($imgdata['img']);
+		$this->response->setContentType($imgdata['tipo_de_imagem_clinica']);
+		echo base64_decode($imgdata['foto_clinica']);
 	}
 }

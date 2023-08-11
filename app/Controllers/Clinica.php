@@ -39,6 +39,9 @@ class Clinica extends BaseController{
             $session->set('tipo', 'clinica');
             return redirect()->to(base_url());
         }
+        else{
+            //return redirect()->to(base_url());
+        }
         
     }
     public function registrar(){
@@ -73,7 +76,7 @@ class Clinica extends BaseController{
     }
     public function logout(){
         $session = session();
-        $array_items = ['id', 'nome', 'tipo'];
+        $array_items = ['ID_clinica', 'Nome_fantasia_clinica', 'tipo'];
         $session->remove($array_items);
         return redirect()->to(base_url());
     }
