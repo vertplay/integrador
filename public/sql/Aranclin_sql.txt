@@ -1,5 +1,3 @@
-CREATE DATABASE araclin;
-
 USE araclin;
 
 CREATE TABLE Usuario (
@@ -49,6 +47,7 @@ Whatsapp_clinica VARCHAR(15),
 Instagram_clinica VARCHAR(50),
 CNPJ CHAR(14),
 foto_clinica MEDIUMBLOB,
+tipo_de_imagem_clinica VARCHAR(40),
 Especialidade_clinica VARCHAR(200),
 Plano_saude_clinica VARCHAR(100),
 Convenio_clinica VARCHAR(100),
