@@ -5,7 +5,7 @@
 		<div id="index-center">
 		
 			<div id="index-text">
-				<h1>AraClín: Catálogo de Clínicas Médicas</h1>
+				<h1>AraClin: Catálogo de Clínicas Médicas</h1>
 				<h2>Seu guia confiável para cuidar da sua saúde!</h2>
 				<a href="#list">ENCONTRE UMA CLÍNICA</a>
 			</div>
