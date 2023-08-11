@@ -61,8 +61,8 @@ class Clinica extends BaseController{
                     'imgtype' => $img->getMimeType()
                 ];
 
-                $inserir = new UserModel();
-                $resultado = $inserir->novoUsuario($parametros);
+                $inserir = new ClinicaModel();
+                $resultado = $inserir->cadastrarClinica($parametros);
                 return redirect()->to(base_url());
             }
             else{

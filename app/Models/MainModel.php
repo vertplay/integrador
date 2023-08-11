@@ -8,8 +8,8 @@ class MainModel extends Model{
     public function list() : array{
         $db = \Config\Database::connect();
 		$dados = $db->query("
-		SELECT id, nome
-		FROM usuarios
+		SELECT ID_clinica, Nome_fantasia_clinica
+		FROM clinica
 		")->getResultArray();
 		$db->close();
         return $dados;
@@ -18,9 +18,9 @@ class MainModel extends Model{
 	public function pegaimg($id) : array{
 		$db = \Config\Database::connect();
 		$dados = $db->query("
-		SELECT img, imgtype
-		FROM usuario
-		WHERE id = $id")->getResultArray();
+		SELECT foto_clinica, tipo_de_imagem_clinica
+		FROM clinica
+		WHERE ID_clinica = $id")->getResultArray();
 		if(empty($dados)){
 			return 0;
 		}
