@@ -19,7 +19,7 @@ class MainModel extends Model{
 		$db = \Config\Database::connect();
 		$dados = $db->query("
 		SELECT img, imgtype
-		FROM usuarios
+		FROM usuario
 		WHERE id = $id")->getResultArray();
 		if(empty($dados)){
 			return 0;
