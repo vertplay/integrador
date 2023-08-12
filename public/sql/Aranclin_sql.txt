@@ -2,7 +2,7 @@ CREATE DATABASE araclin;
 
 USE araclin;
 
-CREATE TABLE Recuperação (
+CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY,
 ID_usuario INTEGER,
 ID_clinica INTEGER,
@@ -13,7 +13,7 @@ Status_recuperacao CHAR(1),
 Data_recuperacao DATETIME
 );
 
-CREATE TABLE avalia_avaliação (
+CREATE TABLE avalia_avaliacao (
 ID_avaliacao INTEGER PRIMARY KEY,
 ID_usuario INTEGER,
 ID_clinica INTEGER,
@@ -21,7 +21,7 @@ Texto_avaliacao TEXT,
 Nota_avaliacao DECIMAL(4)
 );
 
-CREATE TABLE clínica (
+CREATE TABLE clinica (
 ID_clinica INTEGER PRIMARY KEY,
 Forma_pagamento_clinica VARCHAR(100),
 Email_clinica VARCHAR(50),
@@ -41,7 +41,7 @@ Complemento VARCHAR(50),
 Descricao_clinica TEXT
 );
 
-CREATE TABLE médico (
+CREATE TABLE medico (
 ID_medico INTEGER PRIMARY KEY,
 Nome_medico VARCHAR(100),
 CRM_medico VARCHAR(12)
@@ -73,6 +73,6 @@ CEP VARCHAR(8)
 );
 
 ALTER TABLE Recuperação ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE Recuperação ADD FOREIGN KEY(ID_clinica) REFERENCES clínica (ID_clinica);
+ALTER TABLE Recuperação ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
 ALTER TABLE avalia_avaliação ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE avalia_avaliação ADD FOREIGN KEY(ID_clinica) REFERENCES clínica (ID_clinica);
+ALTER TABLE avalia_avaliação ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
