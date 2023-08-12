@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\UserModel;
@@ -39,9 +38,13 @@ class Clinica extends BaseController{
             $session->set('tipo', 'clinica');
             return redirect()->to(base_url());
         }
+        else{
+            //return redirect()->to(base_url());
+        }
         
     }
     public function registrar(){
+        $email = $this->request->getPost('email');
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
         $nome = $this->request->getPost('nome');
@@ -54,6 +57,7 @@ class Clinica extends BaseController{
                 
                 
                 $parametros = [
+                    'email' => $email,
                     'login' => $login,
                     'senha' => $senha,
                     'nome' => $nome,
@@ -61,8 +65,8 @@ class Clinica extends BaseController{
                     'imgtype' => $img->getMimeType()
                 ];
 
-                $inserir = new UserModel();
-                $resultado = $inserir->novoUsuario($parametros);
+                $inserir = new ClinicaModel();
+                $resultado = $inserir->cadastrarClinica($parametros);
                 return redirect()->to(base_url());
             }
             else{
@@ -73,7 +77,7 @@ class Clinica extends BaseController{
     }
     public function logout(){
         $session = session();
-        $array_items = ['id', 'nome', 'tipo'];
+        $array_items = ['ID_clinica', 'Nome_fantasia_clinica', 'tipo'];
         $session->remove($array_items);
         return redirect()->to(base_url());
     }

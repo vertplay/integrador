@@ -5,7 +5,7 @@
 		
 		
 			<div id="clin-block1" class="clin-block">
-				<div class="title"><?= $clin["nome"] ?></div>
+				<div class="title"><?= $clin["Nome_fantasia_clinica"] ?></div>
 				<div class="info">
 					<h3>Descrição:</h3>
 				<p>&nbsp;Nessa seção, o paciente ou responsável descobrirá, a partir da leitura, quais são as especialidades 
@@ -13,7 +13,7 @@
 					Além disso, poderá visualizar imagens do exterior e interior do estabelecimento.</p>
 				</div>
 				<div id="album-block-img">
-					<img src="<?= base_url('/img/'.$clin["id"])?>"/>
+					<img src="<?= base_url('/img/'.$clin["ID_clinica"])?>"/>
 				</div>
 				<div class="info">
 					<h3>Horário de Funcionamento:</h3>

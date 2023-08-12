@@ -38,19 +38,5 @@ class UserModel extends Model{
         $db->close();
         return $dados->getResultArray();
 	}
-    //Musicas do usuario| Perfil
-	public function GetMusicas($id) : array{
-        $parametros = [
-			'id_usuario' => $id
-		];
-        $db = \Config\Database::connect();
-        $dados = $db->query("
-			SELECT nome, arquivo 
-			FROM musicas
-			WHERE iduser = :id_usuario:
-			", $parametros);
-		$db->close();
-        return $dados->getResultArray();
-	}
 
 }

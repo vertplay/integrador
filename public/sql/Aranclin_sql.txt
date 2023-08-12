@@ -1,7 +1,9 @@
+CREATE DATABASE araclin;
+
 USE araclin;
 
 CREATE TABLE Usuario (
-ID_usuario INTEGER PRIMARY KEY,
+ID_usuario INTEGER PRIMARY KEY AUTO_INCREMENT,
 Nome_usuario VARCHAR(100),
 Senha_usaurio VARCHAR(50),
 CPF_usuario VARCHAR(11),
@@ -18,9 +20,9 @@ CEP VARCHAR(8)
 );
 
 CREATE TABLE Recuperacao (
-ID_recuperacao INTEGER PRIMARY KEY,
-ID_usuario INTEGER,
-ID_clinica INTEGER,
+ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_usuario INTEGER DEFAULT NULL,
+ID_clinica INTEGER DEFAULT NULL,
 Codigo_recuperacao VARCHAR(50),
 Tipo_recuperacao CHAR(2),
 Validade_recuperacao DATETIME,
@@ -30,7 +32,7 @@ FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario)
 );
 
 CREATE TABLE avalia_avaliacao (
-ID_avaliacao INTEGER PRIMARY KEY,
+ID_avaliacao INTEGER PRIMARY KEY AUTO_INCREMENT,
 ID_usuario INTEGER,
 ID_clinica INTEGER,
 Texto_avaliacao TEXT,
@@ -39,9 +41,10 @@ FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario)
 );
 
 CREATE TABLE clinica (
-ID_clinica INTEGER PRIMARY KEY,
+ID_clinica INTEGER PRIMARY KEY AUTO_INCREMENT,
 Forma_pagamento_clinica VARCHAR(100),
 Email_clinica VARCHAR(50),
+Senha_clinica VARCHAR(50),
 Telefone_clinica VARCHAR(15),
 Whatsapp_clinica VARCHAR(15),
 Instagram_clinica VARCHAR(50),
@@ -60,7 +63,7 @@ Descricao_clinica TEXT
 );
 
 CREATE TABLE medico (
-ID_medico INTEGER PRIMARY KEY,
+ID_medico INTEGER PRIMARY KEY AUTO_INCREMENT,
 Nome_medico VARCHAR(100),
 CRM_medico VARCHAR(12)
 );

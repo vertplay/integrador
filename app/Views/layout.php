@@ -45,13 +45,13 @@
 	<body>
 		<!--MENU-->
 		<nav id="menu-bar">
-			<a id="home-link" href="<?=base_url()?>">AraClín</a>
+			<a id="home-link" href="<?=base_url()?>"> AraClin</a>
 			
 			<!--BARRA DE PESQUISA-->
 			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->
 			
 			<?php
-				if($session->has('id') && $session->get('id') != null){
+				if($session->has('ID_clinica') && $session->get('Nome_fantasia_clinica') != null){
 					echo '
 					<div id="btn-group">
 						<a href="'.base_url('pe/perfil').'" id="menu-btn-emp">Perfil</a>

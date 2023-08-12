@@ -5,7 +5,7 @@
 		<div id="index-center">
 		
 			<div id="index-text">
-				<h1>AraClín: Catálogo de Clínicas Médicas</h1>
+				<h1>AraClin: Catálogo de Clínicas Médicas</h1>
 				<h2>Seu guia confiável para cuidar da sua saúde!</h2>
 				<a href="#list">ENCONTRE UMA CLÍNICA</a>
 			</div>
@@ -17,10 +17,10 @@
 			
 			<?php foreach($dados as $dado){ ?>
 
-				<a class="container-blocks" href="<?=base_url('/clinica/'.$dado['id'])?>">
-					<img src="<?=base_url('/img/'.$dado['id'])?>"/>
+				<a class="container-blocks" href="<?=base_url('/clinica/'.$dado['ID_clinica'])?>">
+					<img src="<?=base_url('/img/'.$dado['ID_clinica'])?>"/>
 					<div class="container-block-text">
-						<?=$dado['nome']?>
+						<?=$dado['Nome_fantasia_clinica']?>
 						<div class="block-text-sub">Saiba Mais</div>
 					</div>
 					<div class="container-block-text2">
