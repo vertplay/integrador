@@ -86,7 +86,7 @@ class Home extends BaseController
 		}
 		else{
 			$codigo = $this->request->getGet('cod');
-			if(!is_null($codigo)){
+			if(!is_null($codigo) && $codigo != "" && strlen($codigo)==32){
 				return view('form_trocar_senha',array($codigo));
 			}
 			else{
