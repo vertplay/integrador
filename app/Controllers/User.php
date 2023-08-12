@@ -52,4 +52,40 @@ class User extends BaseController{
             }
         }
     }
+
+    public function processar_cadastro() {
+        $this->load->model('User_model');
+
+        $cpf = $this->input->post('cpf');
+        $nome_completo = $this->input->post('nome_completo');
+
+        $existing_data = $this->User_model->check_existing_data($cpf, $nome_completo);
+
+        if (!empty($existing_data)) {
+            $error_message = '';
+            foreach ($existing_data as $row) {
+                if ($row['CPF_usuario'] == $cpf) {
+                    $error_message .= 'CPF já cadastrado. ';
+                }
+                if ($row['Nome_usuario'] == $nome_completo) {
+                    $error_message .= 'Nome de Usuário já cadastrado.';
+                }
+            }
+
+            $this->session->set_flashdata('error_message', $error_message);
+            redirect('cliente/cadastrar');
+        } else {
+            $data = array(
+                'CPF_usuario' => $cpf,
+                'Nome_usuario' => $nome_completo,
+                // Outros campos do formulário aqui...
+            );
+
+            $user_id = $this->User_model->insert_user($data);
+            $this->session->set_flashdata('success_message', 'Usuário cadastrado com sucesso. ID: ' . $user_id);
+            redirect('cliente/cadastrar');
+        }
+    }
+
+
 }

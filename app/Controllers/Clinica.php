@@ -82,6 +82,7 @@ class Clinica extends BaseController{
         return redirect()->to(base_url());
     }
 
+    //Thiago parte
     public function processo_do_cadastro() {
         $this->load->model('Clinica_model');
 

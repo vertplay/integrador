@@ -39,4 +39,18 @@ class UserModel extends Model{
         return $dados->getResultArray();
 	}
 
+
+    //THIAGO PARTE 
+    public function inserir_usuario($dados) {
+        $this->db->insert('usuario', $dados);
+        return $this->db->insert_id();
+    }
+
+    public function check_usuario($cpf, $nome_completo) {
+        $this->db->where('CPF_usuario', $cpf);
+        $this->db->or_where('Nome_usuario', $nome_completo);
+        $query = $this->db->get('usuario');
+        return $query->result_array();  //AQui retornara com os arry com os registros
+    }
+
 }
