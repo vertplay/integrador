@@ -40,4 +40,17 @@
 	    	</form>
 		</div>
 
+    <?php if ($this->session->flashdata('error_message')): ?>
+        <div class="error-message">
+            <?php echo $this->session->flashdata('error_message'); ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($this->session->flashdata('success_message')): ?>
+        <div class="success-message">
+            <?php echo $this->session->flashdata('success_message'); ?>
+        </div>
+    <?php endif; ?>
+
+
     <?=$this->endSection()?>

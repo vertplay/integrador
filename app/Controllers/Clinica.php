@@ -86,17 +86,35 @@ class Clinica extends BaseController{
         $this->load->model('Clinica_model');
 
         $dados = array(
-            // Receber os dados do formulário
+            'CNPJ' => $this->input->post('cnpj'),
+            'Nome_fantasia_clinica' => $this->input->post('nome_fantasia'),
+            'foto_clinica' => '', // vert aqui
+            'Descricao_clinica' => $this->input->post('descricao'),
+            'Logradouro' => $this->input->post('logradouro'),
+            'Numero' => $this->input->post('numero'),
+            'Complemento' => $this->input->post('complemento'),
+            'Bairro' => $this->input->post('bairro'),
+            'CEP' => $this->input->post('cep'),
+            'Forma_pagamento_clinica' => $this->input->post('forma_pagamento'),
+            'Email_clinica' => $this->input->post('email_clinica'),
+            'Senha_clinica' => $this->input->post('senha_clinica'),
+            'Telefone_clinica' => $this->input->post('telefone_clinica'),
+            'Whatsapp_clinica' => $this->input->post('whatsapp_clinica'),
+            'Instagram_clinica' => $this->input->post('instagram_clinica'),
+            'Especialidade_clinica' => $this->input->post('especialidade_clinica'),
+            'Plano_saude_clinica' => $this->input->post('plano_saude_clinica'),
+            'Convenio_clinica' => $this->input->post('convenio_clinica')
         );
 
         $cnpj = $dados['CNPJ'];
 
         if ($this->Clinica_model->checkclinica($cnpj)) {
-            // A clínica já está cadastrada
-            // Exibir mensagem de erro
+            $this->session->set_flashdata('error_message', 'A clínica já está cadastrada.');
+            redirect('clinica/cadastrar');
         } else {
             $clinica_id = $this->Clinica_model->inserir_clinica($dados);
-            // Exibir mensagem de sucesso
+            $this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
+            redirect('clinica/cadastrar'); 
         }
     }
 }
