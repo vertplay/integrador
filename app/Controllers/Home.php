@@ -75,7 +75,7 @@ class Home extends BaseController
 			$mail->setTO($email);
 			/*$mail->setCC();
 			$mail->setBCC();*/
-			$mail->setSubject('Recuperção de senha');
+			$mail->setSubject('Recuperação de senha');
 			$mail->SetMessage($mensagem);
 
 			

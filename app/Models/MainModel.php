@@ -48,29 +48,26 @@ class MainModel extends Model{
 		return $dados;
 	}
 		
-}
+
 	public function setCodeRecuperacao($id, $codigo, $tipo, $datarec, $validade){
 		$dados;
 		if($tipo == 'pe'){
 			$dados = [
-				
-				
 				'ID_clinica '       		=> $id,
 				'Codigo_recuperacao'        => $codigo,
-				'Tipo_recuperacao'        => $tipo,
+				'Tipo_recuperacao'        	=> $tipo,
 				'Validade_recuperacao'		=> $validade,
 				'Status_recuperacao'		=> '0', //0 = não utilizado, 1 = utilizado
 				'Data_recuperacao' 			=> $datarec
 			];
 		}else{
 			$dados = [
-				'ID_recuperacao '          => new RawSql('DEFAULT'),
 				'ID_usuario '       		=> $id,
 				'Codigo_recuperacao'        => $codigo,
 				'Tipo_recuperacaote'        => $tipo,
-				'Validade_recuperacao'		=> '',
-				'Status_recuperacao'		=> '',
-				'Data_recuperacao' => new RawSql('CURRENT_TIMESTAMP()'),
+				'Validade_recuperacao'		=> $validade,
+				'Status_recuperacao'		=> '0',
+				'Data_recuperacao' => $datarec
 			];
 		}
 		
@@ -84,5 +81,5 @@ class MainModel extends Model{
         //$this->db->close();
         //return $query;
 	}	
-
+}
 

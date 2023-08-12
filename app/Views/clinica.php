@@ -53,12 +53,13 @@
 
 				</div>
 				<div class="info">
-        <h3>Nota e Avaliações:</h3>
-        <p>
-            <!-- Exibir notas e avaliações aqui -->
-        </p>
+					<h3>Nota e Avaliações:</h3>
+					<p>
+						<!-- Exibir notas e avaliações aqui -->
+					</p>
 
-    	</div>
+    			</div>
+			</div>
 
 			
 	<?=$this->endSection()?>
