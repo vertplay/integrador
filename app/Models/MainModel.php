@@ -3,6 +3,7 @@
 use CodeIgniter\Model;
 
 class MainModel extends Model{
+	protected $db, $builder;
 
 	public function list() : array {
 		$db = \Config\Database::connect();
@@ -48,4 +49,40 @@ class MainModel extends Model{
 	}
 		
 }
+	public function setCodeRecuperacao($id, $codigo, $tipo, $datarec, $validade){
+		$dados;
+		if($tipo == 'pe'){
+			$dados = [
+				
+				
+				'ID_clinica '       		=> $id,
+				'Codigo_recuperacao'        => $codigo,
+				'Tipo_recuperacao'        => $tipo,
+				'Validade_recuperacao'		=> $validade,
+				'Status_recuperacao'		=> '0', //0 = não utilizado, 1 = utilizado
+				'Data_recuperacao' 			=> $datarec
+			];
+		}else{
+			$dados = [
+				'ID_recuperacao '          => new RawSql('DEFAULT'),
+				'ID_usuario '       		=> $id,
+				'Codigo_recuperacao'        => $codigo,
+				'Tipo_recuperacaote'        => $tipo,
+				'Validade_recuperacao'		=> '',
+				'Status_recuperacao'		=> '',
+				'Data_recuperacao' => new RawSql('CURRENT_TIMESTAMP()'),
+			];
+		}
+		
+		
+		$this->builder->insert($dados);
+
+
+
+		//$this->builder->select('ID_clinica, Nome_fantasia_clinica');
+        //$query = $this->builder->getWhere(['Email_clinica' => $login, 'Senha_clinica' => $senha], $limit, $offset)->getResultArray();
+        //$this->db->close();
+        //return $query;
+	}	
+
 

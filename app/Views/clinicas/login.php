@@ -5,7 +5,7 @@
         <div class="login-form formularios">
             <h2>Log In</h2>
 			<form action="<?=base_url('pe/login')?>" method="POST" enctype="multipart/form-data">
-                <label for="login">CNPJ</label><br>
+                <label for="login">Email</label><br>
                     <input type="text" name="login" id="login" required><br>
                 <label for="senha">Senha</label><br>
                     <input type="password" name="senha" id="senha" required><br>

@@ -6,7 +6,14 @@ class ClinicaModel extends Model{
     protected $db, $builder;
 
     public function __construct(){
+        
+
+
         $this->db      = \Config\Database::connect();
+
+        //$maxp = $this->db->query( 'SELECT @@global.max_allowed_packet' );
+        //$this->db->query( 'SET @@global.max_allowed_packet = ' . 500 * 1024 * 1024 );
+
         $this->builder = $this->db->table('clinica');
     }
 
@@ -17,7 +24,7 @@ class ClinicaModel extends Model{
         $dados = $this->db->query('
             INSERT INTO clinica
             (Email_clinica, Senha_clinica, Nome_fantasia_clinica, foto_clinica, tipo_de_imagem_clinica)
-            VALUES(:login:, :senha:, :nome:, ":img:", :imgtype:)
+            VALUES(:email:, :senha:, :nome:, ":img:", :imgtype:)
             ', $parametros);
         if($dados){
             $erros[] .= "sucesso";
@@ -48,4 +55,10 @@ class ClinicaModel extends Model{
         $this->db->close();
         return $query;
 	}
+    public function getClinicaByEmail($email){
+        $this->builder->select('ID_clinica, Nome_fantasia_clinica');
+        $query = $this->builder->getWhere(['Email_clinica' => $email])->getResultArray();
+        $this->db->close();
+        return $query[0];
+    }
 }
