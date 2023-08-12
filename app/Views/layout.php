@@ -45,7 +45,7 @@
 	<body>
 		<!--MENU-->
 		<nav id="menu-bar">
-			<a id="home-link" href="<?=base_url()?>"> AraClin</a>
+			<a id="home-link" href="<?=base_url()?>">AraClin</a>
 			
 			<!--BARRA DE PESQUISA-->
 			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->

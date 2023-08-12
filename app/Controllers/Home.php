@@ -21,13 +21,11 @@ class Home extends BaseController
 		
 	}
 
-
 	//página de usuario/perfil
 	public function clinica($id){
 
 		$clin = new ClinicaModel();
 		$enviar["clin"] = $clin->getClinica($id);
-
 
 		if(empty($enviar["clin"])){
 			return view('errors/html/error_404');
@@ -43,9 +41,11 @@ class Home extends BaseController
 	public function login(){
 		return view('user/login');
 	}
+	
 	public function registro(){
 		return view('user/registro');
 	}
+
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');
 		if($email != null){
@@ -56,36 +56,43 @@ class Home extends BaseController
 			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
 			
 			//echo time() .'<br>'.date('d/m/y - H:i:s',time());
-			//dd($dadosclinica);
+
 			$timehelper=time();
 			$tempodevalidade = 60*30; // 30 minutos
 			$datarec = date('y-m-d H:i:s',$timehelper);
 			
 			$validade = date('y-m-d H:i:s',$timehelper + $tempodevalidade);
-			//dd($dadosclinica);
+			
 			$tiporec = 'pe';
 			$codigo = hash('md5', $email.$timehelper);
-			$mensagem = $codigo;
-
-			$mail = \Config\Services::email();
-			$mail->setFrom('');
-			$mail->setTO($email);
-			
-			/*$mail->setCC();
-			$mail->setBCC();*/
-
-			$mail->setSubject('teste');
-			$mail->SetMessage($mensagem);
+			$mensagem = '<a href="'.base_url('/recuperacao?cod='.$codigo).'">Alterar senha</a>';
 
 			$inserir = new MainModel();
 			$resultado = $inserir->setCodeRecuperacao($dadosclinica['ID_clinica'], $codigo, $tiporec, $datarec, $validade);
+
+			$mail = \Config\Services::email();
+			$mail->setFrom('Araclin');
+			$mail->setTO($email);
+			/*$mail->setCC();
+			$mail->setBCC();*/
+			$mail->setSubject('Recuperação de senha');
+			$mail->SetMessage($mensagem);
+
+			
 			
 
-			//$mail->send();
+			$mail->send();
 			
 		}
 		else{
-			return view('recupera_senha');
+			$codigo = $this->request->getGet('cod');
+			if(!is_null($codigo) && $codigo != "" && strlen($codigo)==32){
+				return view('form_trocar_senha',array($codigo));
+			}
+			else{
+				return view('recupera_senha');
+			}
+			
 		}
 	}
 

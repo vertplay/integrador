@@ -10,7 +10,7 @@ class ClinicaModel extends Model{
 
 
         $this->db      = \Config\Database::connect();
-
+        //aumentar tamanho limite de upload em caso de falha com imagem mais "pesada"
         //$maxp = $this->db->query( 'SELECT @@global.max_allowed_packet' );
         //$this->db->query( 'SET @@global.max_allowed_packet = ' . 500 * 1024 * 1024 );
 
