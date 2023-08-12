@@ -37,6 +37,17 @@ class ClinicaModel extends Model{
         return $erros;
     }
 
+    public function inserir_clinica($dados) {
+        $this->db->insert('clinica', $dados);
+        return $this->db->insert_id();
+    }
+
+    public function checkclinica($cnpj) {
+        $this->db->where('CNPJ', $cnpj);
+        $query = $this->db->get('clinica');
+        return $query->num_rows() > 0;
+    }
+
     public function login($login, $senha) : array{
         
         $limit=1;

@@ -81,4 +81,22 @@ class Clinica extends BaseController{
         $session->remove($array_items);
         return redirect()->to(base_url());
     }
+
+    public function processo_do_cadastro() {
+        $this->load->model('Clinica_model');
+
+        $dados = array(
+            // Receber os dados do formulário
+        );
+
+        $cnpj = $dados['CNPJ'];
+
+        if ($this->Clinica_model->checkclinica($cnpj)) {
+            // A clínica já está cadastrada
+            // Exibir mensagem de erro
+        } else {
+            $clinica_id = $this->Clinica_model->inserir_clinica($dados);
+            // Exibir mensagem de sucesso
+        }
+    }
 }
