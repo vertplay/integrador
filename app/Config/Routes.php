@@ -34,6 +34,8 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//página de pesquisa
+$routes->get('/pesquisar', 'Pesquisa::index');
 
 //pagina da clinica
 $routes->get('/clinica/(:num)','Home::clinica/$1');

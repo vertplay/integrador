@@ -2,8 +2,6 @@
 		
 	<?=$this->section('content')?>
 		
-		
-		
 			<div id="clin-block1" class="clin-block">
 				<div class="title"><?= $clin["Nome_fantasia_clinica"] ?></div>
 				<div class="info">
@@ -44,7 +42,6 @@
 				</div>
 			</div>
 
-
 			<div id="clin-block2" class="clin-block">
 				<div class="info">
 					<h3>Endereço:</h3>
@@ -56,12 +53,14 @@
 
 				</div>
 				<div class="info">
-					<h3>Nota e Avaliações:</h3>
-					<p>
-					notas....</p>
-					
-				</div>
-			</div>
+        <h3>Nota e Avaliações:</h3>
+        <p>
+            <!-- Exibir notas e avaliações aqui -->
+        </p>
+
+    	</div>
+
+			
 	<?=$this->endSection()?>
 		
 		

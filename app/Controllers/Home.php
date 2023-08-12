@@ -21,13 +21,11 @@ class Home extends BaseController
 		
 	}
 
-
 	//página de usuario/perfil
 	public function clinica($id){
 
 		$clin = new ClinicaModel();
 		$enviar["clin"] = $clin->getClinica($id);
-
 
 		if(empty($enviar["clin"])){
 			return view('errors/html/error_404');
@@ -43,9 +41,11 @@ class Home extends BaseController
 	public function login(){
 		return view('user/login');
 	}
+	
 	public function registro(){
 		return view('user/registro');
 	}
+
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');
 		if($email != null){
