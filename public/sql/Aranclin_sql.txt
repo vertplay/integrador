@@ -3,7 +3,7 @@ CREATE DATABASE araclin;
 USE araclin;
 
 CREATE TABLE Recuperacao (
-ID_recuperacao INTEGER PRIMARY KEY,
+ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
 ID_usuario INTEGER,
 ID_clinica INTEGER,
 Codigo_recuperacao BIGINT(50),
@@ -14,7 +14,7 @@ Data_recuperacao DATETIME
 );
 
 CREATE TABLE avalia_avaliacao (
-ID_avaliacao INTEGER PRIMARY KEY,
+ID_avaliacao INTEGER PRIMARY KEY AUTO_INCREMENT,
 ID_usuario INTEGER,
 ID_clinica INTEGER,
 Texto_avaliacao TEXT,
@@ -22,7 +22,7 @@ Nota_avaliacao DECIMAL(4)
 );
 
 CREATE TABLE clinica (
-ID_clinica INTEGER PRIMARY KEY,
+ID_clinica INTEGER PRIMARY KEY AUTO_INCREMENT,
 Forma_pagamento_clinica VARCHAR(100),
 Email_clinica VARCHAR(50),
 Senha_clinica VARCHAR(50),
@@ -44,7 +44,7 @@ Descricao_clinica TEXT
 );
 
 CREATE TABLE medico (
-ID_medico INTEGER PRIMARY KEY,
+ID_medico INTEGER PRIMARY KEY AUTO_INCREMENT,
 Nome_medico VARCHAR(100),
 CRM_medico VARCHAR(12)
 );
@@ -55,7 +55,7 @@ ID_clinica INTEGER
 );
 
 CREATE TABLE Usuario (
-ID_usuario INTEGER PRIMARY KEY,
+ID_usuario INTEGER PRIMARY KEY AUTO_INCREMENT,
 Nome_usuario VARCHAR(100),
 Nome_completo_usuario VARCHAR(100),
 Senha_usuario VARCHAR(50),
