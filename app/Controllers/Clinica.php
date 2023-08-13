@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\ClinicaModel;
-//use CodeIgniter\Session\Session;
+use CodeIgniter\Session\Session;
 
 class Clinica extends BaseController{
     protected $session;
@@ -134,10 +134,14 @@ class Clinica extends BaseController{
             'whatsapp' => $whatsapp,
             'instagram' => $instagram
         );
-        $cnpj = $dados['cnpj'];
+        
+        $parametros = array(
+            'cnpj' =>$cnpj,
+            'email' =>$email
+        );
 
         $consulta = new ClinicaModel();
-        $possui_clinica = $consulta->checkclinica($cnpj);
+        $possui_clinica = $consulta->checkclinica($parametros);
         
         if ($possui_clinica) {
             $this->session->setFlashdata('error_message', 'A clínica já está cadastrada.');
