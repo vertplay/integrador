@@ -11,6 +11,7 @@
                     <input type="text" name="nome_fantasia" id="nome_fantasia" required><br>
                 <label for="senha_clinica">Senha</label><br>
                     <input type="password" name="senha_clinica" id="senha_clinica" required><br>
+                    <div id="alerta_senha"></div>
                     <input type="file" name="arquivo" required><br>
                 <!--Informações-->
                 <label for="informacoes" class="sub_bloco-titulo">Info</label>
