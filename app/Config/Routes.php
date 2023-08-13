@@ -58,8 +58,9 @@ $routes->post('/pp/registro','User::registro');
 $routes->get('/pe/registro','Clinica::registro');
 $routes->post('/pe/registro','Clinica::processo_do_cadastro');
 
+//erro registro
 
-
+$routes->get('/pe/erro','Clinica::erro');
 
 //logout
 $routes->post('/pe/logout','Clinica::logout');

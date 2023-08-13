@@ -1,7 +1,8 @@
 <?php $this->extend('layout')?>
-		
+	
+
 	<?=$this->section('content')?>
-    <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
+    <!-- <script src="<//?=base_url("js/validarsenha.js") ?>"> </script> -->'
     <script src="<?=base_url("js/mostrasenha.js") ?>"> </script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
