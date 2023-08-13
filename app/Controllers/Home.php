@@ -95,6 +95,13 @@ class Home extends BaseController
 		$codigo = $this->request->getPost('Enviar');
 		$senha = $this->request->getPost('senha');
 		$confirmSenha = $this->request->getPost('confirmsenha');
+
+		$home = new MainModel();
+		if($senha === $confirmSenha){
+			$link = $home->redefine_senha($senha, $codigo);
+			return redirect()->to(base_url("$link/login"));
+		}
+
 	}
 
 	//Gera imagem
