@@ -84,18 +84,24 @@ class Clinica extends BaseController{
 
     //Thiago parte
     public function processo_do_cadastro(){
-        $cnpj = $this->request->getPost('login');
-        $nome_fantasia = $this->request->getPost('nome');
-        $senha = $this->request->getPost('senha');
+        $cnpj = $this->request->getPost('cnpj');
+        $nome_fantasia = $this->request->getPost('nome_fantasia');
+        $senha = $this->request->getPost('senha_clinica');
         $img = $this->request->getFile('arquivo');
-        $logradouro = $this->request->getPost('endereco');
+        $logradouro = $this->request->getPost('logradouro');
+        $forma_pagamento = $this->request->getPost('forma_pagamento');
+        $especialidade = $this->request->getPost('especialidade_clinica');
+        $plano_saude = $this->request->getPost('forma_pagamento');
+        $convenio = $this->request->getPost('convenio_clinica');
+        $descricao = $this->request->getPost('descricao');
+        $cep = $this ->request->getPost('cep');
         $bairro = $this->request->getPost('bairro');
         $numero = $this->request->getPost('numero');
         $complemento = $this->request->getPost('complemento');
-        $email = $this->request->getPost('email');
-        $telefone = $this->request->getPost('telefone');
-        $whatsapp = $this->request->getPost('whatsapp');
-        $instagram = $this->request->getPost('instagram');
+        $email = $this->request->getPost('email_clinica');
+        $telefone = $this->request->getPost('telefone_clinica');
+        $whatsapp = $this->request->getPost('whatsapp_clinica');
+        $instagram = $this->request->getPost('instagram_clinica');
 
         $dados =array(
             'cnpj' => $cnpj,
@@ -104,6 +110,12 @@ class Clinica extends BaseController{
             'img' => base64_encode(file_get_contents($img)),
             'imgtype' => $img->getMimeType(),
             'logradouro' => $logradouro,
+            'forma_pagamento' => $forma_pagamento,
+            'especialidade' => $especialidade,
+            'plano_saude' => $plano_saude,
+            'convenio' => $convenio,
+            'descricao' => $descricao,
+            'cep' => $cep,
             'bairro' => $bairro,
             'numero' => $numero,
             'complemento' => $complemento,
