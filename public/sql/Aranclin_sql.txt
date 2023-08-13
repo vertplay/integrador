@@ -4,8 +4,8 @@ USE araclin;
 
 CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-ID_usuario INTEGER NOT NULL,
-ID_clinica INTEGER NOT NULL,
+ID_usuario INTEGER DEFAULT NULL,
+ID_clinica INTEGER DEFAULT NULL,
 Codigo_recuperacao BIGINT(50) NOT NULL,
 Tipo_recuperacao CHAR(2) NOT NULL,
 Validade_recuperacao DATETIME NOT NULL,
@@ -18,7 +18,7 @@ ID_avaliacao INTEGER PRIMARY KEY AUTO_INCREMENT,
 ID_usuario INTEGER NOT NULL,
 ID_clinica INTEGER NOT NULL,
 Texto_avaliacao TEXT NOT NULL,
-Nota_avaliacao DECIMAL(4) NOT NULL
+Nota_avaliacao FLOAT NOT NULL
 );
 
 CREATE TABLE clinica (
@@ -72,7 +72,7 @@ Bairro VARCHAR(40),
 CEP VARCHAR(8)
 );
 
-ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
-ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
+ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON DELETE CASCADE ON UPDATE CASCADE;

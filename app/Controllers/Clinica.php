@@ -97,7 +97,7 @@ class Clinica extends BaseController{
         $logradouro = $this->request->getPost('logradouro');
         $forma_pagamento = $this->request->getPost('forma_pagamento');
         $especialidade = $this->request->getPost('especialidade_clinica');
-        $plano_saude = $this->request->getPost('forma_pagamento');
+        $plano_saude = $this->request->getPost('plano_saude_clinica');
         $convenio = $this->request->getPost('convenio_clinica');
         $descricao = $this->request->getPost('descricao');
         $cep = $this ->request->getPost('cep');
@@ -134,7 +134,7 @@ class Clinica extends BaseController{
         $cnpj = $dados['cnpj'];
         $consulta = new ClinicaModel();
         $possui_clinica = $consulta->checkclinica($cnpj);
-
+        
         if ($possui_clinica) {
             $this->session->set_flashdata('error_message', 'A clínica já está cadastrada.');
             return redirect()->to(base_url('/pe/registro'));
@@ -142,7 +142,7 @@ class Clinica extends BaseController{
             $inserir = new ClinicaModel();
             $resultado = $inserir->cadastrarClinica($dados);
             
-            $clinica_id = $this->Clinica_model->inserir_clinica($dados);
+            //$clinica_id = $this->clinicaModel->inserir_clinica($dados);
             //$this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
             
             return redirect()->to(base_url()); 
