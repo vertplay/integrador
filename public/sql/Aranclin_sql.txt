@@ -4,68 +4,68 @@ USE araclin;
 
 CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-ID_usuario INTEGER,
-ID_clinica INTEGER,
-Codigo_recuperacao BIGINT(50),
-Tipo_recuperacao CHAR(2),
-Validade_recuperacao DATETIME,
-Status_recuperacao CHAR(1),
-Data_recuperacao DATETIME
+ID_usuario INTEGER NOT NULL,
+ID_clinica INTEGER NOT NULL,
+Codigo_recuperacao BIGINT(50) NOT NULL,
+Tipo_recuperacao CHAR(2) NOT NULL,
+Validade_recuperacao DATETIME NOT NULL,
+Status_recuperacao CHAR(1) NOT NULL,
+Data_recuperacao DATETIME NOT NULL
 );
 
 CREATE TABLE avalia_avaliacao (
 ID_avaliacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-ID_usuario INTEGER,
-ID_clinica INTEGER,
-Texto_avaliacao TEXT,
-Nota_avaliacao DECIMAL(4)
+ID_usuario INTEGER NOT NULL,
+ID_clinica INTEGER NOT NULL,
+Texto_avaliacao TEXT NOT NULL,
+Nota_avaliacao DECIMAL(4) NOT NULL
 );
 
 CREATE TABLE clinica (
 ID_clinica INTEGER PRIMARY KEY AUTO_INCREMENT,
-Forma_pagamento_clinica VARCHAR(100),
-Email_clinica VARCHAR(50),
-Senha_clinica VARCHAR(50),
-Telefone_clinica VARCHAR(15),
+Forma_pagamento_clinica VARCHAR(100) NOT NULL,
+Email_clinica VARCHAR(50) NOT NULL,
+Senha_clinica VARCHAR(50) NOT NULL,
+Telefone_clinica VARCHAR(15) NOT NULL,
 Whatsapp_clinica VARCHAR(15),
 Instagram_clinica VARCHAR(50),
-CNPJ CHAR(14),
-foto_clinica MEDIUMBLOB,
-tipo_de_imagem_clinica VARCHAR(10),
-Especialidade_clinica VARCHAR(200),
-Plano_saude_clinica VARCHAR(100),
-Convenio_clinica VARCHAR(100),
-Nome_fantasia_clinica VARCHAR(100),
-Logradouro VARCHAR(50),
-Bairro VARCHAR(50),
-Numero VARCHAR(5),
+CNPJ CHAR(14) NOT NULL,
+foto_clinica MEDIUMBLOB NOT NULL,
+tipo_de_imagem_clinica VARCHAR(10) NOT NULL,
+Especialidade_clinica VARCHAR(200) NOT NULL,
+Plano_saude_clinica VARCHAR(100) NOT NULL,
+Convenio_clinica VARCHAR(100) NOT NULL,
+Nome_fantasia_clinica VARCHAR(100) NOT NULL,
+Logradouro VARCHAR(50) NOT NULL,
+Bairro VARCHAR(50) NOT NULL,
+Numero VARCHAR(5) NOT NULL,
 Complemento VARCHAR(50),
-Descricao_clinica TEXT
+Descricao_clinica TEXT NOT NULL
 );
 
 CREATE TABLE medico (
 ID_medico INTEGER PRIMARY KEY AUTO_INCREMENT,
-Nome_medico VARCHAR(100),
-CRM_medico VARCHAR(12)
+Nome_medico VARCHAR(100) NOT NULL,
+CRM_medico VARCHAR(12) NOT NULL
 );
 
 CREATE TABLE possui_vinculo (
-ID_medico INTEGER,
-ID_clinica INTEGER
+ID_medico INTEGER NOT NULL,
+ID_clinica INTEGER NOT NULL
 );
 
 CREATE TABLE Usuario (
 ID_usuario INTEGER PRIMARY KEY AUTO_INCREMENT,
-Nome_usuario VARCHAR(100),
-Nome_completo_usuario VARCHAR(100),
-Senha_usuario VARCHAR(50),
-CPF_usuario VARCHAR(11),
-Data_nascimento_usuario DATE,
-Genero_usuario CHAR(1),
-Email_usuario VARCHAR(50),
+Nome_usuario VARCHAR(100) NOT NULL,
+Nome_completo_usuario VARCHAR(100) NOT NULL,
+Senha_usuario VARCHAR(50) NOT NULL,
+CPF_usuario VARCHAR(11) NOT NULL,
+Data_nascimento_usuario DATE NOT NULL,
+Genero_usuario CHAR(1) NOT NULL,
+Email_usuario VARCHAR(50) NOT NULL,
 Whatsapp_usuario VARCHAR(15),
 Telefone_usuario VARCHAR(15),
-RG_usuario VARCHAR(13),
+RG_usuario VARCHAR(13) NOT NULL,
 Logradouro VARCHAR(50),
 Numero VARCHAR(10),
 Bairro VARCHAR(40),
