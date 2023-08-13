@@ -11,7 +11,7 @@ class Clinica extends BaseController{
 
     public function __construct() {
         $this->session = \Config\Services::session();
-        $this->clinicaModel = $clinicaModel;
+        $this->clinicaModel = new ClinicaModel();
     }
 
 

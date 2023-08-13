@@ -6,7 +6,7 @@ use CodeIgniter\Database\ConnectionInterface;
 class ClinicaModel extends Model{
     protected $db, $builder;
 
-    public function __construct(ConnectionInterface $db){
+    public function __construct(){
         
 
 
