@@ -3,12 +3,18 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\ClinicaModel;
+//use CodeIgniter\Session\Session;
 
 class Clinica extends BaseController{
+    protected $session;
+    protected $clinicaModel;
 
-    public function __construct(){
-        
+    public function __construct() {
+        $this->session = \Config\Services::session();
+        $this->clinicaModel = $clinicaModel;
     }
+
+
     
     public function index(){
         $session = session();
@@ -126,18 +132,22 @@ class Clinica extends BaseController{
         );
 
         $cnpj = $dados['cnpj'];
+        $consulta = new ClinicaModel();
+        $possui_clinica = $consulta->checkclinica($cnpj);
 
-        /*if ($this->Clinica_model->checkclinica($cnpj)) {
+        if ($possui_clinica) {
             $this->session->set_flashdata('error_message', 'A clínica já está cadastrada.');
-            redirect('clinica/cadastrar');
+            return redirect()->to(base_url('/pe/registro'));
         } else {
+            $inserir = new ClinicaModel();
+            $resultado = $inserir->cadastrarClinica($dados);
+            
             $clinica_id = $this->Clinica_model->inserir_clinica($dados);
-            $this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
-            redirect('clinica/cadastrar'); 
-        }*/
-        $inserir = new ClinicaModel();
-        $resultado = $inserir->cadastrarClinica($dados);
-        return redirect()->to(base_url());
+            //$this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
+            
+            return redirect()->to(base_url()); 
+        }
+       
     }
 
        

@@ -1,11 +1,12 @@
 <?php namespace App\Models;
 
 use CodeIgniter\Model;
+use CodeIgniter\Database\ConnectionInterface;
 
 class ClinicaModel extends Model{
     protected $db, $builder;
 
-    public function __construct(){
+    public function __construct(ConnectionInterface $db){
         
 
 
@@ -39,9 +40,8 @@ class ClinicaModel extends Model{
     }
 
     public function checkclinica($cnpj) {
-        $this->db->where('CNPJ', $cnpj);
-        $query = $this->db->get('clinica');
-        return $query->num_rows() > 0;
+        $query = $this->builder->where('CNPJ', $cnpj)->get();
+        return $query->getNumRows() > 0;
     }
 
     public function login($login, $senha) : array{
