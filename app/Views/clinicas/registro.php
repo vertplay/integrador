@@ -11,8 +11,8 @@
                 <label for="nome_fantasia">Nome Fantasia</label><br>
                     <input type="text" name="nome_fantasia" id="nome_fantasia" required><br>
                 <label for="senha_clinica">Senha</label><br>
-                    <input type="password" name="senha_clinica" id="senha_clinica" required><br>
-                    <button type="button" id="mostrar_senha">Mostrar Senha</button>
+                    <input type="password" name="senha_clinica" id="senha_clinica" required>
+                    <button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
                     <div id="alerta_senha"></div>
                     <input type="file" name="arquivo" required><br>
                 <!--Informações-->
