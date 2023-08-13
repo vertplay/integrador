@@ -288,6 +288,9 @@ body{
 		margin-top:calc(-350px + 30px);*/
 	}
 }
+#list{
+	min-height:80vh;
+}
 /*.container-blocks:hover .container-block-text{
 	height:80px;
 	margin-top:-80px;
