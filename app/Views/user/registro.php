@@ -21,8 +21,11 @@
                 <div class="sub_bloco" id="informacoes">
                     <label for="data_nascimento">Data de nascimento</label>
                         <input type="date" name="data_nascimento" id="data_nascimento" required />
-                    <label for="genero">Genero</label>
-                        <input type="text" name="genero" id="genero" required/>
+                   <label>Gênero</label>
+                        <input type="radio" name="genero" id="genero_masculino" value="M" required>
+                        <label for="genero_masculino">Masculino</label>
+                        <input type="radio" name="genero" id="genero_feminino" value="F" required>
+                        <label for="genero_feminino">Feminino</label><br>
                     <label for="email">Email</label>
                         <input type="email" name="email" id="email" required/>
                     <label for="whatsapp">Whatsapp</label>
