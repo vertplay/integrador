@@ -12,7 +12,7 @@
                     <input type="text" name="nome_fantasia" id="nome_fantasia" required><br>
                 <label for="senha_clinica">Senha</label><br>
                     <input type="password" name="senha_clinica" id="senha_clinica" required><br>
-                    <button id="mostrar_senha">Mostrar Senha</button>
+                    <button type="button" id="mostrar_senha">Mostrar Senha</button>
                     <div id="alerta_senha"></div>
                     <input type="file" name="arquivo" required><br>
                 <!--Informações-->
