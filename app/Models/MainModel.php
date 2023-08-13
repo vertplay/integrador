@@ -5,8 +5,12 @@ use CodeIgniter\Model;
 class MainModel extends Model{
 	protected $db, $builder;
 
+	public function __construct(){
+		$this->db = \Config\Database::connect();
+	}
+
 	public function list() : array {
-		$db = \Config\Database::connect();
+		
 		$dados = $db->query("
 			SELECT c.ID_clinica, c.Nome_fantasia_clinica, AVG(a.Nota_avaliacao) AS Media_Avaliacao
 			FROM clinica c
@@ -70,7 +74,7 @@ class MainModel extends Model{
 				'Data_recuperacao' => $datarec
 			];
 		}
-		
+		$this->builder = $this->db->table('recuperacao');
 		
 		$this->builder->insert($dados);
 
@@ -80,6 +84,9 @@ class MainModel extends Model{
         //$query = $this->builder->getWhere(['Email_clinica' => $login, 'Senha_clinica' => $senha], $limit, $offset)->getResultArray();
         //$this->db->close();
         //return $query;
-	}	
+	}
+	public function redefine_senha($senha){
+		
+	}
 }
 

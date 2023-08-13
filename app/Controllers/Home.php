@@ -48,10 +48,9 @@ class Home extends BaseController
 
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');
-		if($email != null){
+		if($email != null || $email != ""){
 			date_default_timezone_set('America/Sao_Paulo');
 
-			echo 'sucesso';
 			$dadosclinica = new ClinicaModel();
 			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
 			
@@ -77,23 +76,25 @@ class Home extends BaseController
 			$mail->setBCC();*/
 			$mail->setSubject('Recuperação de senha');
 			$mail->SetMessage($mensagem);
-
-			
-			
-
 			$mail->send();
-			
+			return view('recuperacao/aviso_enviado');
 		}
 		else{
 			$codigo = $this->request->getGet('cod');
 			if(!is_null($codigo) && $codigo != "" && strlen($codigo)==32){
-				return view('form_trocar_senha',array($codigo));
+				$codigo = [ 'codigo' => $codigo];
+				return view('form_trocar_senha',$codigo);
 			}
 			else{
 				return view('recupera_senha');
 			}
 			
 		}
+	}
+	public function realizar_alteracao_de_senha(){
+		$codigo = $this->request->getPost('Enviar');
+		$senha = $this->request->getPost('senha');
+		$confirmSenha = $this->request->getPost('confirmsenha');
 	}
 
 	//Gera imagem

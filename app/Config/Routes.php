@@ -69,6 +69,8 @@ $routes->post('/pe/logout','Clinica::logout');
 $routes->get('/recuperacao','Home::recupera_senha');
 $routes->post('/recuperacao','Home::recupera_senha');
 
+$routes->post('/alterar_senha', 'Home::realizar_alteracao_de_senha');
+
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');
 /*
