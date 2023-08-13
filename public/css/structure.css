@@ -413,12 +413,24 @@ body{
 	font-family: 'garet';
 	font-size:20px;
 }
-.formularios  input{
+.formularios  input, .formularios textarea{
 	width:70%;
 	height:40px;
 	border-radius:6px;
 	margin:2px auto 10px auto;
 }
+.formularios textarea{
+	resize: none;
+	height:80px;
+}
+#alerta_senha{
+	width:70%;
+	height:20px;
+	margin:-5px auto 10px auto;
+	text-align:left;
+	color:red;
+}
+
 .formularios button[type=submit]{
 	width:90px;
 	height:30px;
@@ -451,6 +463,7 @@ body{
 	.reg-form button[type=submit]{
 		width:100px;
 	}
+
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;
