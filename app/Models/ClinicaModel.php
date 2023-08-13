@@ -21,7 +21,7 @@ class ClinicaModel extends Model{
         
         $erros = [];
 
-        $query = 'INSERT INTO clinica (CNPJ, Nome_fantasia_clinica, Senha_clinica, foto_clinica, Logradouro, Bairro, Numero, Complemento, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        $query = 'INSERT INTO clinica (CNPJ, Nome_fantasia_clinica, Senha_clinica, foto_clinica, Logradouro, Bairro, Numero, Complemento, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica) VALUES(:cnpj:, :nome:, :senha:, :img:, :logradouro:, :bairro:, :numero:, :complemento:, :email:, :telefone:, :whatsapp:, :instagram:);';
     
         $dados = $this->db->query($query, $parametros);
     
