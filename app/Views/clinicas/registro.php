@@ -2,6 +2,7 @@
 		
 	<?=$this->section('content')?>
     <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
+    <script src="<?=base_url("js/mostrasenha.js") ?>"> </script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
 			<form id= "userform"action="<?=base_url('pe/registro')?>" method="POST" enctype="multipart/form-data">
@@ -11,6 +12,7 @@
                     <input type="text" name="nome_fantasia" id="nome_fantasia" required><br>
                 <label for="senha_clinica">Senha</label><br>
                     <input type="password" name="senha_clinica" id="senha_clinica" required><br>
+                    <button id="mostrar_senha">Mostrar Senha</button>
                     <div id="alerta_senha"></div>
                     <input type="file" name="arquivo" required><br>
                 <!--Informações-->

@@ -1,7 +1,7 @@
 window.onload = function() {
+
   var userform = document.getElementById("userform");
-  userform.onsubmit = function() {
-    
+  registrar.onclick = function() {
     // Verificar os critérios da senha
     var senha = document.getElementById("senha_clinica").value;
 
@@ -25,8 +25,7 @@ window.onload = function() {
                               "- Deve conter pelo menos uma letra maiúscula<br>" +
                               "- Deve conter pelo menos uma letra minúscula<br>" +
                               "- Deve conter pelo menos um caractere especial<br>" +
-                              "- Deve ter no mínimo 8 caracteres";
-      scrollTo(0,0);                        
+                              "- Deve ter no mínimo 8 caracteres";                        
       return false; 
     }
 
