@@ -11,10 +11,6 @@ class Clinica extends BaseController{
 
     public function __construct() {
         $this->session = \Config\Services::session();
-<<<<<<< HEAD
-=======
-        $this->clinicaModel = new ClinicaModel();
->>>>>>> 3f9de394c3a276742c858c9aab3327254285f62b
     }
 
 
