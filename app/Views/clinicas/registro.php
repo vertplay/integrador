@@ -1,13 +1,11 @@
 <?php $this->extend('layout')?>
 	
-
 	<?=$this->section('content')?>
-        <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
-        <script src="<?=base_url("js/mostrasenha.js") ?>"> </script>
-        <script src="<?=base_url("js/campo_registro.js")?>"> </script> 
+        <script src="<?=base_url('js/validarsenha.js')?>"></script>
+        <script src="<?=base_url('js/mostrasenha.js')?>"></script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
-			<form id= "userform"action="<?=base_url('pe/registro')?>" method="POST" enctype="multipart/form-data">
+			<form id= "userform" action="<?=base_url('pe/registro')?>" method="POST" enctype="multipart/form-data">
                 <label for="cnpj">CNPJ</label><br>
                     <input type="text" name="cnpj" id="cnpj" required><br>
                     <div class="error-message"></div>
@@ -15,7 +13,7 @@
                     <input type="text" name="nome_fantasia" id="nome_fantasia" required><br>
                     <div class="error-message"></div>
                 <label for="senha_clinica">Senha</label><br>
-                    <input type="password" name="senha_clinica" id="senha_clinica" required>
+                    <input type="password" name="formsenha" id="formsenha" required>
                     <button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
                     <div id="alerta_senha"> </div>
                     <input type="file" name="arquivo" required><br>

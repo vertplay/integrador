@@ -96,7 +96,7 @@ class Clinica extends BaseController{
     public function processo_do_cadastro(){
         $cnpj = $this->request->getPost('cnpj');
         $nome_fantasia = $this->request->getPost('nome_fantasia');
-        $senha = $this->request->getPost('senha_clinica');
+        $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $logradouro = $this->request->getPost('logradouro');
         $forma_pagamento = $this->request->getPost('forma_pagamento');

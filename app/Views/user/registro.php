@@ -1,19 +1,22 @@
 <?php $this->extend('layout')?>	
 	<?=$this->section('content')?>
-    <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
+        <script src="<?=base_url('js/validarsenha.js')?>"></script>
+        <script src="<?=base_url('js/mostrasenha.js')?>"></script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
 			<form id = "userform" action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">
                 <label for="login">Usuário</label><br>
                     <input type="text" name="login" id="login" required><br>
-                <label for="nome">Nome</label><br>
+                <label for="nome_completo">Nome Completo</label><br>
                     <input type="text" name="nome" id="nome" required><br>
                 <label for="cpf">CPF</label><br>
                     <input type="text" name="cpf" id="cpf" required><br>
                 <label for="rg">RG</label><br>
                     <input type="text" name="rg" id="rg" required><br>        
                 <label for="senha">Senha</label><br>
-                    <input type="password" name="senha" id="senha" required><br>
+                    <input type="password" name="formsenha" id="formsenha" required>
+                    <button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
+                    <div id="alerta_senha"> </div>
                     <input type="file" name="arquivo" required><br>
 
                 <!--Informações-->    
@@ -37,22 +40,18 @@
                 <label for="endereco" class="sub_bloco-titulo">Endereço</label>
                 <div class="sub_bloco" id="endereco">
                     <label for="cep">Cep</label>
-                        <input type="text" name="cep" id="cep" required/>
-                        <div class="error-message"></div>
+                        <input type="text" name="cep" id="cep"/>
                     <label for="logradouro">Logradouro</label>
-                        <input type="text" name="logradouro" id="logradouro" required/>
-                        <div class="error-message"></div>
+                        <input type="text" name="logradouro" id="logradouro"/>
                     <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" id="bairro" required/>
-                        <div class="error-message"></div>
+                        <input type="text" name="bairro" id="bairro"/>
                     <label for="numero">Número</label>
-                        <input type="text" name="numero" id="numero" required/>
-                        <div class="error-message"></div>
+                        <input type="text" name="numero" id="numero"/>
                     <label for="complemento">Complemento</label>
                         <input type="text" name="complemento" id="complemento"/>
                 </div>    
                 <button type="submit" name="registrar">Entrar</button>
 	    	</form>
 		</div>
-
     <?=$this->endSection()?>
+                                
