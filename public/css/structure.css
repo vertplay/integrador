@@ -418,7 +418,7 @@ body{
 	width:70%;
 	height:40px;
 	border-radius:6px;
-	margin:2px auto 10px auto;
+	margin:2px 0 10px 0;
 	
 }
 .formularios textarea{
@@ -433,6 +433,13 @@ body{
 	margin:-5px auto 10px auto;
 	text-align:left;
 	color:red;
+}
+#mostrar_senha{
+	display:inline-block;
+	position:absolute;
+	margin-top:6.5px;
+	background:none;
+	border:0;
 }
 
 .formularios button[type=submit]{
