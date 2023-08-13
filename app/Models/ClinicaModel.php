@@ -7,6 +7,10 @@ class ClinicaModel extends Model{
     protected $db, $builder;
 
     public function __construct(){
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 3f9de394c3a276742c858c9aab3327254285f62b
 
         $this->db= \Config\Database::connect();
         //aumentar tamanho limite de upload em caso de falha com imagem mais "pesada"
