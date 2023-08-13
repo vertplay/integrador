@@ -37,9 +37,13 @@ class ClinicaModel extends Model{
     
     }
 
-    public function checkclinica($cnpj) {
-        $query = $this->db->query("SELECT * FROM clinica WHERE CNPJ = '$cnpj ';");
-        return $query->getNumRows() > 0;
+    public function checkclinica($parametros) {
+        $cnpj = $parametros['cnpj'];
+        $email = $parametros['email'];
+        
+        $query = "SELECT * FROM clinica WHERE CNPJ = '$cnpj' OR Email_clinica = '$email'";
+        $resultado = $this->db->query($query, $parametros);
+        return $resultado->getNumRows() > 0;
     }
 
     public function login($login, $senha) : array{

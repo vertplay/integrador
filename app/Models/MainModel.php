@@ -24,7 +24,7 @@ class MainModel extends Model{
 	
 	public function pegaimg($id) : array {
 		$db = \Config\Database::connect();
-		$dados = $db->query("
+		$dados = $this->db->query("
 			SELECT foto_clinica, tipo_de_imagem_clinica
 			FROM clinica
 			WHERE ID_clinica = $id
@@ -38,7 +38,7 @@ class MainModel extends Model{
 
 	public function pesquisar($termo) {
 		$db = \Config\Database::connect();
-		$dados = $db->query("
+		$dados = $this->db->query("
 			SELECT c.ID_clinica, c.Nome_fantasia_clinica, AVG(a.Nota_avaliacao) AS Media_Avaliacao
 			FROM clinica c
 			INNER JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
