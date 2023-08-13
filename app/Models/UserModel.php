@@ -10,9 +10,9 @@ class UserModel extends Model{
         $db = \Config\Database::connect();
     
         $dados = $db->query('
-            INSERT INTO usuarios
-            (login, senha, nome, img, imgtype)
-            VALUES(:login:, :senha:, :nome:, ":img:", :imgtype:)
+            INSERT INTO usuario
+            (Nome_usuario, Senha_usuario, Nome_completo_usuario)
+            VALUES(:login:, :senha:, :nome:)
             ', $parametros);
         if($dados){
             $erros[] .= "sucesso";
@@ -32,7 +32,7 @@ class UserModel extends Model{
         $db = \Config\Database::connect();
 		$dados = $db->query("
 			SELECT id, nome 
-			FROM usuarios
+			FROM usuario
 			WHERE id = :id_usuario:
 			", $parametros);
         $db->close();
@@ -40,11 +40,6 @@ class UserModel extends Model{
 	}
 
 
-    //THIAGO PARTE 
-    public function inserir_usuario($dados) {
-        $this->db->insert('usuario', $dados);
-        return $this->db->insert_id();
-    }
 
     public function check_usuario($cpf, $nome_completo) {
         $this->db->where('CPF_usuario', $cpf);

@@ -10,7 +10,7 @@
 <?php endif; ?>
 <?php if (session()->has('success_message')) : ?>
     <div class="alert alert-success">
-        <strong>Sucesso:</strong> <?= session('success_message') ?>
+        <strong></strong> <?= session('success_message') ?>
     </div>
 <?php endif; ?>
 	

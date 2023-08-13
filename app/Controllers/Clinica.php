@@ -161,8 +161,21 @@ class Clinica extends BaseController{
             $inserir = new ClinicaModel();
             $resultado = $inserir->cadastrarClinica($dados);
             $this->session->setFlashdata('success_message', 'A clínica foi cadastrada com sucesso.');
-            
-            return redirect()->to(base_url()); 
+            echo view('clinicas/erro');
+            echo '<div class="alert alert-success">A clínica foi cadastrada. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-success");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "A clínica foi cadastrada. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'";
+                     }
+                }, 1000);
+            </script>';
         }
        
     }
