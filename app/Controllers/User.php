@@ -53,6 +53,7 @@ class User extends BaseController{
         }
     }
 
+    //Thigo parte
     public function processar_cadastro() {
         $this->load->model('User_model');
 

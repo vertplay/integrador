@@ -43,7 +43,7 @@ class Clinica extends BaseController{
         }
         
     }
-    public function registrar(){
+   /* public function registrar(){
         $email = $this->request->getPost('email');
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
@@ -74,7 +74,7 @@ class Clinica extends BaseController{
 
             }
         }
-    }
+    }*/
     public function logout(){
         $session = session();
         $array_items = ['ID_clinica', 'Nome_fantasia_clinica', 'tipo'];
@@ -83,39 +83,50 @@ class Clinica extends BaseController{
     }
 
     //Thiago parte
-    public function processo_do_cadastro() {
-        $this->load->model('Clinica_model');
+    public function teste(){
+        $cnpj = $this->request->getPost('login');
+        $nome_fantasia = $this->request->getPost('nome');
+        $senha = $this->request->getPost('senha');
+        $img = $this->request->getFile('arquivo');
+        $logradouro = $this->request->getPost('endereco');
+        $bairro = $this->request->getPost('bairro');
+        $numero = $this->request->getPost('numero');
+        $complemento = $this->request->getPost('complemento');
+        $email = $this->request->getPost('email');
+        $telefone = $this->request->getPost('telefone');
+        $whatsapp = $this->request->getPost('whatsapp');
+        $instagram = $this->request->getPost('instagram');
 
-        $dados = array(
-            'CNPJ' => $this->input->post('cnpj'),
-            'Nome_fantasia_clinica' => $this->input->post('nome_fantasia'),
-            'foto_clinica' => '', // vert aqui
-            'Descricao_clinica' => $this->input->post('descricao'),
-            'Logradouro' => $this->input->post('logradouro'),
-            'Numero' => $this->input->post('numero'),
-            'Complemento' => $this->input->post('complemento'),
-            'Bairro' => $this->input->post('bairro'),
-            'CEP' => $this->input->post('cep'),
-            'Forma_pagamento_clinica' => $this->input->post('forma_pagamento'),
-            'Email_clinica' => $this->input->post('email_clinica'),
-            'Senha_clinica' => $this->input->post('senha_clinica'),
-            'Telefone_clinica' => $this->input->post('telefone_clinica'),
-            'Whatsapp_clinica' => $this->input->post('whatsapp_clinica'),
-            'Instagram_clinica' => $this->input->post('instagram_clinica'),
-            'Especialidade_clinica' => $this->input->post('especialidade_clinica'),
-            'Plano_saude_clinica' => $this->input->post('plano_saude_clinica'),
-            'Convenio_clinica' => $this->input->post('convenio_clinica')
+        $dados =array(
+            'cnpj' => $cnpj,
+            'nome' => $nome_fantasia,
+            'senha' => $senha,
+            'img' => base64_encode(file_get_contents($img)),
+            'imgtype' => $img->getMimeType(),
+            'logradouro' => $logradouro,
+            'bairro' => $bairro,
+            'numero' => $numero,
+            'complemento' => $complemento,
+            'email' => $email,
+            'telefone' => $telefone,
+            'whatsapp' => $whatsapp,
+            'instagram' => $instagram
         );
 
-        $cnpj = $dados['CNPJ'];
+        $cnpj = $dados['cnpj'];
 
-        if ($this->Clinica_model->checkclinica($cnpj)) {
+        /*if ($this->Clinica_model->checkclinica($cnpj)) {
             $this->session->set_flashdata('error_message', 'A clínica já está cadastrada.');
             redirect('clinica/cadastrar');
         } else {
             $clinica_id = $this->Clinica_model->inserir_clinica($dados);
             $this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
             redirect('clinica/cadastrar'); 
-        }
+        }*/
+        $inserir = new ClinicaModel();
+        $resultado = $inserir->cadastrarClinica($dados);
+        return redirect()->to(base_url());
     }
+
+       
 }

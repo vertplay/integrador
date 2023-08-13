@@ -25,11 +25,13 @@ CREATE TABLE clinica (
 ID_clinica INTEGER PRIMARY KEY,
 Forma_pagamento_clinica VARCHAR(100),
 Email_clinica VARCHAR(50),
+Senha_clinica VARCHAR(50),
 Telefone_clinica VARCHAR(15),
 Whatsapp_clinica VARCHAR(15),
 Instagram_clinica VARCHAR(50),
 CNPJ CHAR(14),
 foto_clinica MEDIUMBLOB,
+tipo_de_imagem_clinica VARCHAR(10),
 Especialidade_clinica VARCHAR(200),
 Plano_saude_clinica VARCHAR(100),
 Convenio_clinica VARCHAR(100),
@@ -49,9 +51,7 @@ CRM_medico VARCHAR(12)
 
 CREATE TABLE possui_vinculo (
 ID_medico INTEGER,
-ID_clinica INTEGER,
-FOREIGN KEY(ID_medico) REFERENCES médico (ID_medico),
-FOREIGN KEY(ID_clinica) REFERENCES clínica (ID_clinica)
+ID_clinica INTEGER
 );
 
 CREATE TABLE Usuario (
@@ -72,7 +72,7 @@ Bairro VARCHAR(40),
 CEP VARCHAR(8)
 );
 
-ALTER TABLE Recuperação ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE Recuperação ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
-ALTER TABLE avalia_avaliação ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
-ALTER TABLE avalia_avaliação ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
+ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
+ALTER TABLE Recuperacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario);
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica);

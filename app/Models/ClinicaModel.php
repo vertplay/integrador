@@ -20,26 +20,21 @@ class ClinicaModel extends Model{
     public function cadastrarClinica($parametros) : array{
         
         $erros = [];
+
+        $query = 'INSERT INTO clinica (CNPJ, Nome_fantasia_clinica, Senha_clinica, foto_clinica, Logradouro, Bairro, Numero, Complemento, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
     
-        $dados = $this->db->query('
-            INSERT INTO clinica
-            (Email_clinica, Senha_clinica, Nome_fantasia_clinica, foto_clinica, tipo_de_imagem_clinica)
-            VALUES(:email:, :senha:, :nome:, ":img:", :imgtype:)
-            ', $parametros);
+        $dados = $this->db->query($query, $parametros);
+    
         if($dados){
-            $erros[] .= "sucesso";
+            $erros[] = "sucesso";
         }
         else{
-            $erros[] .= "Falha";
+            $erros[] = "Falha";
         }
+    
         $this->db->close();
-        
         return $erros;
-    }
-
-    public function inserir_clinica($dados) {
-        $this->db->insert('clinica', $dados);
-        return $this->db->insert_id();
+    
     }
 
     public function checkclinica($cnpj) {
