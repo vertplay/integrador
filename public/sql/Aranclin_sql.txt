@@ -6,7 +6,7 @@ CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
 ID_usuario INTEGER DEFAULT NULL,
 ID_clinica INTEGER DEFAULT NULL,
-Codigo_recuperacao BIGINT(50) NOT NULL,
+Codigo_recuperacao VARCHAR(50) NOT NULL,
 Tipo_recuperacao CHAR(2) NOT NULL,
 Validade_recuperacao DATETIME NOT NULL,
 Status_recuperacao CHAR(1) NOT NULL,
