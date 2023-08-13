@@ -414,18 +414,22 @@ body{
 	font-size:20px;
 }
 .formularios  input, .formularios textarea{
+	display:inline-block;
 	width:70%;
 	height:40px;
 	border-radius:6px;
 	margin:2px auto 10px auto;
+	
 }
 .formularios textarea{
 	resize: none;
 	height:80px;
 }
 #alerta_senha{
+	display:inline-block;
 	width:70%;
 	height:20px;
+	max-height:auto;
 	margin:-5px auto 10px auto;
 	text-align:left;
 	color:red;
