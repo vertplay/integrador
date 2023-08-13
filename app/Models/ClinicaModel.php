@@ -6,11 +6,9 @@ use CodeIgniter\Database\ConnectionInterface;
 class ClinicaModel extends Model{
     protected $db, $builder;
 
-    public function __construct(ConnectionInterface $db){
-        
+    public function __construct(){
 
-
-        $this->db      = \Config\Database::connect();
+        $this->db= \Config\Database::connect();
         //aumentar tamanho limite de upload em caso de falha com imagem mais "pesada"
         //$maxp = $this->db->query( 'SELECT @@global.max_allowed_packet' );
         //$this->db->query( 'SET @@global.max_allowed_packet = ' . 500 * 1024 * 1024 );
@@ -24,9 +22,9 @@ class ClinicaModel extends Model{
 
         $query = 'INSERT INTO `clinica`(`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Especialidade_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`, `Logradouro`, `Bairro`, `Numero`, `Complemento`, `Descricao_clinica`)
          VALUES(:forma_pagamento:, :email:, :senha: , :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :especialidade:, :plano_saude:, :convenio:, :nome:, :logradouro:, :bairro:, :numero:, :complemento:, :descricao: );';
-    
+        
         $dados = $this->db->query($query, $parametros);
-    
+        
         if($dados){
             $erros[] = "sucesso";
         }
@@ -40,7 +38,7 @@ class ClinicaModel extends Model{
     }
 
     public function checkclinica($cnpj) {
-        $query = $this->builder->where('CNPJ', $cnpj)->get();
+        $query = $this->db->query("SELECT * FROM clinica WHERE CNPJ = '$cnpj ';");
         return $query->getNumRows() > 0;
     }
 

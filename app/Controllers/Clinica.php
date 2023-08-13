@@ -11,7 +11,6 @@ class Clinica extends BaseController{
 
     public function __construct() {
         $this->session = \Config\Services::session();
-        $this->clinicaModel = $clinicaModel;
     }
 
 
@@ -33,6 +32,11 @@ class Clinica extends BaseController{
     public function registro(){
         return view('clinicas/registro');
     }
+
+    public function erro(){
+        return view('clinicas/erro');
+    }
+
     public function logar(){
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
@@ -130,20 +134,33 @@ class Clinica extends BaseController{
             'whatsapp' => $whatsapp,
             'instagram' => $instagram
         );
-
         $cnpj = $dados['cnpj'];
+
         $consulta = new ClinicaModel();
         $possui_clinica = $consulta->checkclinica($cnpj);
 
         if ($possui_clinica) {
-            $this->session->set_flashdata('error_message', 'A clínica já está cadastrada.');
-            return redirect()->to(base_url('/pe/registro'));
+            $this->session->setFlashdata('error_message', 'A clínica já está cadastrada.');
+            echo view('clinicas/erro');
+            echo '<div class="alert alert-danger">A clínica já está cadastrada. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "A clínica já está cadastrada. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'/pe/registro";
+                     }
+                }, 1000);
+            </script>';
+            return;    
         } else {
             $inserir = new ClinicaModel();
             $resultado = $inserir->cadastrarClinica($dados);
-            
-            $clinica_id = $this->Clinica_model->inserir_clinica($dados);
-            //$this->session->set_flashdata('success_message', 'A clínica foi cadastrada com sucesso.');
+            $this->session->setFlashdata('success_message', 'A clínica foi cadastrada com sucesso.');
             
             return redirect()->to(base_url()); 
         }
