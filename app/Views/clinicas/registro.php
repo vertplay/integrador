@@ -2,9 +2,9 @@
 	
 
 	<?=$this->section('content')?>
-        <script src="<?=base_url("js/validarsenha.js") ?>"> </script>'
+        <script src="<?=base_url("js/validarsenha.js") ?>"> </script>
         <script src="<?=base_url("js/mostrasenha.js") ?>"> </script>
-        <script src="<?=base_url("js/campo_registro.js")?>"> </script>
+        <script src="<?=base_url("js/campo_registro.js")?>"> </script> 
         <div class="reg-form formularios">
             <h2>Registro</h2>
 			<form id= "userform"action="<?=base_url('pe/registro')?>" method="POST" enctype="multipart/form-data">
@@ -17,7 +17,7 @@
                 <label for="senha_clinica">Senha</label><br>
                     <input type="password" name="senha_clinica" id="senha_clinica" required>
                     <button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
-                    <div id="alerta_senha"></div>
+                    <div id="alerta_senha"> </div>
                     <input type="file" name="arquivo" required><br>
                     <div class="error-message"></div>
                 <!--Informações-->
@@ -52,7 +52,7 @@
                     <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" id="bairro" required/>
                         <div class="error-message"></div>
-                    <label for="numero">numero</label>
+                    <label for="numero">Número</label>
                         <input type="text" name="numero" id="numero" required/>
                         <div class="error-message"></div>
                     <label for="complemento">Complemento</label>
