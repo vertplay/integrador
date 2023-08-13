@@ -83,7 +83,7 @@ class Clinica extends BaseController{
     }
 
     //Thiago parte
-    public function teste(){
+    public function processo_do_cadastro(){
         $cnpj = $this->request->getPost('login');
         $nome_fantasia = $this->request->getPost('nome');
         $senha = $this->request->getPost('senha');
