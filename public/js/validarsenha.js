@@ -19,10 +19,21 @@ window.onload = function() {
       senha.length >= 8; // A senha precisa ter pelo menos 8 caracteres
   
     if (!senhaValida) { 
-      alert("senha inválida");
+      var alertaSenha = document.getElementById("alerta_senha");
+      alertaSenha.innerHTML = "A senha não atende aos critérios:<br>" +
+                              "- Deve conter pelo menos um número<br>" +
+                              "- Deve conter pelo menos uma letra maiúscula<br>" +
+                              "- Deve conter pelo menos uma letra minúscula<br>" +
+                              "- Deve conter pelo menos um caractere especial<br>" +
+                              "- Deve ter no mínimo 8 caracteres";
+      scrollTo(0,0);                        
       return false; 
     }
 
-    return true; 
+    if(senhaValida){
+      var alertaSenha = document.getElementById("alerta_senha");
+      alertaSenha.innerHTML = " ";
+      return true; 
+    }
   } 
 }
