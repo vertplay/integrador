@@ -17,9 +17,6 @@ class User extends BaseController{
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
         
-        public function erro(){
-            return view('user/erro');
-        }    
         
         if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
             
@@ -31,13 +28,17 @@ class User extends BaseController{
         
     }
 
+    public function erro(){
+        return view('user/erro');
+    }    
+
     public function processo_do_cadastro(){
         $cpf = $this->request->getPost('cpf');
         $nome_usuario = $this->request->getPost('login');
         $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $rg = $this->request->getPost('rg');
-        $nome_completo = $this->request->getPost('nome_completo');
+        $nome_completo = $this->request->getPost('nome');
         $data_nascimento = $this->request->getPost('data_nascimento');
         $genero = $this->request->getPost('genero');
         $email = $this->request->getPost('email');
@@ -78,7 +79,7 @@ class User extends BaseController{
 
         if ($possui_usuario) {
             $this->session->setFlashdata('error_message', 'O usuario já está cadastrado.');
-            echo view('usuario/erro');
+            echo view('user/erro');
             echo '<div class="alert alert-danger">O usuario já está cadastrado. Você será redirecionado em breve...</div>';
             echo '<script>
                     var seconds = 5; // Tempo de espera em segundos
@@ -98,9 +99,9 @@ class User extends BaseController{
             $inserir = new UserModel();
             $resultado = $inserir->cadastrarUsuario($dados);
  
-            $this->session->setFlashdata('success_message', 'A clínica foi cadastrada com sucesso.');
+            $this->session->setFlashdata('success_message', 'O usuario foi cadastrado com sucesso.');
             echo view('clinicas/erro');
-            echo '<div class="alert alert-success">A clínica foi cadastrada. Você será redirecionado em breve...</div>';
+            echo '<div class="alert alert-success">O usuario foi cadastrado. Você será redirecionado em breve...</div>';
             echo '<script>
                     var seconds = 5; // Tempo de espera em segundos
                     var message = document.querySelector(".alert-success");
@@ -108,7 +109,7 @@ class User extends BaseController{
                     setInterval(function() {
                         seconds--;
                         if (seconds > 0) {
-                            message.innerHTML = "A clínica foi cadastrada. Aguarde " + seconds + " segundos...";
+                            message.innerHTML = "O usuario foi cadastrado. Aguarde " + seconds + " segundos...";
                         } else {
                          window.location.href = "'.base_url().'";
                      }

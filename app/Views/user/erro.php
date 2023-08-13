@@ -1,7 +1,6 @@
 <?php $this->extend('layout')?>
 	
 <?= $this->section('content'); ?>
-<!-- Seu conteúdo da página aqui -->
 <!-- Exibir as mensagens aqui -->
 <?php if (session()->has('error_message')) : ?>
     <div class="alert alert-danger">

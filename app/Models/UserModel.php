@@ -30,7 +30,7 @@ class UserModel extends Model{
         $cpf = $parametros['cpf'];
         $email = $parametros['email'];
         
-        $query = "SELECT * FROM usuario WHERE CPF_usuario = '$cnpj' OR Email_usuario = '$email'";
+        $query = "SELECT * FROM usuario WHERE CPF_usuario = '$cpf' OR Email_usuario = '$email'";
         $resultado = $this->db->query($query, $parametros);
         return $resultado->getNumRows() > 0;
     }
