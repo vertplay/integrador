@@ -33,7 +33,6 @@
                     <label for="convenio_clinica">Convenios</label>
                         <input type="text" name="convenio_clinica" id="convenio_clinica" required/>
                         <div class="error-message"></div>
-
                     <label for="descricao">Descrição</label>
                         <textarea name="descricao" id="descricao" required></textarea>
                         <div class="error-message"></div>
