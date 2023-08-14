@@ -62,42 +62,25 @@ class Clinica extends BaseController{
             return redirect()->to(base_url());
         }
         else{
-            //return redirect()->to(base_url());
+            $this->session->setFlashdata('error_message', 'Cadastro não encontrado no sistema, favor verificar os dados informados.');
+            echo view("clinicas/erro");
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url('pe/login').'";
+                        }
+                    }, 1000);
+                </script>';
         }
         
     }
-   /* public function registrar(){
-        $email = $this->request->getPost('email');
-        $login = $this->request->getPost('login');
-        $senha = $this->request->getPost('senha');
-        $nome = $this->request->getPost('nome');
-        $img = $this->request->getFile('arquivo');
-        
-        
-        if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
-            
-            if ( $img->isValid()){
-                
-                
-                $parametros = [
-                    'email' => $email,
-                    'login' => $login,
-                    'senha' => $senha,
-                    'nome' => $nome,
-                    'img' => base64_encode(file_get_contents($img)),
-                    'imgtype' => $img->getMimeType()
-                ];
-
-                $inserir = new ClinicaModel();
-                $resultado = $inserir->cadastrarClinica($parametros);
-                return redirect()->to(base_url());
-            }
-            else{
-                echo "erro no arquivo<br><a href='".base_url()."'>Inicio</a>";
-
-            }
-        }
-    }*/
+   
     public function logout(){
         $session = session();
         $array_items = ['ID_clinica', 'Nome_fantasia_clinica', 'tipo'];

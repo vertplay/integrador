@@ -53,7 +53,7 @@ class Home extends BaseController
 
 			$dadosclinica = new ClinicaModel();
 			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
-			if($dadosclinica == null){
+			if($dadosclinica == null){//email não cadastrado
 				return view('recuperacao/aviso_nao_enviado');
 			}
 			
@@ -79,9 +79,10 @@ class Home extends BaseController
 			$mail->setBCC();*/
 			$mail->setSubject('Recuperação de senha');
 			$mail->SetMessage($mensagem);
+
 			if($mail->send()){
 				return view('recuperacao/aviso_enviado');
-			}else{
+			}else{//falha no envio de email
 				return view('recuperacao/aviso_nao_enviado');
 			}
 			
