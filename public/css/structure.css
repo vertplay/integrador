@@ -156,11 +156,13 @@ body{
 	color:var(--menu-font-color);
 	font-weight: bold;
 	font-family:'garet';
-	font-size:18px;
+	font-size:14px;
+	transition:0.3s;
 }
 #btn-group > form > button:hover{
 	text-decoration:underline;
 	cursor:pointer;
+	color:#000;
 }
 /*---------------------BARRA DE PESQUISA---------------------*/
 #search-bar{

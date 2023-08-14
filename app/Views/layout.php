@@ -43,7 +43,6 @@
 		<title>AraClin</title>
 	</head>
 	<body>
-
 		<!--MENU-->
 		<nav id="menu-bar">
 			<a id="home-link" href="<?=base_url()?>">AraClin</a>
@@ -78,6 +77,5 @@
 			&copy;2023
 		</footer>
 			
-
 	</body>
 </html>
