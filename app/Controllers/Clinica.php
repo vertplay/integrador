@@ -11,14 +11,21 @@ class Clinica extends BaseController{
 
     public function __construct() {
         $this->session = \Config\Services::session();
+        $this->clinicaModel = new ClinicaModel();
     }
 
-
+    public function checaSessao(){
+        if($this->session->has('ID_clinica') || $this->session->has('ID_usuario')){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     public function index(){
-        $session = session();
-        if($session->has('ID_clinica') && $session->get('ID_clinica') != null && $session->get('tipo')=="clinica"){
-            $consulta = new ClinicaModel();
+        if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="clinica"){
+
             return view('clinicas/perfil');
         }
         else{
@@ -27,9 +34,15 @@ class Clinica extends BaseController{
     }
 
     public function login(){
+        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
+            return redirect()->to(base_url());
+
         return view('clinicas/login');
     }
     public function registro(){
+        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
+            return redirect()->to(base_url());
+
         return view('clinicas/registro');
     }
 
@@ -40,8 +53,8 @@ class Clinica extends BaseController{
     public function logar(){
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
-        $consulta = new ClinicaModel();
-        $dados = $consulta->login($login, $senha);
+        
+        $dados = $this->clinicaModel->login($login, $senha);
         if($dados != null){
             $session = session();
             $session->set($dados[0]);

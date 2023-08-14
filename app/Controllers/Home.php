@@ -76,8 +76,13 @@ class Home extends BaseController
 			$mail->setBCC();*/
 			$mail->setSubject('Recuperação de senha');
 			$mail->SetMessage($mensagem);
-			$mail->send();
-			return view('recuperacao/aviso_enviado');
+			if($mail->send()){
+				return view('recuperacao/aviso_enviado');
+			}else{
+				return view('recuperacao/aviso_nao_enviado');
+			}
+			
+			
 		}
 		else{
 			$codigo = $this->request->getGet('cod');

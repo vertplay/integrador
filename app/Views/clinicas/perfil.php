@@ -2,7 +2,7 @@
 		
 	
     <?php $session = session();
-        if(!$session->has('ID_clinica') || $session->has('ID_usuario')){
+        if(!$session->has('ID_clinica') && !$session->has('ID_usuario')){
             return redirect()->to(base_url()); // retorna ao inicio caso não exista sessão
         }
         if($session->has('ID_clinica') && $session->get('Nome_fantasia_clinica') != null){//caso usuário clínica
@@ -24,16 +24,6 @@
 				<div class="info">
 					<h3>Horário de Funcionamento:</h3>
 				<p>Segunda-feira: 07:00 às 20:00.<br>
-					Terça-feira: 07:00 às 20:00.<br>
-					Quarta-feira: 07:00 às 20:00.<br>
-					Quinta-feira: 07:00 às 20:00.<br>
-					Sexta-feira: 07:00 às 20:00.<br>
-					Sábado: 07:00 às 11:00.<br>
-					Domingo: Fechado</p>
-				</div>
-				<div class="info">
-					<h3>Horário de Funcionamento:</h3>
-					<p>Segunda-feira: 07:00 às 20:00.<br>
 					Terça-feira: 07:00 às 20:00.<br>
 					Quarta-feira: 07:00 às 20:00.<br>
 					Quinta-feira: 07:00 às 20:00.<br>
