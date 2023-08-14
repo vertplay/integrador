@@ -1,4 +1,3 @@
-alert("teset");
 document.addEventListener("DOMContentLoaded", function() {
     var senhaInput = document.getElementById("formlogin");
     var mostrarSenhaButton = document.getElementById("mostrar_senha");
