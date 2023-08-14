@@ -477,7 +477,23 @@ body{
 	.reg-form button[type=submit]{
 		width:100px;
 	}
-
+#genero{
+	width:70%;
+	margin:0 auto;
+	text-align:left;
+	padding-left:25px;
+}
+.formularios input[type=radio]{
+	width:30px;
+	height:30px;
+	margin:0;
+}
+#genero label{
+	text-align:left;
+	text-indent:0;
+	vertical-align:8px;
+	width:50%;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;

@@ -5,8 +5,8 @@
         <div class="login-form formularios">
             <h2>Log In</h2>
 			<form action="<?=base_url('pp/login')?>" method="POST" enctype="multipart/form-data">
-                <label for="login">Usuário</label><br>
-                    <input type="text" name="login" id="login" required><br>
+                <label for="email">Email</label><br>
+                    <input type="text" name="email" id="email" required><br>
                 <label for="senha">Senha</label><br>
                     <input type="password" name="senha" id="senha" required><br>
                 <button type="submit" name="registrar">Entrar</button>

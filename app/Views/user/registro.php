@@ -25,10 +25,14 @@
                     <label for="data_nascimento">Data de nascimento</label>
                         <input type="date" name="data_nascimento" id="data_nascimento" required />
                    <label>Gênero</label>
-                        <input type="radio" name="genero" id="genero_masculino" value="M" required>
-                        <label for="genero_masculino">Masculino</label>
-                        <input type="radio" name="genero" id="genero_feminino" value="F" required>
-                        <label for="genero_feminino">Feminino</label><br>
+                        <div id="genero">
+                            
+                            <input type="radio" name="genero" id="genero_masculino" value="M" required>
+                            <label for="genero_masculino">Masculino</label>
+                            <br>
+                            <input type="radio" name="genero" id="genero_feminino" value="F" required>
+                            <label for="genero_feminino">Feminino</label>
+                        </div>
                     <label for="email">Email</label>
                         <input type="email" name="email" id="email" required/>
                     <label for="whatsapp">Whatsapp</label>
