@@ -30,7 +30,21 @@ class User extends BaseController{
 
     public function erro(){
         return view('user/erro');
-    }    
+    }
+    
+    public function validarSenha($senha) {
+        $temNumero = preg_match('/[0-9]/', $senha);
+        $temLetraMaiuscula = preg_match('/[A-Z]/', $senha);
+        $temLetraMinuscula = preg_match('/[a-z]/', $senha);
+        $temCaractereEspecial = preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~]/', $senha);
+    
+        if ($temNumero && $temLetraMaiuscula && $temLetraMinuscula && $temCaractereEspecial) {
+            return true; // A senha atende aos requisitos de validação
+        } else {
+            return false; // A senha não atende aos requisitos de validação
+        }
+    }
+
 
     public function processo_do_cadastro(){
         $cpf = $this->request->getPost('cpf');
@@ -73,10 +87,30 @@ class User extends BaseController{
             'cpf' =>$cpf,
             'email' =>$email
         );
-        
+        $senha = $dados['senha'];
         $consulta = new UserModel();
         $possui_usuario = $consulta->check_usuario($parametros);
 
+        if (!$this->validarSenha($senha)) {
+            $this->session->setFlashdata('error_message', 'A senha não atende aos requisitos de segurança.');
+            echo view("user/erro");
+            echo '<div class="alert alert-danger">A senha não atende os requesitos de segurança. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "A senha não atende os requesitos de segurança. Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url().'/pp/registro";
+                        }
+                    }, 1000);
+                </script>';
+        return;
+        }
+        
         if ($possui_usuario) {
             $this->session->setFlashdata('error_message', 'O usuario já está cadastrado.');
             echo view('user/erro');
