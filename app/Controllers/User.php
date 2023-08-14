@@ -36,7 +36,7 @@ class User extends BaseController{
         $temNumero = preg_match('/[0-9]/', $senha);
         $temLetraMaiuscula = preg_match('/[A-Z]/', $senha);
         $temLetraMinuscula = preg_match('/[a-z]/', $senha);
-        $temCaractereEspecial = preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~]/', $senha);
+        $temCaractereEspecial = preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~\/]/', $senha);
     
         if ($temNumero && $temLetraMaiuscula && $temLetraMinuscula && $temCaractereEspecial) {
             return true; // A senha atende aos requisitos de validação

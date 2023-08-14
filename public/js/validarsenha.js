@@ -7,7 +7,7 @@ window.onload = function() {
     const temNumero = /[0-9]/.test(senha);
     const temLetraMaiuscula = /[A-Z]/.test(senha);
     const temLetraMinuscula = /[a-z]/.test(senha);
-    const temCaractereEspecial = /[!@#$%^&*()_+{}\[\]:;<>,.?~]/.test(senha);
+    const temCaractereEspecial = /[!/@#$%^&*()_+{}\[\]:;<>,.?~]/.test(senha);
   
     // Verificar se a senha atende a todos os critérios
     const senhaValida =
