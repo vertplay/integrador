@@ -47,10 +47,6 @@
 		<!--MENU-->
 		<nav id="menu-bar">
 			<a id="home-link" href="<?=base_url()?>">AraClin</a>
-			
-			<!--BARRA DE PESQUISA-->
-			<!-- <input id="search-bar" type="text" placeholder="Pesquisar..."/> -->
-			
 			<?php
 				if($session->has('ID_clinica') && $session->get('Nome_fantasia_clinica') != null){
 					echo '
@@ -72,21 +68,11 @@
 					';
 				}
 			?>
-
-			<!--GRUPO DE BOTÕES-->
-			
-			
-			
 		</nav>
-		
-		
-
-
+		<!--Bloco central-->
         <div id="container-principal">
             <?= $this->renderSection('content') ?>
         </div>
-
-
 		<!--FOOTER-->
 		<footer>
 			&copy;2023
