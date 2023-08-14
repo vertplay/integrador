@@ -67,8 +67,9 @@ class Home extends BaseController
 			$resultado = $inserir->setCodeRecuperacao($dadosclinica['ID_clinica'], $codigo, $tiporec, $datarec, $validade);
 
 			$mail = \Config\Services::email();
-			$mail->setFrom('Araclin');
+			$mail->setFrom('mailer.codeigniter@gmail.com','Araclin');
 			$mail->setTO($email);
+			echo $mail->printDebugger();
 			/*$mail->setCC();
 			$mail->setBCC();*/
 			$mail->setSubject('Recuperação de senha');
@@ -77,6 +78,8 @@ class Home extends BaseController
 			if($mail->send()){
 				return view('recuperacao/aviso_enviado');
 			}else{//falha no envio de email
+				$session = session();
+				$session->set('erro',$mail->printDebugger());//tentando capturar o erro
 				return view('recuperacao/aviso_nao_enviado');
 			}
 			
