@@ -68,7 +68,7 @@ class Email extends BaseConfig
 	 *
 	 * @var integer
 	 */
-	public $SMTPPort = 25;
+	public $SMTPPort = 587;
 
 	/**
 	 * SMTP Timeout (in seconds)
