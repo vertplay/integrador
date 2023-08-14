@@ -1,5 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    var senhaInput = document.getElementById("formlogin");
+    var senhaInput = document.getElementById("senha");
     var mostrarSenhaButton = document.getElementById("mostrar_senha");
     var senhaVisivel = false;
 

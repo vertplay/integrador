@@ -14,20 +14,35 @@ class User extends BaseController{
     }
 
     public function index(){
-        $login = $this->request->getPost('login');
-        $senha = $this->request->getPost('senha');
-        
-        
-        if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
-            
-            
+        if($this->session->has('ID_usuario') && $this->session->get('ID_usuario') != null && $this->session->get('tipo')=="pp"){
+
+            return view('user/perfil');
         }
         else{
             return redirect()->to(base_url());
         }
-        
     }
+    public function checaSessao(){
+        if($this->session->has('ID_clinica') || $this->session->has('ID_usuario')){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public function login(){
+        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
+            return redirect()->to(base_url());
+            
+		return view('user/login');
+	}
+	
+	public function registro(){
+        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
+            return redirect()->to(base_url());
 
+		return view('user/registro');
+	}
     public function erro(){
         return view('user/erro');
     }
@@ -150,31 +165,5 @@ class User extends BaseController{
                 }, 1000);
             </script>';
         }
-
-        /*if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
-            
-            if ( $img->isValid()){
-                
-                
-                $parametros = [
-                    'login' => $login,
-                    'senha' => $senha,
-                    'nome' => $nome,
-                    'img' => base64_encode(file_get_contents($img)),
-                    'imgtype' => $img->getMimeType()
-                ];
-
-                $inserir = new UserModel();
-                $resultado = $inserir->novoUsuario($parametros);
-                return redirect()->to(base_url());
-            }
-            else{
-                echo "erro no arquivo<br><a href='".base_url()."'>Inicio</a>";
-
-            }
-        }
-    }*/
-
-
-}
+    }
 }

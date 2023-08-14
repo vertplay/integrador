@@ -38,13 +38,7 @@ class Home extends BaseController
 		return view('clinica',$enviar);
 	}
 
-	public function login(){
-		return view('user/login');
-	}
 	
-	public function registro(){
-		return view('user/registro');
-	}
 
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');

@@ -24,7 +24,7 @@ class Clinica extends BaseController{
     }
     
     public function index(){
-        if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="clinica"){
+        if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
 
             return view('clinicas/perfil');
         }
@@ -51,14 +51,14 @@ class Clinica extends BaseController{
     }
 
     public function logar(){
-        $login = $this->request->getPost('login');
+        $email = $this->request->getPost('email');
         $senha = $this->request->getPost('senha');
         
-        $dados = $this->clinicaModel->login($login, $senha);
+        $dados = $this->clinicaModel->login($email, $senha);
         if($dados != null){
             $session = session();
             $session->set($dados[0]);
-            $session->set('tipo', 'clinica');
+            $session->set('tipo', 'pe');
             return redirect()->to(base_url());
         }
         else{
