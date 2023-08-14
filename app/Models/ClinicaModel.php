@@ -68,6 +68,9 @@ class ClinicaModel extends Model{
         $this->builder->select('ID_clinica, Nome_fantasia_clinica');
         $query = $this->builder->getWhere(['Email_clinica' => $email])->getResultArray();
         $this->db->close();
-        return $query[0];
+        if($query!=null && $query!="")
+            return $query[0];
+        else
+            return null;
     }
 }

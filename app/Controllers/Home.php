@@ -53,6 +53,9 @@ class Home extends BaseController
 
 			$dadosclinica = new ClinicaModel();
 			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
+			if($dadosclinica == null){
+				return view('recuperacao/aviso_nao_enviado');
+			}
 			
 			//echo time() .'<br>'.date('d/m/y - H:i:s',time());
 
