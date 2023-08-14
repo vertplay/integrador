@@ -2,7 +2,7 @@ window.onload = function() {
   var userform = document.getElementById("userform");
   userform.onsubmit = function() {
     // Verificar os critérios da senha
-    var senha = document.getElementById("senha_clinica").value;
+    var senha = document.getElementById("formsenha").value;
 
     const temNumero = /[0-9]/.test(senha);
     const temLetraMaiuscula = /[A-Z]/.test(senha);

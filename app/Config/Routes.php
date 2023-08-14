@@ -53,13 +53,13 @@ $routes->post('/pe/login','Clinica::logar');
 
 //registro
 $routes->get('/pp/registro','Home::registro');
-$routes->post('/pp/registro','User::registro');
+$routes->post('/pp/registro','User::processo_do_cadastro');
 
 $routes->get('/pe/registro','Clinica::registro');
 $routes->post('/pe/registro','Clinica::processo_do_cadastro');
 
 //erro registro
-
+$routes->get('/pp/erro','User::erro');
 $routes->get('/pe/erro','Clinica::erro');
 
 //logout

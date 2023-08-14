@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var senhaInput = document.getElementById("senha_clinica");
+    var senhaInput = document.getElementById("formsenha");
     var mostrarSenhaButton = document.getElementById("mostrar_senha");
     var senhaVisivel = false;
 

@@ -105,11 +105,25 @@ class Clinica extends BaseController{
         return redirect()->to(base_url());
     }
 
+
     //Thiago parte
+    public function validarSenha($senha) {
+        $temNumero = preg_match('/[0-9]/', $senha);
+        $temLetraMaiuscula = preg_match('/[A-Z]/', $senha);
+        $temLetraMinuscula = preg_match('/[a-z]/', $senha);
+        $temCaractereEspecial = preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~]/', $senha);
+    
+        if ($temNumero && $temLetraMaiuscula && $temLetraMinuscula && $temCaractereEspecial) {
+            return true; // A senha atende aos requisitos de validação
+        } else {
+            return false; // A senha não atende aos requisitos de validação
+        }
+    }
+
     public function processo_do_cadastro(){
         $cnpj = $this->request->getPost('cnpj');
         $nome_fantasia = $this->request->getPost('nome_fantasia');
-        $senha = $this->request->getPost('senha_clinica');
+        $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $logradouro = $this->request->getPost('logradouro');
         $forma_pagamento = $this->request->getPost('forma_pagamento');
@@ -153,9 +167,31 @@ class Clinica extends BaseController{
             'email' =>$email
         );
 
+        $senha = $dados['senha'];
         $consulta = new ClinicaModel();
         $possui_clinica = $consulta->checkclinica($parametros);
         
+        if (!$this->validarSenha($senha)) {
+            $this->session->setFlashdata('error_message', 'A senha não atende aos requisitos de segurança.');
+            echo view("clinicas/erro");
+            echo '<div class="alert alert-danger">A senha não atende os requesitos de segurança. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "A senha não atende os requesitos de segurança. Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url().'/pe/registro";
+                        }
+                    }, 1000);
+                </script>';
+        return;
+        }
+    
+
         if ($possui_clinica) {
             $this->session->setFlashdata('error_message', 'A clínica já está cadastrada.');
             echo view('clinicas/erro');
@@ -170,9 +206,9 @@ class Clinica extends BaseController{
                             message.innerHTML = "A clínica já está cadastrada. Aguarde " + seconds + " segundos...";
                         } else {
                          window.location.href = "'.base_url().'/pe/registro";
-                     }
-                }, 1000);
-            </script>';
+                        }
+                    }, 1000);
+                </script>';
             return;    
         } else {
             $inserir = new ClinicaModel();

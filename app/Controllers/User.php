@@ -3,13 +3,19 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use CodeIgniter\Session\Session;
 
 class User extends BaseController{
-    
+    protected $session;
+    protected $UserModel;
+
+    public function __construct() {
+        $this->session = \Config\Services::session();
+    }
+
     public function index(){
         $login = $this->request->getPost('login');
         $senha = $this->request->getPost('senha');
-        
         
         
         if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
@@ -22,14 +28,130 @@ class User extends BaseController{
         
     }
 
-    public function registro(){
-        $login = $this->request->getPost('login');
-        $senha = $this->request->getPost('senha');
-        $nome = $this->request->getPost('nome');
+    public function erro(){
+        return view('user/erro');
+    }
+    
+    public function validarSenha($senha) {
+        $temNumero = preg_match('/[0-9]/', $senha);
+        $temLetraMaiuscula = preg_match('/[A-Z]/', $senha);
+        $temLetraMinuscula = preg_match('/[a-z]/', $senha);
+        $temCaractereEspecial = preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~]/', $senha);
+    
+        if ($temNumero && $temLetraMaiuscula && $temLetraMinuscula && $temCaractereEspecial) {
+            return true; // A senha atende aos requisitos de validação
+        } else {
+            return false; // A senha não atende aos requisitos de validação
+        }
+    }
+
+
+    public function processo_do_cadastro(){
+        $cpf = $this->request->getPost('cpf');
+        $nome_usuario = $this->request->getPost('login');
+        $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
+        $rg = $this->request->getPost('rg');
+        $nome_completo = $this->request->getPost('nome');
+        $data_nascimento = $this->request->getPost('data_nascimento');
+        $genero = $this->request->getPost('genero');
+        $email = $this->request->getPost('email');
+        $whatsapp = $this->request->getPost('whatsapp');
+        $telefone = $this ->request->getPost('telefone');
+        $cep = $this->request->getPost('cep');
+        $logradouro = $this->request->getPost('logradouro');
+        $bairro = $this->request->getPost('bairro');
+        $numero = $this->request->getPost('numero');
+        $complemento = $this->request->getPost('complemento');
+
+        $dados =array(
+           'cpf' => $cpf,
+           'nome_usuario' => $nome_usuario,
+           'senha' => $senha,
+           'img' => $img,
+           'rg' => $rg,
+           'nome_completo' => $nome_completo,
+           'data_nascimento' => $data_nascimento,
+           'genero' => $genero,
+           'email' => $email,
+           'whatsapp' => $whatsapp,
+           'telefone' => $telefone,
+           'cep' =>$cep,
+           'logradouro' => $logradouro,
+           'bairro' => $bairro,
+           'numero' => $numero,
+           'complemento' => $complemento
+        );
         
+        $parametros = array(
+            'cpf' =>$cpf,
+            'email' =>$email
+        );
+        $senha = $dados['senha'];
+        $consulta = new UserModel();
+        $possui_usuario = $consulta->check_usuario($parametros);
+
+        if (!$this->validarSenha($senha)) {
+            $this->session->setFlashdata('error_message', 'A senha não atende aos requisitos de segurança.');
+            echo view("user/erro");
+            echo '<div class="alert alert-danger">A senha não atende os requesitos de segurança. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "A senha não atende os requesitos de segurança. Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url().'/pp/registro";
+                        }
+                    }, 1000);
+                </script>';
+        return;
+        }
         
-        if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
+        if ($possui_usuario) {
+            $this->session->setFlashdata('error_message', 'O usuario já está cadastrado.');
+            echo view('user/erro');
+            echo '<div class="alert alert-danger">O usuario já está cadastrado. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "O usuario já está cadastrado. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'/pp/registro";
+                     }
+                }, 1000);
+            </script>';
+            return;    
+        } else {
+            $inserir = new UserModel();
+            $resultado = $inserir->cadastrarUsuario($dados);
+ 
+            $this->session->setFlashdata('success_message', 'O usuario foi cadastrado com sucesso.');
+            echo view('clinicas/erro');
+            echo '<div class="alert alert-success">O usuario foi cadastrado. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-success");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "O usuario foi cadastrado. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'";
+                     }
+                }, 1000);
+            </script>';
+        }
+
+        /*if($login!="" && $senha!="" && !is_null($login) && !is_null($senha)){
             
             if ( $img->isValid()){
                 
@@ -51,42 +173,8 @@ class User extends BaseController{
 
             }
         }
-    }
-
-    //Thigo parte
-    public function processar_cadastro() {
-        $this->load->model('User_model');
-
-        $cpf = $this->input->post('cpf');
-        $nome_completo = $this->input->post('nome_completo');
-
-        $existing_data = $this->User_model->check_existing_data($cpf, $nome_completo);
-
-        if (!empty($existing_data)) {
-            $error_message = '';
-            foreach ($existing_data as $row) {
-                if ($row['CPF_usuario'] == $cpf) {
-                    $error_message .= 'CPF já cadastrado. ';
-                }
-                if ($row['Nome_usuario'] == $nome_completo) {
-                    $error_message .= 'Nome de Usuário já cadastrado.';
-                }
-            }
-
-            $this->session->set_flashdata('error_message', $error_message);
-            redirect('cliente/cadastrar');
-        } else {
-            $data = array(
-                'CPF_usuario' => $cpf,
-                'Nome_usuario' => $nome_completo,
-                // Outros campos do formulário aqui...
-            );
-
-            $user_id = $this->User_model->insert_user($data);
-            $this->session->set_flashdata('success_message', 'Usuário cadastrado com sucesso. ID: ' . $user_id);
-            redirect('cliente/cadastrar');
-        }
-    }
+    }*/
 
 
+}
 }
