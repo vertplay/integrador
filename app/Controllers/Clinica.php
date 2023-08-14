@@ -25,8 +25,8 @@ class Clinica extends BaseController{
     
     public function index(){
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
-
-            return view('clinicas/perfil');
+            $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
+            return view('clinicas/perfil',$dados[0]);
         }
         else{
             return redirect()->to(base_url());

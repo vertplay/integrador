@@ -40,7 +40,8 @@ Logradouro VARCHAR(50) NOT NULL,
 Bairro VARCHAR(50) NOT NULL,
 Numero VARCHAR(5) NOT NULL,
 Complemento VARCHAR(50),
-Descricao_clinica TEXT NOT NULL
+Descricao_clinica TEXT NOT NULL,
+Cep VARCHAR(11) NOT NULL
 );
 
 CREATE TABLE medico (

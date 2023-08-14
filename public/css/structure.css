@@ -297,7 +297,7 @@ body{
 	height:80px;
 	margin-top:-80px;
 }*/
-/*---------------------------ALBUM PAGE-----------------------*/
+/*---------------------------Página das clínicas-----------------------*/
 .clin-block{
 	float:left;
 	width:100%;
@@ -495,6 +495,26 @@ body{
 	text-indent:0;
 	vertical-align:8px;
 	width:50%;
+}
+
+/*-----------------------FORMULARIO DO PERFIL----------------*/
+
+#perfil_descricao{
+	width:100%;
+	height:80px;
+	resize:none;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	background:transparent;
+}
+#perfil_horario{
+	width:50%;
+	height:120px;
+	resize:none;
+}
+#upFoto{
+	display:block;
+	width:51%;
 }
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
