@@ -524,6 +524,14 @@ body{
 	font-family:'garet';
 	color:#ffffff;
 }
+#editperf_btn{
+	width:120px;
+	height:30px;
+	margin-top:10px;
+	background-color:var(--menu-color);
+	font-family:'garet';
+	color:#ffffff;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;
