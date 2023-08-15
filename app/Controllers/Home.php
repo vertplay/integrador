@@ -72,14 +72,12 @@ class Home extends BaseController
 			echo $mail->printDebugger();
 			/*$mail->setCC();
 			$mail->setBCC();*/
-			$mail->setSubject('Recuperação de senha');
+			$mail->setSubject('Recuperação/Alteração de senha');
 			$mail->SetMessage($mensagem);
 
 			if($mail->send()){
 				return view('recuperacao/aviso_enviado');
 			}else{//falha no envio de email
-				$session = session();
-				$session->set('erro',$mail->printDebugger());//tentando capturar o erro
 				return view('recuperacao/aviso_nao_enviado');
 			}
 			

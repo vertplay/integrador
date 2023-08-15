@@ -112,6 +112,10 @@
 
 				<div id="clin-block2" class="clin-block">
 					<button type="button" id="editperf_btn">Editar Dados</button>
+					<form id="form-alterasenha" action="<?=base_url('/recuperacao')?>" method="POST" enctype="multipart/form-data">
+					<input type="email" name="email" id="login" value="<?=$Email_clinica?>" style="display:none;"/>
+						<button type="submit" id="editsenha_btn">Alterar Senha</button>
+					</form>
 					<div class="info">
 						<h3>Endereço:</h3>
 						<p>
