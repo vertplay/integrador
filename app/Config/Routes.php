@@ -45,7 +45,7 @@ $routes->get('/pe/perfil','Clinica::index');
 
 //login
 $routes->get('/pp/login','User::login');
-$routes->post('/pp/login','User::index');
+$routes->post('/pp/login','User::logar');
 
 $routes->get('/pe/login','Clinica::login');
 $routes->post('/pe/login','Clinica::logar');
@@ -63,6 +63,7 @@ $routes->get('/pe/erro','Clinica::erro');
 
 //logout
 $routes->post('/pe/logout','Clinica::logout');
+$routes->post('/pp/logout','User::logout');
 
 //recuperação de senha
 $routes->get('/recuperacao','Home::recupera_senha');

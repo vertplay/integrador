@@ -4,7 +4,13 @@ use CodeIgniter\Model;
 use CodeIgniter\Database\ConnectionInterface;
 
 class UserModel extends Model{
-  
+    
+    public function __construct(){
+
+        $this->db= \Config\Database::connect();
+        $this->builder = $this->db->table('usuario');
+    }
+
     public function cadastrarUsuario($parametros) : array{
         $db = \Config\Database::connect();
         
@@ -49,6 +55,16 @@ class UserModel extends Model{
         $db->close();
         return $dados->getResultArray();
 	}
+
+    public function login($email, $senha){
+        $limit=1;
+        $offset=0;
+
+        $this->builder->select('ID_usuario, Nome_usuario');
+        $query = $this->builder->getWhere(['Email_usuario' => $email, 'Senha_usuario' => $senha], $limit, $offset)->getResultArray();
+        $this->db->close();
+        return $query;
+    }
 
 
 /*

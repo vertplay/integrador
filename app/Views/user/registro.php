@@ -5,8 +5,6 @@
         <div class="reg-form formularios">
             <h2>Registro</h2>
 			<form id = "userform" action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">
-                <label for="login">Usuário</label><br>
-                    <input type="text" name="login" id="login" required><br>
                 <label for="nome_completo">Nome Completo</label><br>
                     <input type="text" name="nome" id="nome" required><br>
                 <label for="cpf">CPF</label><br>
@@ -17,7 +15,7 @@
                     <input type="password" name="formsenha" id="formsenha" required>
                     <button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
                     <div id="alerta_senha"> </div>
-                    <input type="file" name="arquivo" required><br>
+                    
 
                 <!--Informações-->    
                 <label for="informacoes" class="sub_bloco-titulo">Info</label>
