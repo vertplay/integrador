@@ -516,6 +516,14 @@ body{
 	display:block;
 	width:51%;
 }
+#cancelarUpdate_btn{
+	width:90px;
+	height:30px;
+	margin-top:10px;
+	background-color:#a01212;
+	font-family:'garet';
+	color:#ffffff;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;
