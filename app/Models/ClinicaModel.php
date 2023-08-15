@@ -20,8 +20,8 @@ class ClinicaModel extends Model{
         
         $erros = [];
 
-        $query = 'INSERT INTO `clinica`(`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Especialidade_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`, `Logradouro`, `Bairro`, `Numero`, `Complemento`, `Descricao_clinica`)
-         VALUES(:forma_pagamento:, :email:, :senha: , :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :especialidade:, :plano_saude:, :convenio:, :nome:, :logradouro:, :bairro:, :numero:, :complemento:, :descricao: );';
+        $query = 'INSERT INTO `clinica`(`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Especialidade_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`, `Logradouro`, `Bairro`, `Numero`, `Complemento`, `Descricao_clinica`,`Cep`)
+         VALUES(:forma_pagamento:, :email:, :senha: , :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :especialidade:, :plano_saude:, :convenio:, :nome:, :logradouro:, :bairro:, :numero:, :complemento:, :descricao:, :cep: );';
         
         $dados = $this->db->query($query, $parametros);
         
