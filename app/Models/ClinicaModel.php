@@ -87,4 +87,13 @@ class ClinicaModel extends Model{
         }
         
     }
+    public function excluir_cadastro($id, $senha){
+        $this->builder->where(['ID_clinica' => $id, 'Senha_clinica' => $senha]);
+        if($this->builder->delete()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
