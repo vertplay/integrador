@@ -217,5 +217,89 @@ class Clinica extends BaseController{
        
     }
 
+    public function atualizar_cadastro(){
+        $cnpj = $this->request->getPost('cnpj');
+        $nome_fantasia = $this->request->getPost('nome_fantasia');
+        $senha = $this->request->getPost('formsenha');
+        $img = $this->request->getFile('arquivo');
+        $logradouro = $this->request->getPost('logradouro');
+        $forma_pagamento = $this->request->getPost('forma_pagamento');
+        $especialidade = $this->request->getPost('especialidade_clinica');
+        $plano_saude = $this->request->getPost('plano_saude_clinica');
+        $convenio = $this->request->getPost('convenio_clinica');
+        $descricao = $this->request->getPost('descricao');
+        $cep = $this ->request->getPost('cep');
+        $bairro = $this->request->getPost('bairro');
+        $numero = $this->request->getPost('numero');
+        $complemento = $this->request->getPost('complemento');
+        $email = $this->request->getPost('email_clinica');
+        $telefone = $this->request->getPost('telefone_clinica');
+        $whatsapp = $this->request->getPost('whatsapp_clinica');
+        $instagram = $this->request->getPost('instagram_clinica');
+        
+        $dados=array(
+            'CNPJ' => $cnpj,
+            'Nome_fantasia_clinica' => $nome_fantasia,
+            'Senha_clinica' => $senha,
+            'Logradouro' => $logradouro,
+            'Forma_pagamento_clinica' => $forma_pagamento,
+            'Especialidade_clinica' => $especialidade,
+            'Plano_saude_clinica' => $plano_saude,
+            'Convenio_clinica' => $convenio,
+            'Descricao_clinica' => $descricao,
+            'Cep' => $cep,
+            'Bairro' => $bairro,
+            'Numero' => $numero,
+            'Complemento' => $complemento,
+            'Email_clinica' => $email,
+            'Telefone_clinica' => $telefone,
+            'Whatsapp_clinica' => $whatsapp,
+            'Instagram_clinica' => $instagram
+        );
+        if($img->isvalid())
+            $dados+=['foto_clinica' => base64_encode(file_get_contents($img)), 'tipo_de_imagem_clinica' => $img->getMimeType()];
+
+        if($this->session->has('ID_clinica') && $this->session->has('tipo') && $this->session->get('tipo')=='pe'){
+            
+            if($this->clinicaModel->atualizar_cadastro($this->session->get('ID_clinica'), $dados)){
+                return redirect()->to(base_url('/pe/perfil'));
+            }else{
+                $this->session->setFlashdata('error_message', 'Erro ao alterar dados, favor verificar a senha inserida.');
+                echo view("clinicas/erro");
+                echo '<script>
+                        var seconds = 5; // Tempo de espera em segundos
+                        var message = document.querySelector(".alert-danger");
+                        message.innerHTML += " Aguarde " + seconds + " segundos...";
+                        setInterval(function() {
+                            seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "Erro ao alterar dados, favor verificar a senha inserida... Aguarde " + seconds + " segundos...";
+                        } else {
+                            window.location.href = "'.base_url('pe/login').'";
+                            }
+                        }, 1000);
+                    </script>';
+            }
+        }
+        else{
+            $this->session->setFlashdata('error_message', 'Inconsistência encontrada ao tentar atualizar os dados.');
+            echo view("clinicas/erro");
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "Inconsistência encontrada ao tentar atualizar os dados... Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url('pe/login').'";
+                        }
+                    }, 1000);
+                </script>';
+        }
+        
+    }
+
        
 }

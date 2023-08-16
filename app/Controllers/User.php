@@ -7,12 +7,13 @@ use CodeIgniter\Session\Session;
 
 class User extends BaseController{
     protected $session;
-    protected $UserModel;
+    protected $userModel;
 
     public function __construct() {
         $this->session = \Config\Services::session();
+        $this->userModel = new UserModel();
     }
-
+    /*
     public function index(){
         if($this->session->has('ID_usuario') && $this->session->get('ID_usuario') != null && $this->session->get('tipo')=="pp"){
 
@@ -22,6 +23,7 @@ class User extends BaseController{
             return redirect()->to(base_url());
         }
     }
+    */
     public function checaSessao(){
         if($this->session->has('ID_clinica') || $this->session->has('ID_usuario')){
             return true;
@@ -36,7 +38,43 @@ class User extends BaseController{
             
 		return view('user/login');
 	}
-	
+	public function logar(){
+        $email = $this->request->getPost('email');
+        $senha = $this->request->getPost('senha');
+        
+        $dados = $this->userModel->login($email, $senha);
+        if($dados != null){
+            $session = session();
+            $session->set($dados[0]);
+            $session->set('tipo', 'pp');
+            return redirect()->to(base_url());
+        }
+        else{
+            $this->session->setFlashdata('error_message', 'Cadastro não encontrado no sistema, favor verificar os dados informados.');
+            echo view("clinicas/erro");
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                    if (seconds > 0) {
+                        message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
+                    } else {
+                        window.location.href = "'.base_url('pe/login').'";
+                        }
+                    }, 1000);
+                </script>';
+        }
+    }
+    public function logout(){
+        $session = session();
+        $array_items = ['ID_usuario', 'Nome_usuario', 'tipo'];
+        $session->remove($array_items);
+        return redirect()->to(base_url());
+    }
+
+
 	public function registro(){
         if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
             return redirect()->to(base_url());
@@ -63,7 +101,7 @@ class User extends BaseController{
 
     public function processo_do_cadastro(){
         $cpf = $this->request->getPost('cpf');
-        $nome_usuario = $this->request->getPost('login');
+        $nome_usuario = $this->request->getPost('nome');
         $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $rg = $this->request->getPost('rg');

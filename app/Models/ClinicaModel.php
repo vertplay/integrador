@@ -56,13 +56,14 @@ class ClinicaModel extends Model{
         $this->db->close();
         return $query;
     }
-
+    //obter dados da clinica pelo ID
     public function getClinica($id) : array{
-        $this->builder->select('ID_clinica, Nome_fantasia_clinica, Forma_pagamento_clinica, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica, Plano_saude_clinica, Descricao_clinica, Especialidade_clinica, Convenio_clinica');
+        $this->builder->select('ID_clinica, Nome_fantasia_clinica, Forma_pagamento_clinica, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica, Plano_saude_clinica, Descricao_clinica, Especialidade_clinica, Convenio_clinica, Cep, Logradouro, Bairro, Numero, Complemento');
         $query = $this->builder->getWhere(['ID_clinica' => $id])->getResultArray();
         $this->db->close();
         return $query;
 	}
+    //obter dados da clinica através do e-mail
     public function getClinicaByEmail($email){
         $this->builder->select('ID_clinica, Nome_fantasia_clinica');
         $query = $this->builder->getWhere(['Email_clinica' => $email])->getResultArray();
@@ -71,5 +72,19 @@ class ClinicaModel extends Model{
             return $query[0];
         else
             return null;
+    }
+    public function atualizar_cadastro($id,$dados){
+        $this->builder->where(['ID_clinica' => $id, 'Senha_clinica' => $dados['Senha_clinica']]);
+
+        //if($query = $this->builder->get()->getResultArray() == null)
+        //    return false;
+
+        if($this->builder->update($dados)){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
     }
 }

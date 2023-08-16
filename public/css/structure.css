@@ -516,6 +516,36 @@ body{
 	display:block;
 	width:51%;
 }
+#cancelarUpdate_btn{
+	width:90px;
+	height:30px;
+	margin-top:10px;
+	background-color:#a01212;
+	font-family:'garet';
+	color:#ffffff;
+}
+#editperf_btn{
+	display:inline-block;
+	width:120px;
+	height:30px;
+	margin-top:10px;
+	background-color:var(--menu-color);
+	font-family:'garet';
+	color:#ffffff;
+}
+#editsenha_btn{
+	display:inline-block;
+	width:120px;
+	height:30px;
+	margin-top:10px;
+	background-color:var(--menu-color);
+	font-family:'garet';
+	color:#ffffff;
+}
+#form-alterasenha{
+	display:inline;
+	width:50%;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;

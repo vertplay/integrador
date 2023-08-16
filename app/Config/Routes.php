@@ -44,9 +44,8 @@ $routes->get('/clinica/(:num)','Home::clinica/$1');
 $routes->get('/pe/perfil','Clinica::index');
 
 //login
-//$routes->get('/login','User::index');
 $routes->get('/pp/login','User::login');
-$routes->post('/pp/login','User::index');
+$routes->post('/pp/login','User::logar');
 
 $routes->get('/pe/login','Clinica::login');
 $routes->post('/pe/login','Clinica::logar');
@@ -64,12 +63,16 @@ $routes->get('/pe/erro','Clinica::erro');
 
 //logout
 $routes->post('/pe/logout','Clinica::logout');
+$routes->post('/pp/logout','User::logout');
 
 //recuperação de senha
 $routes->get('/recuperacao','Home::recupera_senha');
 $routes->post('/recuperacao','Home::recupera_senha');
 
 $routes->post('/alterar_senha', 'Home::realizar_alteracao_de_senha');
+
+//Alterar dados do cadastro
+$routes->post('/pe/atualizar','Clinica::atualizar_cadastro');
 
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');

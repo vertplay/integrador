@@ -47,7 +47,7 @@
 		<nav id="menu-bar">
 			<a id="home-link" href="<?=base_url()?>">AraClin</a>
 			<?php
-				if($session->has('ID_clinica') && $session->get('Nome_fantasia_clinica') != null){
+				if($session->has('ID_clinica') && $session->get('tipo') == "pe"){
 					echo '
 					<div id="btn-group">
 						<a href="'.base_url('pe/perfil').'" id="menu-btn-emp">Perfil</a>
@@ -55,10 +55,18 @@
 						<button type="submit" name="sair">LogOut</button>
 						</form>
 					</div>
-					
 					';
 				}
-				else{
+				elseif($session->has('ID_usuario') && $session->get('tipo') == "pp"){
+					echo '
+					<div id="btn-group">
+						<a href="'.base_url('pp/perfil').'" id="menu-btn-user">Perfil</a>
+						<form action="'.base_url('/pp/logout').'" method="post"">
+						<button type="submit" name="sair">LogOut</button>
+						</form>
+					</div>
+					';
+				}else{
 					echo'
 					<div id="btn-group">
 						<a href="'.base_url('pp/login').'" id="menu-btn-user">Perfil Pessoal</a>
