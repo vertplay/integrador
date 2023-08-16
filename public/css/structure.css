@@ -359,36 +359,6 @@ body{
 		
 	}
 
-#music-list{
-	width:100%;
-	float:left;
-}
-#music-list .item{
-	width:calc(100%-1px);
-	margin:auto;
-	padding-left:5px;
-	border-width:2px;
-	border-style:solid;
-	height:30px;
-}
-#music-list .item .name{
-	width:calc(100% - 50px);
-	height:100%;
-	float:left;
-	line-height:180%;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
-#music-list .item:nth-child(2n+0){
-	border-top-width: 1px;
-	border-bottom-width:1px;
-}
-#music-list .item i{
-	float:center;
-	background:transparent;
-	font-size:40px;
-	line-height:68%;
-}
 /*-----------------------FORMULÁRIOS----------------------------*/
 
 .formularios{
