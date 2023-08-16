@@ -126,6 +126,12 @@
 						Intagram: @<?=$Instagram_clinica?><br>
 						Email: <?=$Email_clinica?></p>
 					</div>
+					<div class="info">
+						<h3>Endereço:</h3>
+						<p>
+						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
+						
+					</div>
 				</div>
 
 				<div id="clin-block2" class="clin-block">
@@ -136,24 +142,27 @@
 					</form>
 					<button type="button" id="deleteperf_btn">Excluir Conta</button>
 					
+					
 					<div class="info">
 						<h3>Avaliações:</h3>
-						<?php if (!empty($avaliacoes)) : ?>
-						<?php foreach ($avaliacoes as $avaliacao) : ?>
-							<div class="comentarios">
-								<p><strong><?= $avaliacao['Nome_usuario'] ?></strong></p>
-								<p><?= str_repeat('&#9733;', $avaliacao['Nota_avaliacao']) ?></p>
-								<p><?= $avaliacao['Texto_avaliacao'] ?></p>
-							</div>
-						<?php endforeach; ?>
-					<?php else : ?>
-						<p>A clínica ainda não possui nenhuma avaliação.</p>
-					<?php endif; ?>
+						<div id="comentarios">
+							<h3>Avaliações:</h3>
+							<?php if (!empty($avaliacoes)) : ?>
+							<?php foreach ($avaliacoes as $avaliacao) : ?>
+								<div class="comentarios">
+									<p><strong><?= $avaliacao['Nome_usuario'] ?></strong></p>
+									<p><?= str_repeat('&#9733;', $avaliacao['Nota_avaliacao']) ?></p>
+									<p><?= $avaliacao['Texto_avaliacao'] ?></p>
+								</div>
+							<?php endforeach; ?>
+						<?php else : ?>
+							<p>A clínica ainda não possui nenhuma avaliação.</p>
+						<?php endif; ?>
 
+						</div>
 					</div>
 				</div>
-			</div>
-
+		</div>
         <?php $this->endSection();
 				}elseif($session->has('ID_usuario') && $session->get('tipo') == "pe"){//caso usuário pessoa física
             		return redirect()->to(base_url('pp/perfil'));?>

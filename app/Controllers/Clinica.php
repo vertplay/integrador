@@ -30,7 +30,8 @@ class Clinica extends BaseController{
             $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
             $avaliacaoModel = new AvaliacaoModel();
 		    $enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
-            $dados[0]+=$enviar['avaliacoes'];
+            $dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
+            //dd($dados[0]);
             return view('clinicas/perfil',$dados[0]);
         }
         else{
