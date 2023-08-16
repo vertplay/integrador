@@ -96,8 +96,22 @@ class Home extends BaseController
 
 			$dadosclinica = new ClinicaModel();
 			$dadosclinica = $dadosclinica->getClinicaByEmail($email);
-			if($dadosclinica == null){//email não cadastrado
+			$dadosuser = new UserModel();
+			$dadosuser = $dadosuser->getUserByEmail($email);
+			$dados;
+			$tipo;
+			if($dadosclinica == null && $dadosuser == null){//email não cadastrado
 				return view('recuperacao/aviso_nao_enviado');
+			}
+			else{
+				if($dadosuser != null){
+					$dados = $dadosuser;
+					$tipo = "pp";
+				}
+				else{
+					$dados = $dadosclinica;
+					$tipo = "pe";
+				}
 			}
 			
 			//echo time() .'<br>'.date('d/m/y - H:i:s',time());
@@ -108,12 +122,17 @@ class Home extends BaseController
 			
 			$validade = date('y-m-d H:i:s',$timehelper + $tempodevalidade);
 			
-			$tiporec = 'pe';
 			$codigo = hash('md5', $email.$timehelper);
 			$mensagem = '<a href="'.base_url('/recuperacao?cod='.$codigo).'">Alterar senha</a>';
 
 			$inserir = new MainModel();
-			$resultado = $inserir->setCodeRecuperacao($dadosclinica['ID_clinica'], $codigo, $tiporec, $datarec, $validade);
+			if($tipo == "pp"){
+				$resultado = $inserir->setCodeRecuperacao($dados['ID_usuario'], $codigo, $tipo, $datarec, $validade);
+			}
+			else{
+				$resultado = $inserir->setCodeRecuperacao($dados['ID_clinica'], $codigo, $tipo, $datarec, $validade);
+			}
+			
 
 			$mail = \Config\Services::email();
 			$mail->setFrom('mailer.codeigniter@gmail.com','Araclin');
