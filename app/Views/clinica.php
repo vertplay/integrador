@@ -45,10 +45,6 @@
 				</div>
 
 			</div>
-
-
-
-			
 				
 			<div id="clin-block2" class="clin-block">
 				<div class="info">
