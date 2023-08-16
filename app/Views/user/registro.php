@@ -2,6 +2,7 @@
 	<?=$this->section('content')?>
         <script src="<?=base_url('js/validarsenha.js')?>"></script>
         <script src="<?=base_url('js/mostrasenha.js')?>"></script>
+        <script src="<?=base_url('js/checkusuario.js')?>"></script>
         <div class="reg-form formularios">
             <h2>Registro</h2>
 			<form id = "userform" action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">

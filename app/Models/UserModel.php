@@ -26,6 +26,7 @@ class UserModel extends Model{
         return $erros;
     }
 
+
     public function check_usuario($parametros) {
         $cpf = $parametros['cpf'];
         $email = $parametros['email'];
