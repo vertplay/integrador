@@ -47,6 +47,7 @@ $routes->post('/clinica/enviaravaliacao', 'Home::enviarAvaliacao');
 
 //perfil
 $routes->get('/pe/perfil','Clinica::index');
+$routes->get('pp/perfil','User::index');
 
 //login
 $routes->get('/pp/login','User::login');

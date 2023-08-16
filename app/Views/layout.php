@@ -16,11 +16,6 @@
 		
 			<!--THEMES-->
 			<link rel="stylesheet" href="<?=base_url('/css/green.css')?>" id="green-theme"/>
-			<!--incluir preferências de usuário-->
-			<!-- <script type="text/javascript">
-				var theme_blocked = localStorage.getItem('blocked_theme')+"-theme";
-				document.getElementById(theme_blocked).disabled=true;
-			</script> -->
 		
 		<!--FIM CSS e JS-->
 		<!--favicon-->

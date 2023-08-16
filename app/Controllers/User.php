@@ -13,17 +13,19 @@ class User extends BaseController{
         $this->session = \Config\Services::session();
         $this->userModel = new UserModel();
     }
-    /*
+    
     public function index(){
         if($this->session->has('ID_usuario') && $this->session->get('ID_usuario') != null && $this->session->get('tipo')=="pp"){
 
-            return view('user/perfil');
+            $dados = $this->userModel->getUser($this->session->get('ID_usuario'));
+            //dd($dados[0]);
+            return view('clinicas/perfil',$dados);
         }
         else{
             return redirect()->to(base_url());
         }
     }
-    */
+    
     public function checaSessao(){
         if($this->session->has('ID_clinica') || $this->session->has('ID_usuario')){
             return true;

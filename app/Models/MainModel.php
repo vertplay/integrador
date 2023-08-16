@@ -68,10 +68,10 @@ class MainModel extends Model{
 			$dados = [
 				'ID_usuario '       		=> $id,
 				'Codigo_recuperacao'        => $codigo,
-				'Tipo_recuperacaote'        => $tipo,
+				'Tipo_recuperacao'        => $tipo,
 				'Validade_recuperacao'		=> $validade,
 				'Status_recuperacao'		=> '0',
-				'Data_recuperacao' => $datarec
+				'Data_recuperacao' 			=> $datarec
 			];
 		}
 		$this->builder = $this->db->table('recuperacao');

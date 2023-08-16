@@ -44,17 +44,24 @@ class UserModel extends Model{
 
     //dados usuarios| Perfil
     public function getUser($id) : array{
-		$parametros = [
-			'id_usuario' => $id
-		];
-        $db = \Config\Database::connect();
-		$dados = $db->query("
-			SELECT id, nome 
-			FROM usuario
-			WHERE id = :id_usuario:
-			", $parametros);
-        $db->close();
-        return $dados->getResultArray();
+        $this->builder->select('ID_usuario, Nome_usuario');
+        $query = $this->builder->getWhere(['ID_usuario' => $id])->getResultArray();
+        $this->db->close();
+
+        if($query!=null && $query!="")
+            return $query[0];
+        else
+            return null;
+	}
+    public function getUserByEmail($email) : array{
+        $this->builder->select('ID_usuario, Nome_usuario');
+        $query = $this->builder->getWhere(['Email_usuario' => $email])->getResultArray();
+        $this->db->close();
+
+        if($query!=null && $query!="")
+            return $query[0];
+        else
+            return null;
 	}
 
     public function login($email, $senha){
