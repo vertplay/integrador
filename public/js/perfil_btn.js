@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
         perfil.style.display="none";
         delete_form.style.display = "block";
     });
-    formulario_altera_senha.addEventListener("submit", function() {
+
+    formulario_altera_senha.onsubmit = function(){
         return confirm('Você receberá um e-mail contendo o link para alteração da senha.');
-    });
+    }
+    /*formulario_altera_senha.addEventListener("submit", function() {
+        return confirm('Você receberá um e-mail contendo o link para alteração da senha.');
+    });*/
 });
