@@ -50,7 +50,7 @@
 				<div class="info">
 					<h3>Endereço:</h3>
 					<p>
-					Av. das Rosas, 40 - Alto Mercado, Araçuaí - MG, 39600-000</p>
+					<?=$clin['Logradouro']?>, <?=$clin['Numero']?> - <?=$clin['Bairro']?>, Araçuaí - MG, 39600-000</p>
 
 				</div>
 				
