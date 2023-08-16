@@ -28,6 +28,12 @@
 				
 				<div class="info">
 					</br>
+					<h3>Especialidades:</h3>
+					<p><?=$clin['Especialidade_clinica']?></p>
+				</div>
+
+				<div class="info">
+					</br>
 					<h3>Contato:</h3>
 					<p>Telefone: <?=formataTelefone($clin['Telefone_clinica'])?><br>
 					WhatsApp: <a target="_blank" href="https://api.whatsapp.com/send?phone=55<?=$clin['Whatsapp_clinica']?>"><?=formataTelefone($clin['Whatsapp_clinica'])?></a><br>
@@ -36,19 +42,33 @@
 				</div>
 
 				<div class="info">
-				</br>
-				<h3>Endereço:</h3>
+					</br>
+					<h3>Endereço:</h3>
 					<p>
 					<?= $clin['Logradouro'] ?>, <?= $clin['Numero'] ?> - <?= $clin['Bairro'] ?>, <?= $clin['Complemento'] ?> - Araçuaí, MG, <?= $clin['Cep'] ?>.
 					</p>
 
 				</div>
 
+				<div class="info">
+					</br>
+					<h3>Formas de Pagamento:</h3>
+					<p><?=$clin['Forma_pagamento_clinica']?></p>
+				</div>
+
+				<div class="info">
+					</br>
+					<h3>Convênios:</h3>
+					<p><?=$clin['Convenio_clinica']?></p>
+				</div>
+
 			</div>
 				
 			<div id="clin-block2" class="clin-block">
 
+
 				<div class="info">
+
 					<h3>Avaliações:</h3>
 					<div id="comentarios">
 

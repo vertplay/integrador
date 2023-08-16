@@ -114,6 +114,11 @@
 					</div>
 					<div class="info">
 						</br>
+						<h3>Especialidades:</h3>
+						<p><?= $Especialidade_clinica ?></p>
+					</div>
+					<div class="info">
+						</br>
 						<h3>Endereço:</h3>
 						<p>
 						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
@@ -127,11 +132,16 @@
 						Email: <?=$Email_clinica?></p>
 					</div>
 					<div class="info">
-						<h3>Endereço:</h3>
-						<p>
-						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
-						
+						</br>
+						<h3>Formas de Pagamento:</h3>
+						<p><?= $Forma_pagamento_clinica ?></p>
 					</div>
+					<div class="info">
+						</br>
+						<h3>Convênios:</h3>
+						<p><?= $Convenio_clinica ?></p>
+					</div>
+
 				</div>
 
 				<div id="clin-block2" class="clin-block">
@@ -167,7 +177,4 @@
 				}elseif($session->has('ID_usuario') && $session->get('tipo') == "pe"){//caso usuário pessoa física
             		return redirect()->to(base_url('pp/perfil'));?>
         
-
-
-
     <?php } ?>
