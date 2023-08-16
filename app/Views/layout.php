@@ -33,6 +33,9 @@
 		
 		
 		<link rel="icon" href="<?php echo base_url()?>/img/favicon-64x64.png"/>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 		
 		
 			<!--WINDOWS 8 TILE-->

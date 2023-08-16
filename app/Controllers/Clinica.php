@@ -3,6 +3,8 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\ClinicaModel;
+use App\Models\AvaliacaoModel;
+use App\Models\MainModel;
 use CodeIgniter\Session\Session;
 
 class Clinica extends BaseController{
@@ -300,6 +302,4 @@ class Clinica extends BaseController{
         }
         
     }
-
-       
-}
+}    

@@ -8,10 +8,23 @@ use App\Models\UserModel;
 
 use App\Models\ClinicaModel;
 
+use App\Models\AvaliacaoModel;
+
 use Config\Services\Email;
+
+use CodeIgniter\Session\SessionInterface; 
+
 
 class Home extends BaseController
 {
+
+	protected $session;
+
+	public function __construct() {
+
+        $this->session = \Config\Services::session(); // Inicializa a sessão no construtor
+    }
+
 	//página inicial, listagem de clínicas
 	public function index()
 	{
@@ -20,6 +33,7 @@ class Home extends BaseController
 		return view('index', $enviar);
 		
 	}
+
 
 	//página de usuario/perfil
 	public function clinica($id){
@@ -31,13 +45,48 @@ class Home extends BaseController
 			return view('errors/html/error_404');
 		}
 
+		$avaliacaoModel = new AvaliacaoModel();
+		$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($id);
+
 		$enviar["clin"] = $enviar["clin"][0];
 		
 		//print_r($enviar);
-		
+
+		$this->session->set('avaliacao_clinica_id', $id);
+
+		// Verifica se o usuário está logado e obtém o ID do usuário
+        if ($this->session->has('ID_usuario')) {
+            $ID_usuario = $this->session->get('ID_usuario');
+            $enviar["ID_usuario"] = $ID_usuario;
+        } 
+		else {
+            $enviar["ID_usuario"] = null;
+        }
+
 		return view('clinica',$enviar);
 	}
 
+	
+	public function enviarAvaliacao() {
+		$avaliacaoModel = new AvaliacaoModel();
+	
+		$ID_usuario = $this->session->get('ID_usuario');
+		$ID_clinica = $this->request->getPost('ID_clinica');
+		$comentario = $this->request->getPost('comentario');
+		$nota_avaliacao = $this->request->getPost('nota_avaliacao');
+	
+		if ($this->session->has('ID_usuario')) {
+			$data = [
+				'ID_usuario' => $ID_usuario,
+				'ID_clinica' => $ID_clinica,
+				'Texto_avaliacao' => $comentario,
+				'Nota_avaliacao' => $nota_avaliacao, 
+			];
+	
+			$avaliacaoModel->inserirAvaliacao($data);
+			return redirect()->to('/clinica/' . $ID_clinica);
+		}
+	}
 	
 
 	public function recupera_senha(){
@@ -116,3 +165,5 @@ class Home extends BaseController
 		echo base64_decode($imgdata['foto_clinica']);
 	}
 }
+
+

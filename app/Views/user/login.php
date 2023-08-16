@@ -13,7 +13,7 @@
                     <br>
                 <button type="submit" name="registrar">Entrar</button>
 				<div id="recup-link"><a href="<?=base_url('recuperacao')?>">Esqueceu a senha?</a></div>
-				<div id="reg-link">ainda não possui uma conta? <a href="<?=base_url('pp/registro')?>">registrar</a></div>
+				<div id="reg-link">Ainda não possui uma conta? <a href="<?=base_url('pp/registro')?>">Registrar</a></div>
 	    	</form>
 		</div>
 

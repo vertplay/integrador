@@ -16,18 +16,31 @@
                     <div class="block-text-sub">Saiba Mais</div>
                 </div>
                 <div class="container-block-text2">
-                    <?php
-                        $media_avaliacao = $dado['Media_Avaliacao'];
-                        echo number_format($media_avaliacao, 1) . " &#9733;";
-                    ?>
+                       <?php
+                       if ($dado['Media_Avaliacao'] !== null) {
+                           $media_avaliacao = $dado['Media_Avaliacao'];
+                           echo number_format($media_avaliacao, 1) . " &#9733;";
+                       } 
+                       else {
+                           echo "Sem pontuação";
+                       }
+                   ?>
                 </div>
             </a>
         <?php } ?>
-    <?php } else { ?>
-        <div>
-            <br>Nenhum resultado encontrado para <?= esc($termoPesquisa) ?>.</br>Tente pesquisar por outra palavra!
-        </div>
-    <?php } ?>
+
+        <?php } else { ?>
+            <div>
+                <br>Nenhum resultado encontrado para <?= esc($termoPesquisa) ?> . </br>Tente pesquisar por outra palavra!
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    window.history.back();
+                }, 3000); 
+            </script>
+        <?php } ?>
 </div>
 
 <?=$this->endSection()?>
+

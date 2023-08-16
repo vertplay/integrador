@@ -40,6 +40,11 @@ $routes->get('/pesquisar', 'Pesquisa::index');
 //pagina da clinica
 $routes->get('/clinica/(:num)','Home::clinica/$1');
 
+//Enviar avaliacao
+$routes->post('/clinica/enviaravaliacao', 'Home::enviarAvaliacao');
+
+
+
 //perfil
 $routes->get('/pe/perfil','Clinica::index');
 
@@ -93,3 +98,5 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+

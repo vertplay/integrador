@@ -10,11 +10,10 @@ class MainModel extends Model{
 	}
 
 	public function list() : array {
-		
 		$dados = $this->db->query("
 			SELECT c.ID_clinica, c.Nome_fantasia_clinica, AVG(a.Nota_avaliacao) AS Media_Avaliacao
 			FROM clinica c
-			INNER JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
+			LEFT JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
 			GROUP BY c.ID_clinica, c.Nome_fantasia_clinica
 			ORDER BY Media_Avaliacao DESC
 		")->getResultArray();
@@ -41,7 +40,7 @@ class MainModel extends Model{
 		$dados = $this->db->query("
 			SELECT c.ID_clinica, c.Nome_fantasia_clinica, AVG(a.Nota_avaliacao) AS Media_Avaliacao
 			FROM clinica c
-			INNER JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
+			LEFT JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
 			INNER JOIN possui_vinculo pv ON c.ID_clinica = pv.ID_clinica
 			INNER JOIN medico m ON pv.ID_medico = m.ID_medico
 			WHERE c.Nome_fantasia_clinica LIKE '%$termo%'
@@ -53,7 +52,6 @@ class MainModel extends Model{
 		$db->close();
 		return $dados;
 	}
-		
 
 	public function setCodeRecuperacao($id, $codigo, $tipo, $datarec, $validade){
 		$dados;
