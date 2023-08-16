@@ -74,6 +74,9 @@ $routes->post('/alterar_senha', 'Home::realizar_alteracao_de_senha');
 //Alterar dados do cadastro
 $routes->post('/pe/atualizar','Clinica::atualizar_cadastro');
 
+//Excluir conta
+$routes->post('/pe/excluir','Clinica::excluir_cadastro');
+
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');
 /*

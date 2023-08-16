@@ -61,7 +61,7 @@ class User extends BaseController{
                     if (seconds > 0) {
                         message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
                     } else {
-                        window.location.href = "'.base_url('pe/login').'";
+                        window.location.href = "'.base_url('pp/login').'";
                         }
                     }, 1000);
                 </script>';
