@@ -113,16 +113,13 @@
 						<img src="<?= base_url('/img/'.$ID_clinica)?>"/>
 					</div>
 					<div class="info">
-						<h3>Horário de Funcionamento:</h3>
-					<p>Segunda-feira: 07:00 às 20:00.<br>
-						Terça-feira: 07:00 às 20:00.<br>
-						Quarta-feira: 07:00 às 20:00.<br>
-						Quinta-feira: 07:00 às 20:00.<br>
-						Sexta-feira: 07:00 às 20:00.<br>
-						Sábado: 07:00 às 11:00.<br>
-						Domingo: Fechado</p>
+						</br>
+						<h3>Endereço:</h3>
+						<p>
+						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
 					</div>
 					<div class="info">
+						</br>
 						<h3>Contato:</h3>
 						<p>Telefone: <?=$Telefone_clinica?><br>
 						WhatsApp: <?=$Whatsapp_clinica?><br>
@@ -148,6 +145,18 @@
 					<div class="info">
 					<h3>Avaliações:</h3>
 					<div id="comentarios">
+						<h3>Avaliações:</h3>
+						<?php if (!empty($avaliacoes)) : ?>
+						<?php foreach ($avaliacoes as $avaliacao) : ?>
+							<div class="comentarios">
+								<p><strong><?= $avaliacao['Nome_usuario'] ?></strong></p>
+								<p><?= str_repeat('&#9733;', $avaliacao['Nota_avaliacao']) ?></p>
+								<p><?= $avaliacao['Texto_avaliacao'] ?></p>
+							</div>
+						<?php endforeach; ?>
+					<?php else : ?>
+						<p>A clínica ainda não possui nenhuma avaliação.</p>
+					<?php endif; ?>
 
 						
 
