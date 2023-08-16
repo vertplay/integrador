@@ -145,15 +145,23 @@
 						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
 						
 					</div>
-					<div id="mapa">
-
-					</div>
 					<div class="info">
-						<h3>Nota e Avaliações:</h3>
-						<p>
-							<!-- Exibir notas e avaliações aqui -->
-						</p>
+					<h3>Avaliações:</h3>
+					<div id="comentarios">
 
+						
+
+						<?php if (!empty($avaliacoes)) : ?>
+							<?php foreach ($avaliacoes as $avaliacao) : ?>
+								<div class="comentarios">
+									<p><strong><?= $avaliacao['Nome_usuario'] ?></strong></p>
+									<p><?= str_repeat('&#9733;', $avaliacao['Nota_avaliacao']) ?></p>
+									<p><?= $avaliacao['Texto_avaliacao'] ?></p>
+								</div>
+							<?php endforeach; ?>
+						<?php else : ?>
+							<p>Nenhuma avaliação para esta clínica.</p>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
