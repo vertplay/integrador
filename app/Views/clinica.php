@@ -46,8 +46,18 @@
 
 			</div>
 
-			<div id="clin-block2" class="clin-block">
+
+
+			
 				
+			<div id="clin-block2" class="clin-block">
+				<div class="info">
+					<h3>Endereço:</h3>
+					<p>
+					<?=$clin['Logradouro']?>, <?=$clin['Numero']?> - <?=$clin['Bairro']?>, Araçuaí - MG, 39600-000</p>
+
+				</div>
+
 				<div class="info">
 					<h3>Avaliações:</h3>
 					<div id="comentarios">

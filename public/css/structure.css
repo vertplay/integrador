@@ -432,7 +432,7 @@ body{
 	text-align:left;
 	color:red;
 }
-#mostrar_senha{
+#mostrar_senha, #mostrar_senha2{
 	display:inline-block;
 	position:absolute;
 	margin-top:6.5px;
@@ -582,7 +582,7 @@ form[name="formComentario"] input[name="comentario"] {
 	display:block;
 	width:51%;
 }
-#cancelarUpdate_btn{
+#cancelarUpdate_btn, #cancelardelete_btn{
 	width:90px;
 	height:30px;
 	margin-top:10px;
@@ -590,7 +590,7 @@ form[name="formComentario"] input[name="comentario"] {
 	font-family:'garet';
 	color:#ffffff;
 }
-#editperf_btn{
+#editperf_btn, #deleteperf_btn{
 	display:inline-block;
 	width:120px;
 	height:30px;
@@ -611,6 +611,15 @@ form[name="formComentario"] input[name="comentario"] {
 #form-alterasenha{
 	display:inline;
 	width:50%;
+}
+#cancelardelete_btn{
+	background:#007E7E;
+}
+#deleteaccbtn{
+	background:#a01212;
+}
+#deleteperf_btn{
+	background:#a01212;
 }
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/

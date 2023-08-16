@@ -28,6 +28,9 @@ class Clinica extends BaseController{
     public function index(){
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
             $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
+            $avaliacaoModel = new AvaliacaoModel();
+		    $enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
+            $dados[0]+=$enviar['avaliacoes'];
             return view('clinicas/perfil',$dados[0]);
         }
         else{
@@ -89,7 +92,24 @@ class Clinica extends BaseController{
         $session->remove($array_items);
         return redirect()->to(base_url());
     }
-
+    //--------------------------------------------------Excluir cadastro (perfil empresarial)-------------------------------------------------------------------
+    public function excluir_cadastro(){
+        if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
+            $senha = $this->request->getPost('formsenha');
+            $id = $this->session->get('ID_clinica');
+            $this->clinicaModel->excluir_cadastro($id, $senha);
+            if($this->clinicaModel->getClinica($id) == null){
+                $this->logout();
+                return redirect()->to(base_url());
+            }
+            else{
+                return redirect()->to(base_url('pe/perfil'));
+            }
+        }
+        else{
+            return redirect()->to(base_url());
+        }
+    }
 
     //Thiago parte
     public function validarSenha($senha) {
@@ -219,6 +239,7 @@ class Clinica extends BaseController{
        
     }
 
+    ////Atualizar cadastro --- artur
     public function atualizar_cadastro(){
         $cnpj = $this->request->getPost('cnpj');
         $nome_fantasia = $this->request->getPost('nome_fantasia');
