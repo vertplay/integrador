@@ -62,12 +62,12 @@
                         <input type="email" name="email_clinica" id="email_clinica" required/>
                         <div class="error-message"></div>
                     <label for="telefone_clinica">Telefone</label>
-                        <input type="text" name="telefone_clinica" id="telefone_clinica" required/>
+                        <input type="text" name="telefone_clinica" id="telefone_clinica" pattern="[0-9]*" required/>
                         <div class="error-message"></div>
                     <label for="whatsapp_clinica">Whatsapp</label>
-                        <input type="text" name="whatsapp_clinica" id="whatsapp_clinica"/>
+                        <input type="number" name="whatsapp_clinica" id="whatsapp_clinica" pattern="[0-9]*"/>
                     <label for="instagram_clinica">Instagram</label>
-                        <input type="text" name="instagram_clinica" id="instagram_clinica" placeholder="@"/>
+                        <input type="number" name="instagram_clinica" id="instagram_clinica" placeholder="@"/>
                 </div>
 
                 <button type="submit" name="registrar">Cadastrar</button>

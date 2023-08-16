@@ -14,6 +14,8 @@ class Pesquisa extends Controller {
         $dados['resultados'] = $mainModel->pesquisar($termoPesquisa); 
 
         return view('resultados_pesquisa', $dados);
+
+        
     }
 }
 

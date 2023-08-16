@@ -35,9 +35,9 @@
                     <label for="email">Email</label>
                         <input type="email" name="email" id="email" required/>
                     <label for="whatsapp">Whatsapp</label>
-                        <input type="text" name="whatsapp" id="whatsapp" required/>
+                        <input type="number" name="whatsapp" id="whatsapp" pattern="[0-9]*" required/>
                     <label for="telefone">Telefone</label>
-                        <input type= "text" name="telefone" id="telefone" required>
+                        <input type= "number" name="telefone" id="telefone" pattern="[0-9]*" required>
                 </div>
                 <!--Endereço-->
                 <label for="endereco" class="sub_bloco-titulo">Endereço</label>
