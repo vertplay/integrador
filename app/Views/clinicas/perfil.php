@@ -126,6 +126,12 @@
 						Intagram: @<?=$Instagram_clinica?><br>
 						Email: <?=$Email_clinica?></p>
 					</div>
+					<div class="info">
+						<h3>Endereço:</h3>
+						<p>
+						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
+						
+					</div>
 				</div>
 
 				<div id="clin-block2" class="clin-block">
@@ -136,12 +142,7 @@
 					</form>
 					<button type="button" id="deleteperf_btn">Excluir Conta</button>
 					
-					<div class="info">
-						<h3>Endereço:</h3>
-						<p>
-						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
-						
-					</div>
+					
 					<div class="info">
 						<h3>Avaliações:</h3>
 						<div id="comentarios">
