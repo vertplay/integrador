@@ -52,7 +52,6 @@ class MainModel extends Model{
 		$db->close();
 		return $dados;
 	}
-	
 
 	public function setCodeRecuperacao($id, $codigo, $tipo, $datarec, $validade){
 		$dados;
@@ -78,8 +77,6 @@ class MainModel extends Model{
 		$this->builder = $this->db->table('recuperacao');
 		
 		$this->builder->insert($dados);
-
-
 
 		//$this->builder->select('ID_clinica, Nome_fantasia_clinica');
         //$query = $this->builder->getWhere(['Email_clinica' => $login, 'Senha_clinica' => $senha], $limit, $offset)->getResultArray();
@@ -130,4 +127,3 @@ class MainModel extends Model{
 		return $retorno;
 	}
 }
-

@@ -26,13 +26,21 @@ class Home extends BaseController
     }
 
 	//página inicial, listagem de clínicas
-	public function index() {
+	public function index(){
+
 		$home = new MainModel();
 		$enviar['dados'] = $home->list();
-		return view('index', $enviar);
-		
+		return view('index', $enviar);	
 	}
 
+	//Gera imagem
+	public function img($id) {
+
+		$img = new MainModel();
+		$imgdata = $img->pegaimg($id);
+		$this->response->setContentType($imgdata['tipo_de_imagem_clinica']);
+		echo base64_decode($imgdata['foto_clinica']);
+	}
 
 	//página de usuario/perfil
 	public function clinica($id){
@@ -49,11 +57,9 @@ class Home extends BaseController
 
 		$enviar["clin"] = $enviar["clin"][0];
 		
-		//print_r($enviar);
 
 		$this->session->set('avaliacao_clinica_id', $id);
 
-		// Verifica se o usuário está logado e obtém o ID do usuário
         if ($this->session->has('ID_usuario')) {
             $ID_usuario = $this->session->get('ID_usuario');
             $enviar["ID_usuario"] = $ID_usuario;
@@ -65,7 +71,6 @@ class Home extends BaseController
 		return view('clinica',$enviar);
 	}
 
-	
 	public function enviarAvaliacao() {
 		$avaliacaoModel = new AvaliacaoModel();
 	
@@ -87,7 +92,6 @@ class Home extends BaseController
 		}
 	}
 	
-
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');
 		if($email != null || $email != ""){
@@ -147,8 +151,7 @@ class Home extends BaseController
 			}else{//falha no envio de email
 				return view('recuperacao/aviso_nao_enviado');
 			}
-			
-			
+	
 		}
 		else{
 			$codigo = $this->request->getGet('cod');
@@ -158,10 +161,10 @@ class Home extends BaseController
 			}
 			else{
 				return view('recupera_senha');
-			}
-			
+			}		
 		}
 	}
+
 	public function realizar_alteracao_de_senha(){
 		$codigo = $this->request->getPost('Enviar');
 		$senha = $this->request->getPost('senha');
@@ -172,15 +175,6 @@ class Home extends BaseController
 			$link = $home->redefine_senha($senha, $codigo);
 			return redirect()->to(base_url("$link/login"));
 		}
-
-	}
-
-	//Gera imagem
-	public function img($id){
-		$img = new MainModel();
-		$imgdata = $img->pegaimg($id);
-		$this->response->setContentType($imgdata['tipo_de_imagem_clinica']);
-		echo base64_decode($imgdata['foto_clinica']);
 	}
 }
 
