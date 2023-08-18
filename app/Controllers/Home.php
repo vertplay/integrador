@@ -26,8 +26,7 @@ class Home extends BaseController
     }
 
 	//página inicial, listagem de clínicas
-	public function index()
-	{
+	public function index() {
 		$home = new MainModel();
 		$enviar['dados'] = $home->list();
 		return view('index', $enviar);
