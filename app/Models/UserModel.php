@@ -53,7 +53,7 @@ class UserModel extends Model{
         else
             return null;
 	}
-    public function getUserByEmail($email) : array{
+    public function getUserByEmail($email){
         $this->builder->select('ID_usuario, Nome_usuario');
         $query = $this->builder->getWhere(['Email_usuario' => $email])->getResultArray();
         $this->db->close();
