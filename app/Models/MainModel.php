@@ -41,11 +41,11 @@ class MainModel extends Model{
 			SELECT c.ID_clinica, c.Nome_fantasia_clinica, AVG(a.Nota_avaliacao) AS Media_Avaliacao
 			FROM clinica c
 			LEFT JOIN avalia_avaliacao a ON c.ID_clinica = a.ID_clinica
-			INNER JOIN possui_vinculo pv ON c.ID_clinica = pv.ID_clinica
-			INNER JOIN medico m ON pv.ID_medico = m.ID_medico
+			LEFT JOIN possui_vinculo pv ON c.ID_clinica = pv.ID_clinica
+			LEFT JOIN medico m ON pv.ID_medico = m.ID_medico
 			WHERE c.Nome_fantasia_clinica LIKE '%$termo%'
-			OR c.Especialidade_clinica LIKE '%$termo%'
-			OR m.Nome_medico LIKE '%$termo%'
+			   OR c.Especialidade_clinica LIKE '%$termo%'
+			   OR m.Nome_medico LIKE '%$termo%'
 			GROUP BY c.ID_clinica, c.Nome_fantasia_clinica
 			ORDER BY Media_Avaliacao DESC
 		")->getResultArray();
@@ -77,8 +77,6 @@ class MainModel extends Model{
 		$this->builder = $this->db->table('recuperacao');
 		
 		$this->builder->insert($dados);
-
-
 
 		//$this->builder->select('ID_clinica, Nome_fantasia_clinica');
         //$query = $this->builder->getWhere(['Email_clinica' => $login, 'Senha_clinica' => $senha], $limit, $offset)->getResultArray();
@@ -129,4 +127,3 @@ class MainModel extends Model{
 		return $retorno;
 	}
 }
-

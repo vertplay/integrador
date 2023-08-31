@@ -67,7 +67,7 @@
                     <label for="whatsapp_clinica">Whatsapp</label>
                         <input type="number" name="whatsapp_clinica" id="whatsapp_clinica" pattern="[0-9]*"/>
                     <label for="instagram_clinica">Instagram</label>
-                        <input type="number" name="instagram_clinica" id="instagram_clinica" placeholder="@"/>
+                        <input type="text" name="instagram_clinica" id="instagram_clinica" placeholder="@"/>
                 </div>
 
                 <button type="submit" name="registrar">Cadastrar</button>
