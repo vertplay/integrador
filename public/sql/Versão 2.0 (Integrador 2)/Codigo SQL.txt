@@ -1,0 +1,128 @@
+CREATE DATABASE Araclin;
+USE Araclin; 
+
+CREATE TABLE avalia_avaliacao (
+ID_avaliacao INTEGER PRIMARY KEY,
+ID_clinica INTEGER,
+ID_usuario INTEGER,
+Texto_avaliacao TEXT,
+Nota_avaliacao FLOAT,
+Data_avaliacao VARCHAR(10)
+);
+
+CREATE TABLE Usuario (
+ID_usuario INTEGER PRIMARY KEY,
+ID_endereco INTEGER,
+Nome_usuario VARCHAR(100),
+CPF_usuario VARCHAR(14),
+Senha_usuario VARCHAR(50),
+Whatsapp_usuario VARCHAR(15),
+Email_usuario VARCHAR(50),
+Telefone_usuario VARCHAR(15)
+);
+
+CREATE TABLE Disponibilidade (
+ID_disponibilidade INTEGER PRIMARY KEY,
+ID_medico INTEGER,
+Dia_semana VARCHAR(15),
+Hora_inicio TIME,
+Hora_fim TIME
+);
+
+CREATE TABLE medico (
+ID_medico INTEGER PRIMARY KEY,
+Nome_medico VARCHAR(100),
+Telefone_medico VARCHAR(15),
+Preco_consulta_medico FLOAT,
+Especialidade_medico VARCHAR(50),
+Email_medico VARCHAR(50),
+CRM_medico VARCHAR(12)
+);
+
+CREATE TABLE Endereco (
+ID_endereco INTEGER PRIMARY KEY,
+Cidade VARCHAR(30),
+Estado VARCHAR(30),
+Numero VARCHAR(10),
+Rua VARCHAR(100),
+Complemento VARCHAR(50),
+CEP CHAR(9),
+Bairro VARCHAR(50)
+);
+
+CREATE TABLE clinica (
+ID_clinica INTEGER PRIMARY KEY,
+ID_endereco INTEGER,
+Whatsapp_clinica VARCHAR(15),
+Instagram_clinica VARCHAR(50),
+Senha_clinica VARCHAR(50),
+Telefone_clinica VARCHAR(15),
+Convenio_clinica VARCHAR(100),
+CNPJ CHAR(14),
+Forma_pagamento_clinica VARCHAR(100),
+foto_clinica MEDIUMBLOB,
+Nome_fantasia_clinica VARCHAR(100),
+Descricao_clinica VARCHAR(200),
+Especialidade_clinica VARCHAR(200),
+Email_clinica VARCHAR(50),
+Plano_saude_clinica VARCHAR(100),
+FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE agenda_Agendamento (
+ID_agendamento INTEGER PRIMARY KEY,
+ID_medico INTEGER,
+ID_clinica INTEGER,
+CPF_paciente VARCHAR(14),
+Data_hora DATETIME,
+Status_agendamento VARCHAR(50),
+Observacoes TEXT,
+FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE SET NULL,
+FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE Funcionamento (
+ID_funcionamento INTEGER PRIMARY KEY,
+ID_clinica INTEGER,
+Hora_fechamento TIME,
+Dia_semana VARCHAR(15),
+Hora_abertura TIME,
+FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Paciente (
+CPF_paciente VARCHAR(14) PRIMARY KEY,
+ID_endereco INTEGER,
+Nome_paciente VARCHAR(100),
+Genero_paciente CHAR(1),
+RG_paciente VARCHAR(9),
+Data_nascimento_paciente DATETIME,
+Telefone_paciente VARCHAR(15),
+FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE Recuperacao (
+ID_recuperacao INTEGER PRIMARY KEY,
+ID_usuario INTEGER,
+ID_clinica INTEGER,
+Codigo_recuperacao VARCHAR(50),
+Data_recuperacao INTEGER,
+Status_recuperacao CHAR(1),
+Tipo_recuperacao CHAR(2),
+Validade_recuperacao DATETIME,
+FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON UPDATE CASCADE ON DELETE CASCADE,
+FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE possui_vinculo (
+ID_medico INTEGER,
+ID_clinica INTEGER,
+FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE CASCADE,
+FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Usuario ADD FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL;
+ALTER TABLE Disponibilidade ADD FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE agenda_Agendamento ADD FOREIGN KEY(CPF_paciente) REFERENCES Paciente (CPF_paciente) ON UPDATE CASCADE ON DELETE CASCADE;
