@@ -63,7 +63,6 @@ Forma_pagamento_clinica VARCHAR(100),
 foto_clinica MEDIUMBLOB,
 Nome_fantasia_clinica VARCHAR(100),
 Descricao_clinica VARCHAR(200),
-Especialidade_clinica VARCHAR(200),
 Email_clinica VARCHAR(50),
 Plano_saude_clinica VARCHAR(100),
 FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
