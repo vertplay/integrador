@@ -39,12 +39,12 @@ body{
 	min-height:calc(100vh - var(--menu-heigth));
 	background-color:var(--menu-color);
 	text-align:center;
-	background-image:url("../img/logo.png");
+	/*background-image:url("../img/logo.png");
 	background-repeat: no-repeat;
 	background-attachment:scroll;
 	background-position-x:right;
 	background-position-y:center;
-	background-size:contain;
+	background-size:contain;*/
 	
 }
 
@@ -104,12 +104,12 @@ body{
 	height:100%;
 	padding:22px 0px 0px 80px;
 	margin-left:40px;
-	background-image:url("../img/logo-darker.png");
+	background-image:url("../img/logo.jpg");
 	background-repeat: no-repeat;
 	background-attachment:scroll;
 	background-position-x:10%;
-	background-position-y:85%;
-	background-size:50px;
+	background-position-y:50%;
+	background-size:180px;
 }
 	/*#menu-bar > #home-link:hover{
 		color:#000000;

@@ -37,7 +37,7 @@
 	<body>
 		<!--MENU-->
 		<nav id="menu-bar">
-			<a id="home-link" href="<?=base_url()?>">AraClin</a>
+			<a id="home-link" href="<?=base_url()?>"></a>
 			<?php
 				if($session->has('ID_clinica') && $session->get('tipo') == "pe"){
 					echo '
