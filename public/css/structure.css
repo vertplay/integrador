@@ -7,10 +7,10 @@
     src: url("../font/Garet-Book.otf");
 }
 :root{
-	--menu-color:#007E7E;
+	--menu-color:#005050;
 	--menu-font-color:#ffffff;
 	--menu-heigth:80px;
-	--background-color:#7AC0C0;
+	--background-color:##ffffff;
 	--container-block-height:300px;
 }
 *{
@@ -116,7 +116,7 @@ body{
 		text-decoration:underline 2px;
 	}
 #btn-group{/* MENU -> link de login/registro*/
-	width:320px;
+	width:160px;
 	height:100%;
 	float:right;
 	
@@ -129,23 +129,30 @@ body{
 	display:inline-block;
 	height:100%;
 	padding:calc(var(--menu-heigth) - 30px) 10px 0px 10px;
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;
 	background-attachment:scroll;
 	background-position-x:center;
 	background-position-y:12%;
-	background-size:60px;
+	background-size:60px;*/
 }
 	#btn-group > a:hover{
 		transition:0.5s;
 		color:#000000;
 		text-decoration:underline 2px;
 	}
+#btn-group > #menu-btn-user > span{
+	font-size:45px;
+	position:absolute;
+	top:10px;
+	margin-left:18px;
+}
+	/*
 #btn-group > #menu-btn-user{
 	background-image:url("../img/pf2.png");
 }
 #btn-group > #menu-btn-emp{
 	background-image:url("../img/pe2.png");
-}
+}*/
 #btn-group > form{
 	display:inline-block;
 	
