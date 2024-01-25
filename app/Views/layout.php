@@ -59,12 +59,20 @@
 					</div>
 					';
 				}else{
+
+					echo'
+					<div id="btn-group">
+						<a href="'.base_url('pe/login').'" id="menu-btn-user"><span class="material-icons">person</span>Minha Conta</a>
+					</div>
+					';
+					/*
 					echo'
 					<div id="btn-group">
 						<a href="'.base_url('pp/login').'" id="menu-btn-user">Perfil Pessoal</a>
 						<a href="'.base_url('pe/login').'" id="menu-btn-emp">Perfil Empresarial</a>
 					</div>
 					';
+					*/
 				}
 			?>
 		</nav>
