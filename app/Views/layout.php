@@ -82,7 +82,9 @@
         </div>
 		<!--FOOTER-->
 		<footer>
-			&copy;2023
+			<p>Condições de Uso | Cookies | Anúncios Baseados em Interesses</p>
+			<p>AraClin - Catálogo de Clínicas Médicas &copy 2021-2024</p>
+			<p>Fale conosco: ajuda-araclin@araclin.com.br</p>
 		</footer>
 			
 	</body>
