@@ -3,7 +3,7 @@
 	<?=$this->section('content')?>
         <script src= "<?=base_url('js/mostrasenhalogin.js')?>"> </script>
         <div class="login-form formularios">
-            <h2>Log In</h2>
+            <h2>Entrar</h2>
 			<form action="<?=base_url('pp/login')?>" method="POST" enctype="multipart/form-data">
                 <label for="email">Email</label><br>
                     <input type="text" name="email" id="email" required><br>
