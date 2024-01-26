@@ -605,8 +605,8 @@ form[name="formComentario"] input[name="comentario"] {
 footer{/*RODAPÉ*/
 	clear:both;
 	width:100%;
-	min-height:80px;
-	padding:10px 0px 15px 0px;
+	min-height:150px;
+	padding:20px 0px 15px 0px;
 	text-align:center;
 	/*line-height:300%;*/
 	border-top-width:2px;
