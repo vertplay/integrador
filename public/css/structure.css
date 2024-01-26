@@ -7,7 +7,7 @@
     src: url("../font/Garet-Book.otf");
 }
 :root{
-	--menu-color:#004e4e;
+	--menu-color:#005050;
 	--menu-font-color:#ffffff;
 	--menu-heigth:80px;
 	--background-color:##ffffff;
@@ -72,7 +72,7 @@ body{
 	padding:20px;
 	margin-top:40px;
 	color:#ffffff;
-	background:#004e4e;
+	background:#005d5d;
 	font-weight: bold;
 }
 
@@ -101,7 +101,7 @@ body{
 	font-weight: normal;
 	float:left;
 	width:250px;
-	height:120%;
+	height:130%;
 	padding:22px 0px 0px 80px;
 	margin-left:40px;
 	background-image:url("../img/logo2.jpg");
@@ -109,7 +109,7 @@ body{
 	background-attachment:scroll;
 	background-position-x:10%;
 	background-position-y:50%;
-	background-size:180px;
+	background-size:150px;
 }
 	/*#menu-bar > #home-link:hover{
 		color:#000000;
@@ -219,7 +219,7 @@ body{
 }
 	
 .container-blocks:hover{
-	border-color:#004e4e;
+	border-color:#005d5d;
 }
 	.container-blocks:hover > .container-block-text{
 		text-decoration:underline;
@@ -272,7 +272,7 @@ body{
 	font-size:17px;
 	opacity:0.9;
 	transition:0.3s;
-	background:#004e4e;
+	background:#005d5d;
 	color:#ffffff;
 }
 @media (min-width:840px){
@@ -334,10 +334,10 @@ body{
 	text-align:left;
 	font-size:24px;
 	font-weight:bold;
-	color:#004e4e;
+	color:#007e7e;
 }
 .info h3{
-	color:#004e4e;
+	color:#007e7e;
 	margin-bottom:10px;
 }
 .clin-block .info{
@@ -375,7 +375,7 @@ body{
 	width:65%;
 	max-width:95%;
 	min-height:500px;
-	border:1px solid #004e4e;
+	border:1px solid #005d5d;
 	border-radius:20px;
 	text-align:center;
 	color:#004e4e;
@@ -421,7 +421,7 @@ body{
 	width:90px;
 	height:30px;
 	margin-top:10px;
-	background-color:#004e4e;
+	background-color:#005d5d;
 	font-family:'garet';
 	color:#ffffff;
 }
@@ -468,7 +468,7 @@ body{
 }
 
 
-/*-----------------------COMENTÁRIOS----------------------------*/
+/*-----------------------AVALIAÇÃO----------------------------*/
 
 form[name="formComentario"] input[name="comentario"] {
     float: left;
@@ -476,7 +476,7 @@ form[name="formComentario"] input[name="comentario"] {
     min-height: 50px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #004e4e;
+    border: 2px solid #005d5d;
     height: auto;
 	border-radius: 10px;
 }
@@ -487,7 +487,7 @@ form[name="formComentario"] input[name="comentario"] {
     min-height: 100px;
     margin-top: 20px;
     padding: 10px;
-    border: 2px solid #004e4e;
+    border: 2px solid #005d5d;
     height: auto;
     border-radius: 20px;
 }
@@ -498,7 +498,7 @@ form[name="formComentario"] input[name="comentario"] {
     min-height: 100px;
     padding: 10px;
     margin-bottom: 10px;
-	border: 2px solid #004e4e;
+	border: 2px solid #005d5d;
 	color: #000;
     height: auto;
     border-radius: 20px;
@@ -605,8 +605,8 @@ form[name="formComentario"] input[name="comentario"] {
 footer{/*RODAPÉ*/
 	clear:both;
 	width:100%;
-	min-height:150px;
-	padding:20px 0px 15px 0px;
+	min-height:80px;
+	padding:10px 0px 15px 0px;
 	text-align:center;
 	/*line-height:300%;*/
 	border-top-width:2px;
