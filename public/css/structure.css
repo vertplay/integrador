@@ -394,6 +394,7 @@ body{
 	height:40px;
 	border-radius:6px;
 	margin:2px 0 10px 0;
+	border:1px solid #005d5d;
 	
 }
 .formularios textarea{
@@ -436,6 +437,7 @@ body{
 	border:1px inset #000;
 	border-radius:20px;
 	margin:0 auto;
+	border:1px solid #005d5d;
 }
 .sub_bloco-titulo{
 	font-weight:bold;
