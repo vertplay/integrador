@@ -606,9 +606,11 @@ footer{/*RODAPÉ*/
 	clear:both;
 	width:100%;
 	min-height:150px;
-	padding:20px 0px 15px 0px;
 	text-align:center;
-	/*line-height:300%;*/
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
 	border-top-width:2px;
 	background-color:var(--menu-color);
 	color:var(--menu-font-color);
