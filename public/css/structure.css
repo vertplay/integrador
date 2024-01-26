@@ -101,7 +101,7 @@ body{
 	font-weight: normal;
 	float:left;
 	width:250px;
-	height:120%;
+	height:130%;
 	padding:22px 0px 0px 80px;
 	margin-left:40px;
 	background-image:url("../img/logo2.jpg");
@@ -109,7 +109,7 @@ body{
 	background-attachment:scroll;
 	background-position-x:10%;
 	background-position-y:50%;
-	background-size:180px;
+	background-size:150px;
 }
 	/*#menu-bar > #home-link:hover{
 		color:#000000;
@@ -394,6 +394,7 @@ body{
 	height:40px;
 	border-radius:6px;
 	margin:2px 0 10px 0;
+	border:1px solid #005d5d;
 	
 }
 .formularios textarea{
@@ -436,6 +437,7 @@ body{
 	border:1px inset #000;
 	border-radius:20px;
 	margin:0 auto;
+	border:1px solid #005d5d;
 }
 .sub_bloco-titulo{
 	font-weight:bold;
@@ -468,50 +470,50 @@ body{
 }
 
 
+/*-----------------------AVALIAÇÃO----------------------------*/
+
 form[name="formComentario"] input[name="comentario"] {
     float: left;
     width: 100%;
     min-height: 50px;
     padding: 10px;
     margin-bottom: 10px;
-    background: #c9f4f4;
-    border: 1px solid #005d5d;
+    border: 2px solid #005d5d;
     height: auto;
+	border-radius: 10px;
 }
 
-/*-----------------------COMENTÁRIOS----------------------------*/
-
-#comentarios{
-	float:left;
-	width:100%;
-	min-height:100px;
-	margin-top:20px;
-	padding: 10px;
-	background:#ffffff;
-	border:2px solid #005d5d;
-	height:auto;
-	border-radius: 20px;
+#comentarios {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #005d5d;
+    height: auto;
+    border-radius: 20px;
 }
 
-.comentarios{
-	float:left;
-	width:100%;
-	min-height:100px;
-	padding: 10px;
-	margin-bottom: 10px;
-	background: #6ca9a9;
-	height:auto;
-	border-radius: 20px;
-
+.comentarios {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+	border: 2px solid #005d5d;
+	color: #000;
+    height: auto;
+    border-radius: 20px;
 }
 
 .btn-avaliar {
-    background-color: #7ac0c0;
-    color: black;
+	background-color: #ffffff;
     border: none;
-    padding: 5x 20px;
+    padding: 1px 1px;
     cursor: pointer;
     margin-bottom: 30px;
+    border-radius: 20px;
+	font-weight: bold;
 }
 
 .avaliacao{
@@ -522,7 +524,7 @@ form[name="formComentario"] input[name="comentario"] {
 .star-icon{
 	list-style-type: none;
 	cursor: pointer;
-	color: #005d5d;
+	color: #004e4e;
 	font-size: 25px;
 }
 
@@ -593,7 +595,7 @@ form[name="formComentario"] input[name="comentario"] {
 	width:50%;
 }
 #cancelardelete_btn{
-	background:#007E7E;
+	background:#004e4e;
 }
 #deleteaccbtn{
 	background:#a01212;
