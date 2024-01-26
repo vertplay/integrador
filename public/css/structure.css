@@ -7,7 +7,7 @@
     src: url("../font/Garet-Book.otf");
 }
 :root{
-	--menu-color:#005050;
+	--menu-color:#004e4e;
 	--menu-font-color:#ffffff;
 	--menu-heigth:80px;
 	--background-color:##ffffff;
@@ -72,7 +72,7 @@ body{
 	padding:20px;
 	margin-top:40px;
 	color:#ffffff;
-	background:#005d5d;
+	background:#004e4e;
 	font-weight: bold;
 }
 
@@ -219,7 +219,7 @@ body{
 }
 	
 .container-blocks:hover{
-	border-color:#005d5d;
+	border-color:#004e4e;
 }
 	.container-blocks:hover > .container-block-text{
 		text-decoration:underline;
@@ -272,7 +272,7 @@ body{
 	font-size:17px;
 	opacity:0.9;
 	transition:0.3s;
-	background:#005d5d;
+	background:#004e4e;
 	color:#ffffff;
 }
 @media (min-width:840px){
@@ -334,10 +334,10 @@ body{
 	text-align:left;
 	font-size:24px;
 	font-weight:bold;
-	color:#007e7e;
+	color:#004e4e;
 }
 .info h3{
-	color:#007e7e;
+	color:#004e4e;
 	margin-bottom:10px;
 }
 .clin-block .info{
@@ -375,7 +375,7 @@ body{
 	width:65%;
 	max-width:95%;
 	min-height:500px;
-	border:1px solid #005d5d;
+	border:1px solid #004e4e;
 	border-radius:20px;
 	text-align:center;
 	color:#004e4e;
@@ -421,7 +421,7 @@ body{
 	width:90px;
 	height:30px;
 	margin-top:10px;
-	background-color:#005d5d;
+	background-color:#004e4e;
 	font-family:'garet';
 	color:#ffffff;
 }
@@ -468,50 +468,50 @@ body{
 }
 
 
+/*-----------------------COMENTÁRIOS----------------------------*/
+
 form[name="formComentario"] input[name="comentario"] {
     float: left;
     width: 100%;
     min-height: 50px;
     padding: 10px;
     margin-bottom: 10px;
-    background: #c9f4f4;
-    border: 1px solid #005d5d;
+    border: 2px solid #004e4e;
     height: auto;
+	border-radius: 10px;
 }
 
-/*-----------------------COMENTÁRIOS----------------------------*/
-
-#comentarios{
-	float:left;
-	width:100%;
-	min-height:100px;
-	margin-top:20px;
-	padding: 10px;
-	background:#ffffff;
-	border:2px solid #005d5d;
-	height:auto;
-	border-radius: 20px;
+#comentarios {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #004e4e;
+    height: auto;
+    border-radius: 20px;
 }
 
-.comentarios{
-	float:left;
-	width:100%;
-	min-height:100px;
-	padding: 10px;
-	margin-bottom: 10px;
-	background: #6ca9a9;
-	height:auto;
-	border-radius: 20px;
-
+.comentarios {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+	border: 2px solid #004e4e;
+	color: #000;
+    height: auto;
+    border-radius: 20px;
 }
 
 .btn-avaliar {
-    background-color: #7ac0c0;
-    color: black;
+	background-color: #ffffff;
     border: none;
-    padding: 5x 20px;
+    padding: 1px 1px;
     cursor: pointer;
     margin-bottom: 30px;
+    border-radius: 20px;
+	font-weight: bold;
 }
 
 .avaliacao{
@@ -522,7 +522,7 @@ form[name="formComentario"] input[name="comentario"] {
 .star-icon{
 	list-style-type: none;
 	cursor: pointer;
-	color: #005d5d;
+	color: #004e4e;
 	font-size: 25px;
 }
 
@@ -593,7 +593,7 @@ form[name="formComentario"] input[name="comentario"] {
 	width:50%;
 }
 #cancelardelete_btn{
-	background:#007E7E;
+	background:#004e4e;
 }
 #deleteaccbtn{
 	background:#a01212;
