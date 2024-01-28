@@ -12,9 +12,7 @@ Data_avaliacao VARCHAR(10)
 
 CREATE TABLE Usuario (
 ID_usuario INTEGER PRIMARY KEY,
-ID_endereco INTEGER,
 Nome_usuario VARCHAR(100),
-CPF_usuario VARCHAR(14),
 Senha_usuario VARCHAR(50),
 Whatsapp_usuario VARCHAR(15),
 Email_usuario VARCHAR(50),
@@ -32,10 +30,7 @@ Hora_fim TIME
 CREATE TABLE medico (
 ID_medico INTEGER PRIMARY KEY,
 Nome_medico VARCHAR(100),
-Telefone_medico VARCHAR(15),
-Preco_consulta_medico FLOAT,
 Especialidade_medico VARCHAR(50),
-Email_medico VARCHAR(50),
 CRM_medico VARCHAR(12)
 );
 
@@ -68,17 +63,6 @@ Plano_saude_clinica VARCHAR(100),
 FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
 );
 
-CREATE TABLE agenda_Agendamento (
-ID_agendamento INTEGER PRIMARY KEY,
-ID_medico INTEGER,
-ID_clinica INTEGER,
-CPF_paciente VARCHAR(14),
-Data_hora DATETIME,
-Status_agendamento VARCHAR(50),
-Observacoes TEXT,
-FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE SET NULL,
-FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE SET NULL
-);
 
 CREATE TABLE Funcionamento (
 ID_funcionamento INTEGER PRIMARY KEY,
@@ -89,16 +73,6 @@ Hora_abertura TIME,
 FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE Paciente (
-CPF_paciente VARCHAR(14) PRIMARY KEY,
-ID_endereco INTEGER,
-Nome_paciente VARCHAR(100),
-Genero_paciente CHAR(1),
-RG_paciente VARCHAR(9),
-Data_nascimento_paciente DATETIME,
-Telefone_paciente VARCHAR(15),
-FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
-);
 
 CREATE TABLE Recuperacao (
 ID_recuperacao INTEGER PRIMARY KEY,
@@ -124,4 +98,4 @@ ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_
 ALTER TABLE avalia_avaliacao ADD FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE Usuario ADD FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL;
 ALTER TABLE Disponibilidade ADD FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE CASCADE;
-ALTER TABLE agenda_Agendamento ADD FOREIGN KEY(CPF_paciente) REFERENCES Paciente (CPF_paciente) ON UPDATE CASCADE ON DELETE CASCADE;
+
