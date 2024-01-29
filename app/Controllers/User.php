@@ -34,41 +34,7 @@ class User extends BaseController{
             return false;
         }
     }
-    public function login(){
-        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
-            return redirect()->to(base_url());
-            
-		return view('user/login');
-	}
-	public function logar(){
-        $email = $this->request->getPost('email');
-        $senha = $this->request->getPost('senha');
-        
-        $dados = $this->userModel->login($email, $senha);
-        if($dados != null){
-            $session = session();
-            $session->set($dados[0]);
-            $session->set('tipo', 'pp');
-            return redirect()->to(base_url());
-        }
-        else{
-            $this->session->setFlashdata('error_message', 'Cadastro não encontrado no sistema, favor verificar os dados informados.');
-            echo view("clinicas/erro");
-            echo '<script>
-                    var seconds = 5; // Tempo de espera em segundos
-                    var message = document.querySelector(".alert-danger");
-                    message.innerHTML += " Aguarde " + seconds + " segundos...";
-                    setInterval(function() {
-                        seconds--;
-                    if (seconds > 0) {
-                        message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
-                    } else {
-                        window.location.href = "'.base_url('pp/login').'";
-                        }
-                    }, 1000);
-                </script>';
-        }
-    }
+    
     public function logout(){
         $session = session();
         $array_items = ['ID_usuario', 'Nome_usuario', 'tipo'];

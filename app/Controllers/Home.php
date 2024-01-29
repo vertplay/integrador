@@ -41,6 +41,65 @@ class Home extends BaseController
 		$this->response->setContentType($imgdata['tipo_de_imagem_clinica']);
 		echo base64_decode($imgdata['foto_clinica']);
 	}
+	//Verificar se existe sessão
+	public function checaSessao(){
+        if($this->session->has('ID_clinica') || $this->session->has('ID_usuario')){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+	//Formulário de login
+    public function login(){
+        if($this->checaSessao())//verifica se existe sessão, caso positivo volta para página inicial
+            return redirect()->to(base_url());
+            
+		return view('/login');
+	}
+
+	//Realizar login
+	public function logar(){
+		$clinicaModel = new ClinicaModel();
+		$userModel = new UserModel();
+
+        $email = $this->request->getPost('email');
+        $senha = $this->request->getPost('senha');
+        
+        $dados = $clinicaModel->login($email, $senha);
+        if($dados != null){
+            $session = session();
+            $session->set($dados[0]);
+            $session->set('tipo', 'pe');
+            return redirect()->to(base_url());
+        }
+		else{
+			$dados = $userModel->login($email, $senha);
+			if($dados != null){
+				$session = session();
+				$session->set($dados[0]);
+				$session->set('tipo', 'pp');
+				return redirect()->to(base_url());
+			}
+			else{
+				$this->session->setFlashdata('error_message', 'Cadastro não encontrado no sistema, favor verificar os dados informados.');
+				echo view("clinicas/erro");
+				echo '<script>
+						var seconds = 5; // Tempo de espera em segundos
+						var message = document.querySelector(".alert-danger");
+						message.innerHTML += " Aguarde " + seconds + " segundos...";
+						setInterval(function() {
+							seconds--;
+						if (seconds > 0) {
+							message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
+						} else {
+							window.location.href = "'.base_url('/login').'";
+							}
+						}, 1000);
+					</script>';
+			}
+		}
+    }
 
 	//página de usuario/perfil
 	public function clinica($id){

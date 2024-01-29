@@ -42,9 +42,9 @@
 				if($session->has('ID_clinica') && $session->get('tipo') == "pe"){
 					echo '
 					<div id="btn-group">
-						<a href="'.base_url('pe/perfil').'" id="menu-btn-emp">Perfil</a>
+						<a href="'.base_url('pe/perfil').'" id="menu-btn-user"><span class="material-icons">person</span>Perfil</a>
 						<form action="'.base_url('/pe/logout').'" method="post"">
-						<button type="submit" name="sair">Sair</button>
+						<button type="submit" name="sair"><span class="material-icons">logout</span>Sair</button>
 						</form>
 					</div>
 					';
@@ -52,9 +52,9 @@
 				elseif($session->has('ID_usuario') && $session->get('tipo') == "pp"){
 					echo '
 					<div id="btn-group">
-						<a href="'.base_url('pp/perfil').'" id="menu-btn-user">Perfil</a>
+						<a href="'.base_url('pp/perfil').'" id="menu-btn-user"><span class="material-icons">person</span>Perfil</a>
 						<form action="'.base_url('/pp/logout').'" method="post"">
-						<button type="submit" name="sair">Sair</button>
+						<button type="submit" name="sair"><span class="material-icons">logout</span>Sair</button>
 						</form>
 					</div>
 					';
@@ -62,7 +62,7 @@
 
 					echo'
 					<div id="btn-group">
-						<a href="'.base_url('pp/login').'" id="menu-btn-user"><span class="material-icons">person</span>Minha Conta</a>
+						<a href="'.base_url('/login').'" id="menu-btn-login"><span class="material-icons">person</span>Minha Conta</a>
 					</div>
 					';
 					/*

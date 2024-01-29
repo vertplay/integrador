@@ -144,8 +144,15 @@ body{
 	font-size:45px;
 	position:absolute;
 	top:10px;
-	margin-left:18px;
+	margin-left:-4px;
 }
+#btn-group > #menu-btn-login > span{
+	font-size:45px;
+	position:absolute;
+	top:10px;
+	margin-left:20px;
+}
+
 	/*
 #btn-group > #menu-btn-user{
 	background-image:url("../img/pf2.png");
@@ -165,11 +172,18 @@ body{
 	font-family:'garet';
 	font-size:14px;
 	transition:0.3s;
+	margin-left:10px;
 }
 #btn-group > form > button:hover{
 	/*text-decoration:underline;*/
 	cursor:pointer;
 	/*color:#000;*/
+}
+#btn-group > form > button > span{
+	font-size:45px;
+	position:absolute;
+	top:10px;
+	margin-left:-4px;
 }
 /*---------------------BARRA DE PESQUISA---------------------*/
 #search-bar{

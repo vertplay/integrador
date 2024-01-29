@@ -48,11 +48,8 @@ $routes->get('/pe/perfil','Clinica::index');
 $routes->get('pp/perfil','User::index');
 
 //login
-$routes->get('/pp/login','User::login');
-$routes->post('/pp/login','User::logar');
-
-$routes->get('/pe/login','Clinica::login');
-$routes->post('/pe/login','Clinica::logar');
+$routes->get('/login','Home::login');
+$routes->post('/login','Home::logar');
 
 //registro
 $routes->get('/pp/registro','User::registro');
