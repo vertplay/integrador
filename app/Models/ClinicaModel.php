@@ -16,6 +16,13 @@ class ClinicaModel extends Model{
         $this->builder = $this->db->table('clinica');
     }
 
+    public function get_Email(){
+        $this->builder->select('Email_clinica');
+        $query = $this->builder->getResultArray();
+        dd($query);
+        return $query;
+    }
+
     public function cadastrarClinica($parametros, $checkbox) : array{
         $erros = [];
         $query = 'INSERT INTO `endereco`(`Cidade`, `Estado`, `Numero`, `Rua`, `Complemento`, `CEP`, `Bairro`)
@@ -51,11 +58,22 @@ class ClinicaModel extends Model{
     public function checkclinica($parametros) {
         $cnpj = $parametros['cnpj'];
         $email = $parametros['email'];
-        
         $query = "SELECT * FROM clinica WHERE CNPJ = '$cnpj' OR Email_clinica = '$email'";
         $resultado = $this->db->query($query, $parametros);
-        return $resultado->getNumRows() > 0;
-    }
+
+        if($resultado->getNumRows() > 0){
+            return $resultado->getNumRows() > 0;
+        }
+        else{
+            $query = "SELECT * FROM usuario WHERE Email_usuario = '$email'";
+            $resultado = $this->db->query($query, $parametros);
+            if($resultado->getNumRows() > 0){
+                //dd($resultado);
+                return 1000;
+            }
+            //return $resultado->getNumRows() > 0;
+        }
+    }    
 
     public function login($login, $senha) : array{
         
@@ -117,5 +135,16 @@ class ClinicaModel extends Model{
             $lista []= $this->builder->getWhere(['ID_medico' => $id_medico['ID_medico']])->getResultArray();
         }
         return $lista;
+    }
+
+    public function excluir_medico($id){
+        $this->builder = $this->db->table('medico');
+        $this->builder->where(['ID_medico' => $id]);
+        if($this->builder->delete()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

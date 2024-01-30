@@ -658,6 +658,13 @@ form[name="formComentario"] input[name="comentario"] {
 #deleteperf_btn{
 	background:#a01212;
 }
+
+.lista_medicos{
+	border-width:1px 0px 1px 0px;
+	border-style:inset;
+	border-color:var(--menu-color);
+	padding-bottom:2px;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;
