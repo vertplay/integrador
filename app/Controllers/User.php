@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\ClinicaModel; // verificar email
 use CodeIgniter\Session\Session;
 
 class User extends BaseController{
@@ -170,6 +171,104 @@ class User extends BaseController{
                      }
                 }, 1000);
             </script>';
+        }
+    }
+
+
+
+    public function atualizar_cadastro(){
+        $nome_usuario = $this->request->getPost('nome');
+        $senha = $this->request->getPost('formsenha');
+        $email = $this->request->getPost('email');
+        $whatsapp = $this->request->getPost('whatsapp');
+        $telefone = $this ->request->getPost('telefone');
+
+        $dados =array(
+           'Nome_usuario' => $nome_usuario,
+           'Senha_usuario' => $senha,
+           'Email_usuario' => $email,
+           'Whatsapp_usuario' => $whatsapp,
+           'Telefone_usuario' => $telefone
+        );
+        
+        $parametros = array(
+            'email' =>$email
+        );
+        $senha = $dados['Senha_usuario'];
+        $possui_usuario = $this->userModel->check_usuario($parametros);
+        $verifica_usuario = $this->userModel->getUserByEmail($dados['Email_usuario']);
+        
+        $clinica = new ClinicaModel;
+        $verifica_clinica = $clinica->getClinicaByEmail($dados['Email_usuario']);
+
+        if($verifica_usuario == null){
+            $verifica_usuario['ID_usuario'] = null;
+        }
+        
+        if($this->session->has('ID_usuario') && $this->session->has('tipo') && $this->session->get('tipo')=='pp'){
+            
+
+            if($verifica_usuario['ID_usuario'] == $this->session->get('ID_usuario') && $verifica_clinica == null){ //verificar se o usuário que contem o email é o mesmo a ser alterado.
+                if($this->userModel->atualizar_cadastro($this->session->get('ID_usuario'), $dados)){
+                    return redirect()->to(base_url('/pp/perfil'));
+                }else{
+                    $this->session->setFlashdata('error_message', 'Erro ao alterar dados, favor verificar a senha inserida.');
+                    echo view("clinicas/erro");
+                    echo '<script>
+                            var seconds = 5; // Tempo de espera em segundos
+                            var message = document.querySelector(".alert-danger");
+                            message.innerHTML += " Aguarde " + seconds + " segundos...";
+                            setInterval(function() {
+                                seconds--;
+                            if (seconds > 0) {
+                                message.innerHTML = "Erro ao alterar dados, favor verificar a senha inserida... Aguarde " + seconds + " segundos...";
+                            } else {
+                                window.location.href = "'.base_url('pp/login').'";
+                                }
+                            }, 1000);
+                        </script>';
+                }
+            }
+            else{
+                $this->session->setFlashdata('error_message', 'O e-mail indicado já está cadastrado em nosso sistema!');
+                echo view("clinicas/erro");
+                echo '<script>
+                        var seconds = 5; // Tempo de espera em segundos
+                        var message = document.querySelector(".alert-danger");
+                        message.innerHTML += " Aguarde " + seconds + " segundos...";
+                        setInterval(function() {
+                            seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "O e-mail indicado já está cadastrado em nosso sistema! Aguarde " + seconds + " segundos...";
+                        } else {
+                            window.location.href = "'.base_url('pp/perfil').'";
+                            }
+                        }, 1000);
+                    </script>';
+            }
+
+            
+        }
+        else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function excluir_cadastro(){
+        if($this->session->has('ID_usuario') && $this->session->get('ID_usuario') != null && $this->session->get('tipo')=="pp"){
+            $senha = $this->request->getPost('formsenha');
+            $id = $this->session->get('ID_usuario');
+            $this->userModel->excluir_cadastro($id, $senha);
+            if($this->userModel->getUser($id) == null){
+                $this->logout();
+                return redirect()->to(base_url());
+            }
+            else{
+                return redirect()->to(base_url('pp/perfil'));
+            }
+        }
+        else{
+            return redirect()->to(base_url());
         }
     }
 }

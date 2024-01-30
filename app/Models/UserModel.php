@@ -43,8 +43,8 @@ class UserModel extends Model{
     }
 
     //dados usuarios| Perfil
-    public function getUser($id) : array{
-        $this->builder->select('ID_usuario, Nome_usuario, Email_usuario');
+    public function getUser($id){
+        $this->builder->select('ID_usuario, Nome_usuario, Email_usuario, Whatsapp_usuario, Telefone_usuario');
         $query = $this->builder->getWhere(['ID_usuario' => $id])->getResultArray();
         $this->db->close();
 
@@ -74,7 +74,30 @@ class UserModel extends Model{
         return $query;
     }
 
+    public function atualizar_cadastro($id,$dados){
+        $this->builder->where(['ID_usuario' => $id, 'Senha_usuario' => $dados['Senha_usuario']]);
 
+        //if($query = $this->builder->get()->getResultArray() == null)
+        //    return false;
+
+        if($this->builder->update($dados)){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+
+    public function excluir_cadastro($id, $senha){
+        $this->builder->where(['ID_usuario' => $id, 'Senha_usuario' => $senha]);
+        if($this->builder->delete()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 /*
     public function check_usuario($cpf, $email) {
         $this->db->where('CPF_usuario', $cpf);

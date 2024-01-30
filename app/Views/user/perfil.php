@@ -18,6 +18,26 @@
 				<h2>Alterar Dados</h2>
 				<h6></h6>
                 <form id= "userform" action="<?=base_url('pp/atualizar')?>" method="POST" enctype="multipart/form-data">
+
+					<label for="nome_completo">Nome Completo</label><br>
+						<input type="text" name="nome" id="nome" value="<?=$Nome_usuario?>" required><br>        
+					<label for="senha">Senha</label><br>
+						<input type="password" name="formsenha" id="formsenha" placeholder="Obrigatório para alterar os dados" required>
+						<button type="button" id="mostrar_senha"><i class="material-icons">visibility</i></button>
+						<div id="alerta_senha"> </div>
+						
+
+					<!--Informações-->    
+					<label for="informacoes" class="sub_bloco-titulo">Info</label>
+					<div class="sub_bloco" id="informacoes">
+						<label for="email">Email</label>
+							<input type="email" name="email" id="email" value="<?=$Email_usuario?>" required/>
+						<label for="whatsapp">Whatsapp</label>
+							<input type="number" name="whatsapp" id="whatsapp" pattern="[0-9]*" value="<?=$Whatsapp_usuario?>" required/>
+						<label for="telefone">Telefone</label>
+							<input type= "number" name="telefone" id="telefone" pattern="[0-9]*" value="<?=$Telefone_usuario?>" required>
+					</div>
+
                     <button type="submit" name="salvar">Salvar</button>
 					<button type="button" id="cancelarUpdate_btn">Cancelar</button>
 				</form>
