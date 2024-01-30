@@ -81,7 +81,8 @@ $routes->post('/pe/excluir','Clinica::excluir_cadastro');
 $routes->post('/pp/excluir','User::excluir_cadastro');
 
 //Gerenciar Médicos
-$routes->get('/pe/gerenciar','Clinica::gerenciar_medicos');
+$routes->get('/pe/gerenciar','Clinica::gerenciar_medicos'); //página de gerenciamento
+$routes->post('/med/excluir','Clinica::excluir_medico'); //exclusão de médico
 
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');

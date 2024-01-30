@@ -381,5 +381,13 @@ class Clinica extends BaseController{
         return view('clinicas/medicos');
     }
 
+    public function excluir_medico(){
+        $ID_medico = $this->request->getPost('ID_medico');
+        $ID_clinica = $this->request->getPost('ID_clinica');
+
+        $this->clinicaModel->excluir_medico($ID_medico);
+
+        return redirect()->to(base_url('/pe/gerenciar'));
+    }
 
 }    

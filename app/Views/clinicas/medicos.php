@@ -11,9 +11,9 @@
 				<h3><?=$dado['Nome_medico']?></h3>
 				<p>Especialidade: <?=$dado['Especialidade_medico']?></p>
                 <p>CRM: <?=$dado['CRM_medico']?></p>
-                <form id="form" action="<?=base_url('??')?>" method="POST" enctype="multipart/form-data">
+                <form id="form" action="<?=base_url('/med/excluir')?>" method="POST" enctype="multipart/form-data">
 					<input type="text" name="ID_medico" id="ID_medico" value="<?=$dado['ID_medico']?>" style="display:none;"/>
-					<button type="submit" id="cancelarUpdate_btn" value="<?=$session->get('ID_clinica')?>">Excluir</button>
+					<button type="submit" id="cancelarUpdate_btn" name="ID_clinica" value="<?=$session->get('ID_clinica')?>">Excluir</button>
 				</form>
 			</div>
 

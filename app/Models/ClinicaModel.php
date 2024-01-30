@@ -118,4 +118,15 @@ class ClinicaModel extends Model{
         }
         return $lista;
     }
+
+    public function excluir_medico($id){
+        $this->builder = $this->db->table('medico');
+        $this->builder->where(['ID_medico' => $id]);
+        if($this->builder->delete()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
