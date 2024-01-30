@@ -17,18 +17,22 @@ class ClinicaModel extends Model{
     }
 
     public function cadastrarClinica($parametros) : array{
-        
         $erros = [];
-
-        $query = 'INSERT INTO `clinica`(`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`,`Descricao_clinica`)
-         VALUES(:forma_pagamento:, :email:, :senha: , :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :plano_saude:, :convenio:, :nome:, :descricao: );';
-        
-        $dados = $this->db->query($query, $parametros);
-
         $query = 'INSERT INTO `endereco`(`Cidade`, `Estado`, `Numero`, `Rua`, `Complemento`, `CEP`, `Bairro`)
-         VALUES(:cidade:, :estado:, :numero:, :rua:, :complemento:, :cep:, :bairro: );';
-        
+        VALUES(:cidade:, :estado:, :numero:, :logradouro:, :complemento:, :cep:, :bairro:);';
+   
+        $dados= $this->db->query($query, $parametros);
+
+        $ultimoIdEndereco = $this->db->insertID();
+        $parametros['id_endereco'] = $ultimoIdEndereco;   
+
+        $query = 'INSERT INTO `clinica`(`ID_endereco`,`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`,`Descricao_clinica`)
+            VALUES(:id_endereco: ,:forma_pagamento:, :email:, :senha:, :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :plano_saude:, :convenio:, :nome:, :descricao:)';
+           
         $dados = $this->db->query($query, $parametros);
+
+       // $query = "INSERT INTO `clinica` (`ID_endereco`) VALUES ('$ultimoIdEndereco')";
+        //$this->db->query($query);
         if($dados){
             $erros[] = "sucesso";
         }
