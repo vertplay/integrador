@@ -68,14 +68,14 @@ class User extends BaseController{
 
 
     public function processo_do_cadastro(){
-        $cpf = $this->request->getPost('cpf');
+        //$cpf = $this->request->getPost('cpf');
         $nome_usuario = $this->request->getPost('nome');
         $senha = $this->request->getPost('formsenha');
-        $img = $this->request->getFile('arquivo');
-        $rg = $this->request->getPost('rg');
-        $nome_completo = $this->request->getPost('nome');
-        $data_nascimento = $this->request->getPost('data_nascimento');
-        $genero = $this->request->getPost('genero');
+        //$img = $this->request->getFile('arquivo');
+        //$rg = $this->request->getPost('rg');
+        //$nome_completo = $this->request->getPost('nome');
+        //$data_nascimento = $this->request->getPost('data_nascimento');
+        //$genero = $this->request->getPost('genero');
         $email = $this->request->getPost('email');
         $whatsapp = $this->request->getPost('whatsapp');
         $telefone = $this ->request->getPost('telefone');
@@ -86,14 +86,14 @@ class User extends BaseController{
         $complemento = $this->request->getPost('complemento');
 
         $dados =array(
-           'cpf' => $cpf,
+           //'cpf' => $cpf,
            'nome_usuario' => $nome_usuario,
            'senha' => $senha,
-           'img' => $img,
-           'rg' => $rg,
-           'nome_completo' => $nome_completo,
-           'data_nascimento' => $data_nascimento,
-           'genero' => $genero,
+           //'img' => $img,
+           //'rg' => $rg,
+           //'nome_completo' => $nome_completo,
+           //'data_nascimento' => $data_nascimento,
+           //'genero' => $genero,
            'email' => $email,
            'whatsapp' => $whatsapp,
            'telefone' => $telefone,
@@ -105,7 +105,7 @@ class User extends BaseController{
         );
         
         $parametros = array(
-            'cpf' =>$cpf,
+            //'cpf' =>$cpf,
             'email' =>$email
         );
         $senha = $dados['senha'];

@@ -16,8 +16,8 @@ class UserModel extends Model{
         
         $erros = [];
 
-        $query = 'INSERT INTO `usuario`(`Nome_usuario`, `Nome_completo_usuario`, `Senha_usuario`, `CPF_usuario`, `Data_nascimento_usuario`, `Genero_usuario`, `Email_usuario`, `Whatsapp_usuario`, `Telefone_usuario`, `RG_usuario`, `Logradouro`, `Numero`, `Bairro`, `CEP`)
-         VALUES(:nome_usuario:, :nome_completo:, :senha: , :cpf:, :data_nascimento:, :genero:, :email:, :whatsapp:, :telefone:, :rg:, :logradouro:, :numero:, :bairro:, :cep:);';
+        $query = 'INSERT INTO `usuario`(`Nome_usuario`,`Senha_usuario`, `Email_usuario`, `Whatsapp_usuario`, `Telefone_usuario`)
+         VALUES(:nome_usuario:, :senha: , :email:, :whatsapp:, :telefone:);';
         
         $dados = $this->db->query($query, $parametros);
         
@@ -34,10 +34,10 @@ class UserModel extends Model{
 
 
     public function check_usuario($parametros) {
-        $cpf = $parametros['cpf'];
+        //$cpf = $parametros['cpf'];
         $email = $parametros['email'];
         
-        $query = "SELECT * FROM usuario WHERE CPF_usuario = '$cpf' OR Email_usuario = '$email'";
+        $query = "SELECT * FROM usuario WHERE Email_usuario = '$email'";
         $resultado = $this->db->query($query, $parametros);
         return $resultado->getNumRows() > 0;
     }
