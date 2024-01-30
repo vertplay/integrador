@@ -6,12 +6,12 @@
 <div id="perfil-pag">
     <div id="clin-block1" class="clin-block">
         <?php foreach($dados as $dado){ $dado = $dado[0]; ?>
-
+            
             <div class="info lista_medicos">
 				<h3><?=$dado['Nome_medico']?></h3>
 				<p>Especialidade: <?=$dado['Especialidade_medico']?></p>
                 <p>CRM: <?=$dado['CRM_medico']?></p>
-                <form id="form" action="<?=base_url('/med/excluir')?>" method="POST" enctype="multipart/form-data">
+                <form id="excluir_medico_form" action="<?=base_url('/med/excluir')?>" method="POST" enctype="multipart/form-data" onsubmit="return confirm('Deseja realmente excluir este médico dos registros?');">
 					<input type="text" name="ID_medico" id="ID_medico" value="<?=$dado['ID_medico']?>" style="display:none;"/>
 					<button type="submit" id="cancelarUpdate_btn" name="ID_clinica" value="<?=$session->get('ID_clinica')?>">Excluir</button>
 				</form>
@@ -24,7 +24,7 @@
         <div class="update-form formularios" id="update-form">
 			<h2>Cadastrar Médico</h2>
 			<h6></h6>
-			<form id="update-form" action="<?=base_url('??')?>" method="POST" enctype="multipart/form-data">
+			<form id="update-form" action="<?=base_url('/med/cadastrar')?>" method="POST" enctype="multipart/form-data">
             <br/>
                 <label for="nome_medico">Nome do médico:</label>
                     <input type="text" name="nome_medico" id="nome_medico" required/>

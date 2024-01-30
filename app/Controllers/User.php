@@ -145,7 +145,7 @@ class User extends BaseController{
                         if (seconds > 0) {
                             message.innerHTML = "O email já está cadastrado. Aguarde " + seconds + " segundos...";
                         } else {
-                         window.location.href = "'.base_url().'/pp/registro";
+                         window.location.href = "'.base_url('/pp/registro').'";
                      }
                 }, 1000);
             </script>';
@@ -165,7 +165,7 @@ class User extends BaseController{
                         if (seconds > 0) {
                             message.innerHTML = "O usuario já está cadastrado. Aguarde " + seconds + " segundos...";
                         } else {
-                         window.location.href = "'.base_url().'/pp/registro";
+                         window.location.href = "'.base_url().'";
                      }
                 }, 1000);
             </script>';

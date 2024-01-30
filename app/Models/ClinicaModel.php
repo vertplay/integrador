@@ -19,7 +19,6 @@ class ClinicaModel extends Model{
     public function get_Email(){
         $this->builder->select('Email_clinica');
         $query = $this->builder->getResultArray();
-        dd($query);
         return $query;
     }
 
@@ -141,6 +140,25 @@ class ClinicaModel extends Model{
         $this->builder = $this->db->table('medico');
         $this->builder->where(['ID_medico' => $id]);
         if($this->builder->delete()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function cadastrar_medico($dados, $ID_clinica){
+        $this->builder = $this->db->table('medico');
+        if($this->builder->insert($dados)){
+            //médico adicionado
+            $ID_medico = $this->db->insertID();
+            $dados_vinculo = array(
+                'ID_medico' => $ID_medico,
+                'ID_clinica' => $ID_clinica
+            );
+
+            $this->builder = $this->db->table('possui_vinculo');
+            $this->builder->insert($dados_vinculo);
             return true;
         }
         else{

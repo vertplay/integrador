@@ -28,14 +28,15 @@ class Clinica extends BaseController{
     public function index(){
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
             $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
-            $dados = $dados[0];
-
-            $mainModel = new MainModel();
-            $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
+            
+            
             $avaliacaoModel = new AvaliacaoModel();
 		    $enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
             $dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
 
+            $dados = $dados[0];
+            $mainModel = new MainModel();
+            $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
             //dd($dados);
             return view('clinicas/perfil',$dados);
         }
@@ -380,7 +381,7 @@ class Clinica extends BaseController{
         
     }
 
-    public function gerenciar_medicos(){
+    public function gerenciar_medicos(){//página de gerenciamento de médicos
 
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
             $enviar['dados'] = $this->clinicaModel->lista_medicos($this->session->get('ID_clinica'));
@@ -401,7 +402,7 @@ class Clinica extends BaseController{
         return view('clinicas/medicos');
     }
 
-    public function excluir_medico(){
+    public function excluir_medico(){//exclusão de médico
         $ID_medico = $this->request->getPost('ID_medico');
         $ID_clinica = $this->request->getPost('ID_clinica');
 
@@ -410,4 +411,22 @@ class Clinica extends BaseController{
         return redirect()->to(base_url('/pe/gerenciar'));
     }
 
+    public function cadastrar_medico(){//cadastro de médicos
+        $nome_medico = $this->request->getPost('nome_medico');
+        $especialidade_medico = $this->request->getPost('especialidade_medico');
+        $crm_medico = $this->request->getPost('crm_medico');
+
+        $dados=array(
+            'Nome_medico' => $nome_medico,
+            'Especialidade_medico' => $especialidade_medico,
+            'CRM_medico' => $crm_medico
+        );
+
+        if($this->clinicaModel->cadastrar_medico($dados, $this->session->get('ID_clinica'))){
+            return redirect()->to(base_url('/pe/gerenciar'));
+        }
+        else{
+            return redirect()->to(base_url('/'));
+        }
+    }
 }    
