@@ -130,6 +130,8 @@ class Home extends BaseController
 		return view('clinica',$enviar);
 	}
 
+	//Início Avaliação
+
 	public function enviarAvaliacao() {
 		$avaliacaoModel = new AvaliacaoModel();
 	
@@ -144,12 +146,37 @@ class Home extends BaseController
 				'ID_clinica' => $ID_clinica,
 				'Texto_avaliacao' => $comentario,
 				'Nota_avaliacao' => $nota_avaliacao, 
+				'Data_avaliacao' => date('Y-m-d H:i:s'), 
 			];
-	
+			
 			$avaliacaoModel->inserirAvaliacao($data);
 			return redirect()->to('/clinica/' . $ID_clinica);
 		}
 	}
+	
+	public function excluirAvaliacao($ID_avaliacao) {
+		$avaliacaoModel = new AvaliacaoModel();
+		
+		$ID_usuario_logado = $this->session->get('ID_usuario');
+		
+		$avaliacao = $avaliacaoModel->find($ID_avaliacao);
+		
+		if ($avaliacao && $avaliacao['ID_usuario'] == $ID_usuario_logado) {
+			$ID_clinica = $avaliacao['ID_clinica'];
+			$avaliacaoModel->excluirAvaliacao($ID_avaliacao);
+			return redirect()->to('/clinica/' . $ID_clinica);
+		} 
+		else {
+			// Usuário não autorizado, redireciona para algum lugar apropriado ou mostra uma mensagem de erro
+			return redirect()->to('/clinica/' . $ID_clinica);
+		}
+	}
+	
+	
+	
+//Fim analiação
+
+
 	
 	public function recupera_senha(){
 		$email = $this->request->getPost('email');

@@ -40,8 +40,10 @@ $routes->get('/pesquisar', 'Pesquisa::index');
 //pagina da clinica
 $routes->get('/clinica/(:num)','Home::clinica/$1');
 
-//Enviar avaliacao
+//Avaliacao
 $routes->post('/clinica/enviaravaliacao', 'Home::enviarAvaliacao');
+$routes->get('clinica/excluiravaliacao/(:num)', 'Home::excluirAvaliacao/$1');
+
 
 //perfil
 $routes->get('/pe/perfil','Clinica::index');

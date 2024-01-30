@@ -103,14 +103,19 @@
 						<?php if (!empty($avaliacoes)) : ?>
 							<?php foreach ($avaliacoes as $avaliacao) : ?>
 								<div class="comentarios">
-									<p><strong><?= $avaliacao['Nome_usuario'] ?></strong></p>
+									<p><strong><?= $avaliacao['Nome_usuario'] ?></strong> - <?= isset($avaliacao['Data_avaliacao']) ? date('d/m/Y H:i', strtotime($avaliacao['Data_avaliacao'])) : 'Data não disponível' ?></p>
 									<p><?= str_repeat('&#9733;', $avaliacao['Nota_avaliacao']) ?></p>
 									<p><?= $avaliacao['Texto_avaliacao'] ?></p>
+
+									<?php if ($ID_usuario && $avaliacao['ID_usuario'] == $ID_usuario) : ?>
+										<a href="<?= base_url('/clinica/excluiravaliacao/' . $avaliacao['ID_avaliacao']) ?>" onclick="return confirm('Tem certeza que deseja excluir essa avaliação?')">Excluir</a>
+									<?php endif; ?>
 								</div>
 							<?php endforeach; ?>
 						<?php else : ?>
 							<p>Nenhuma avaliação para esta clínica.</p>
 						<?php endif; ?>
+
 					</div>
 			</div>
 
