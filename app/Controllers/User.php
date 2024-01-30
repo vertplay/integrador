@@ -18,8 +18,8 @@ class User extends BaseController{
         if($this->session->has('ID_usuario') && $this->session->get('ID_usuario') != null && $this->session->get('tipo')=="pp"){
 
             $dados = $this->userModel->getUser($this->session->get('ID_usuario'));
-            //dd($dados[0]);
-            return view('clinicas/perfil',$dados);
+            //dd($dados);
+            return view('user/perfil',$dados);
         }
         else{
             return redirect()->to(base_url());

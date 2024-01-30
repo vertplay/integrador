@@ -44,7 +44,7 @@ class UserModel extends Model{
 
     //dados usuarios| Perfil
     public function getUser($id) : array{
-        $this->builder->select('ID_usuario, Nome_usuario');
+        $this->builder->select('ID_usuario, Nome_usuario, Email_usuario');
         $query = $this->builder->getWhere(['ID_usuario' => $id])->getResultArray();
         $this->db->close();
 

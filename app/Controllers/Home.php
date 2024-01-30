@@ -232,7 +232,7 @@ class Home extends BaseController
 		$home = new MainModel();
 		if($senha === $confirmSenha){
 			$link = $home->redefine_senha($senha, $codigo);
-			return redirect()->to(base_url("$link/login"));
+			return redirect()->to(base_url("/login"));
 		}
 	}
 }

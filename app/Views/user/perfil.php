@@ -13,7 +13,16 @@
 			<script src="<?=base_url('js/mostrasenha.js')?>"></script>
 			<script src="<?=base_url('js/mostrasenhadelete.js')?>"></script>
 			<!-----------------------fim javascript--------------------------------------->
-			
+			<!--------------------------fomulario---------------------------------------->
+			<div class="update-form formularios" style="display:none;" id="update-form">
+				<h2>Alterar Dados</h2>
+				<h6></h6>
+                <form id= "userform" action="<?=base_url('pp/atualizar')?>" method="POST" enctype="multipart/form-data">
+                    <button type="submit" name="salvar">Salvar</button>
+					<button type="button" id="cancelarUpdate_btn">Cancelar</button>
+				</form>
+			</div>
+			<!--------------------------------------------fim formulario---------------------------------------------------->
 
 			<!--------------------------------------------formulario de exclusão-------------------------------------------->
 			<div class="update-form formularios" style="display:none;" id="delete-form">
@@ -34,23 +43,15 @@
 				<div id="clin-block1" class="clin-block">
 					<div class="title"></div>
 					<div class="info">
-						<h3>Descrição:teste</h3>
-					<p>&nbsp;</p>
-					</div>
-					<div id="album-block-img">
-						
+						<h3>Olá <?=$Nome_usuario ?></h3>
+					<p>&nbsp; No momento não funcionalidades agregadas ao perfil de usuário.</p>
 					</div>
 					<div class="info">
-						</br>
-						<h3>Especialidades:</h3>
+						<br/>
+						<h3></h3>
 						<p></p>
 					</div>
-					<div class="info">
-						</br>
-						<h3>Endereço:</h3>
-						<p>
-						, Araçuaí - MG, 39600-000</p>
-					</div>
+					
 					
 					
 
