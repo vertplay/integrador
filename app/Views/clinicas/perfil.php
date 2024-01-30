@@ -32,12 +32,24 @@
 					<!--Informações-->
 					<label for="informacoes" class="sub_bloco-titulo">Info</label>
 					<div class="sub_bloco" id="informacoes">
+
 						<label for="forma_pagamento">Formas de pagamento</label>
-							<input type="text" name="forma_pagamento" id="forma_pagamento" value="<?=$Forma_pagamento_clinica?>" required/>
-							<div class="error-message"></div>
-						<label for="especialidade_clinica">Especialidades médicas</label>
-							<input type="text" name="especialidade_clinica" id="especialidade_clinica" value="<?=$Especialidade_clinica?>" required/>
-							<div class="error-message"></div>
+							<label for="forma_pagamento_dinheiro" class="forma_pagamento">Dinheiro</label>
+								<input type="checkbox" name="forma_pagamento_dinheiro" id="forma_pagamento_dinheiro" value="dinheiro">
+
+							<label for="forma_pagamento_cartao" class="forma_pagamento">Cartão de crédito/débito</label>
+								<input type="checkbox" name="forma_pagamento_cartao" id="forma_pagamento_cartao" value="cartao">
+									
+							<label for="forma_pagamento_pix" class="forma_pagamento">PIX</label>
+								<input type="checkbox" name="forma_pagamento_pix" id="forma_pagamento_pix" value="pix">
+								
+							<label for="forma_pagamento_cheque" class="forma_pagamento">Cheque</label>
+								<input type="checkbox" name="forma_pagamento_cheque" id="forma_pagamento_cheque" value="cheque">
+
+							<label for="outro_campo" class="forma_pagamento" id="outras_formas_pagamento">Outras formas: </label><br>
+								<input type="checkbox" name="forma_pagamento_outro" id="forma_pagamento_outro" value="outro">
+								<input type="text" name="outro_campo" id="outro_campo">
+						
 						<label for="plano_saude_clinica">Planos de saúde aceitos</label>
 							<input type="text" name="plano_saude_clinica" id="plano_saude_clinica" value="<?=$Plano_saude_clinica?>" required/>
 							<div class="error-message"></div>
@@ -52,19 +64,25 @@
 					<label for="endereco" class="sub_bloco-titulo">Endereço</label>
 					<div class="sub_bloco" id="endereco">
 						<label for="cep">Cep</label>
-							<input type="text" name="cep" id="cep" value="<?=$Cep?>" required/>
+							<input type="text" name="cep" id="cep" value="<?=$endereco["CEP"]?>" required/>
 							<div class="error-message"></div>
+						<label for="estado">Estado</label>
+                        	<input type="text" name="estado" id="estado" value="<?=$endereco["Estado"]?>" required/>
+                        	<div class="error-message"></div>
+                    	<label for="cidade">Cidade</label>
+                        	<input type="text" name="cidade" id="cidade" value="<?=$endereco["Cidade"]?>" required/>
+                        	<div class="error-message"></div>
 						<label for="logradouro">Logradouro</label>
-							<input type="text" name="logradouro" id="logradouro" value="<?=$Logradouro?>" required/>
+							<input type="text" name="logradouro" id="logradouro" value="<?=$endereco["Rua"]?>" required/>
 							<div class="error-message"></div>
 						<label for="bairro">Bairro</label>
-							<input type="text" name="bairro" id="bairro" value="<?=$Bairro?>" required/>
+							<input type="text" name="bairro" id="bairro" value="<?=$endereco["Bairro"]?>" required/>
 							<div class="error-message"></div>
 						<label for="numero">Número</label>
-							<input type="text" name="numero" id="numero" value="<?=$Numero?>" required/>
+							<input type="text" name="numero" id="numero" value="<?=$endereco["Numero"]?>" required/>
 							<div class="error-message"></div>
 						<label for="complemento">Complemento</label>
-							<input type="text" name="complemento" id="complemento" value="<?=$Complemento?>"/>
+							<input type="text" name="complemento" id="complemento" value="<?=$endereco["Complemento"]?>"/>
 					</div>
 					<!--Contato-->
 					<label for="contato">Contato</label> 
@@ -115,13 +133,13 @@
 					<div class="info">
 						</br>
 						<h3>Especialidades:</h3>
-						<p><?= $Especialidade_clinica ?></p>
+						<p></p>
 					</div>
 					<div class="info">
 						</br>
 						<h3>Endereço:</h3>
 						<p>
-						<?=$Logradouro?>, <?=$Numero?> - <?=$Bairro?>, Araçuaí - MG, 39600-000</p>
+						<?=$endereco["Rua"]?>, <?=$endereco["Numero"]?> - <?=$endereco["Bairro"]?>, <?=$endereco["Cidade"]?> - <?=$endereco["Estado"]?>, <?=$endereco["CEP"]?></p>
 					</div>
 					<div class="info">
 						</br>

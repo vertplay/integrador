@@ -133,4 +133,20 @@ class MainModel extends Model{
 		$dados = $this->builder->getWhere(['ID_endereco' => $id])->getResultArray();
 		return $dados[0];
 	}
+	public function getIdEnderecoClinica($id_clinica){
+		$this->builder = $this->db->table('clinica');
+		$this->builder->select('ID_endereco');
+		$dados = $this->builder->getWhere(['ID_clinica' => $id_clinica])->getResultArray();
+		return $dados[0];
+	}
+	public function atualizaEndereco($id_endereco, $dados){
+		$this->builder = $this->db->table('endereco');
+		$this->builder->where(['ID_endereco' => $id_endereco]);
+		if($this->builder->update($dados)){
+            return true;
+        }
+        else{
+            return false;
+        }
+	}
 }

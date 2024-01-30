@@ -28,13 +28,16 @@ class Clinica extends BaseController{
     public function index(){
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
             $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
+            $dados = $dados[0];
 
+            $mainModel = new MainModel();
+            $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
             //$avaliacaoModel = new AvaliacaoModel();
 		    //$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
             //$dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
 
-            //dd($dados[0]);
-            return view('clinicas/perfil',$dados[0]);
+            //dd($dados);
+            return view('clinicas/perfil',$dados);
         }
         else{
             return redirect()->to(base_url());
@@ -264,23 +267,29 @@ class Clinica extends BaseController{
             'CNPJ' => $cnpj,
             'Nome_fantasia_clinica' => $nome_fantasia,
             'Senha_clinica' => $senha,
-            'Logradouro' => $logradouro,
             'Forma_pagamento_clinica' => $forma_pagamento,
             //'Especialidade_clinica' => $especialidade,
             'Plano_saude_clinica' => $plano_saude,
             'Convenio_clinica' => $convenio,
             'Descricao_clinica' => $descricao,
-            'Cep' => $cep,
-            'Cidade' =>$cidade,
-            'Estado' =>$estado,
-            'Bairro' => $bairro,
-            'Numero' => $numero,
-            'Complemento' => $complemento,
             'Email_clinica' => $email,
             'Telefone_clinica' => $telefone,
             'Whatsapp_clinica' => $whatsapp,
             'Instagram_clinica' => $instagram
         );
+
+        $dadosEndereco=array(
+            'Cidade' =>$cidade,
+            'Estado' =>$estado,
+            'Numero' => $numero,
+            'Rua' => $logradouro,
+            'Complemento' => $complemento,
+            'CEP' => $cep,
+            'Bairro' => $bairro
+        );
+        $mainModel = new MainModel();
+        $clinEndereco = $mainModel->getIdEnderecoClinica($this->session->get('ID_clinica'));
+        $mainModel->atualizaEndereco($clinEndereco, $dadosEndereco);
         if($img->isvalid())
             $dados+=['foto_clinica' => base64_encode(file_get_contents($img)), 'tipo_de_imagem_clinica' => $img->getMimeType()];
 
