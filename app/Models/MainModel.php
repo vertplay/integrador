@@ -126,4 +126,11 @@ class MainModel extends Model{
 		$this->builder->update();
 		return $retorno;
 	}
+
+	public function getEndereco($id){
+		$this->builder = $this->db->table('endereco');
+		$this->builder->select('ID_endereco, Cidade, Estado, Numero, Rua, Complemento, CEP, Bairro');
+		$dados = $this->builder->getWhere(['ID_endereco' => $id])->getResultArray();
+		return $dados[0];
+	}
 }
