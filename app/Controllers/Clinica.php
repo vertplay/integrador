@@ -103,7 +103,29 @@ class Clinica extends BaseController{
         $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $logradouro = $this->request->getPost('logradouro');
-        $forma_pagamento = $this->request->getPost('forma_pagamento');
+        if($this->request->getPost()) {
+            // Cria um array associativo com os dados do formulário
+            $dados_formulario = array();
+
+            if (!is_null($this->request->getPost('forma_pagamento_dinheiro'))) {
+                $dados_formulario['dinheiro'] = $this->request->getPost('forma_pagamento_dinheiro');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_cartao'))) {
+                $dados_formulario['cartao'] = $this->request->getPost('forma_pagamento_cartao');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_pix'))) {
+                $dados_formulario['pix'] = $this->request->getPost('forma_pagamento_pix');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_cheque'))) {
+                $dados_formulario['cheque'] = $this->request->getPost('forma_pagamento_cheque');
+            }
+            if (!is_null($this->request->getPost('outro_campo'))) {
+                $dados_formulario['outro_campo'] = $this->request->getPost('outro_campo');
+            }
+
+            // Agora você pode passar esse array para o model
+            //$this->seu_model->sua_funcao($dados_formulario);
+        }
         //$especialidade = $this->request->getPost('especialidade_clinica');
         $plano_saude = $this->request->getPost('plano_saude_clinica');
         $convenio = $this->request->getPost('convenio_clinica');
@@ -126,7 +148,7 @@ class Clinica extends BaseController{
             'img' => base64_encode(file_get_contents($img)),
             'imgtype' => $img->getMimeType(),
             'logradouro' => $logradouro,
-            'forma_pagamento' => $forma_pagamento,
+            //'forma_pagamento' => $forma_pagamento,
             //'especialidade' => $especialidade,
             'plano_saude' => $plano_saude,
             'convenio' => $convenio,
@@ -193,7 +215,7 @@ class Clinica extends BaseController{
             return;    
         } else {
             $inserir = new ClinicaModel();
-            $resultado = $inserir->cadastrarClinica($dados);
+            $resultado = $inserir->cadastrarClinica($dados,$dados_formulario);
  
             $this->session->setFlashdata('success_message', 'A clínica foi cadastrada com sucesso.');
             echo view('clinicas/erro');
