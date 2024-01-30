@@ -32,7 +32,11 @@
                         <label for="forma_pagamento_pix">PIX</label>
 
                     <input type="checkbox" name="forma_pagamento_cheque" id="forma_pagamento_cheque" value="cheque">
-                        <label for="forma_pagamento_cheque">Cheque</label>    
+                        <label for="forma_pagamento_cheque">Cheque</label>
+                        
+                        <label for="outro_campo">Outras: </label>
+                            <input type="text" name="outro_campo" id="outro_campo"> 
+                           
 
                         <div class="error-message"></div>
                     <label for="especialidade_clinica">Especialidades médicas</label>
