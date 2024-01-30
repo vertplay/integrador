@@ -447,7 +447,7 @@ body{
 	width:90px;
 	height:30px;
 	margin-top:10px;
-	background-color:#005d5d;
+	background-color:var(--menu-color);
 	font-family:'garet';
 	color:#ffffff;
 }
@@ -650,7 +650,7 @@ form[name="formComentario"] input[name="comentario"] {
 	width:50%;
 }
 #cancelardelete_btn{
-	background:#004e4e;
+	background:var(--menu-color);
 }
 #deleteaccbtn{
 	background:#a01212;
