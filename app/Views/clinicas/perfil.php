@@ -35,9 +35,9 @@
 						<label for="forma_pagamento">Formas de pagamento</label>
 							<input type="text" name="forma_pagamento" id="forma_pagamento" value="<?=$Forma_pagamento_clinica?>" required/>
 							<div class="error-message"></div>
-						<label for="especialidade_clinica">Especialidades médicas</label>
+						<!--<label for="especialidade_clinica">Especialidades médicas</label>
 							<input type="text" name="especialidade_clinica" id="especialidade_clinica" value="<?=$Especialidade_clinica?>" required/>
-							<div class="error-message"></div>
+							<div class="error-message"></div>-->
 						<label for="plano_saude_clinica">Planos de saúde aceitos</label>
 							<input type="text" name="plano_saude_clinica" id="plano_saude_clinica" value="<?=$Plano_saude_clinica?>" required/>
 							<div class="error-message"></div>
