@@ -32,14 +32,29 @@ class UserModel extends Model{
         return $erros;
     }
 
+    public function get_Email(){
+        $this->builder->select('Email_usuario');
+        $query = $this->builder->getResultArray();
+        dd($query);
+        return $query;
+    }
 
     public function check_usuario($parametros) {
         //$cpf = $parametros['cpf'];
         $email = $parametros['email'];
-        
         $query = "SELECT * FROM usuario WHERE Email_usuario = '$email'";
         $resultado = $this->db->query($query, $parametros);
-        return $resultado->getNumRows() > 0;
+
+        if($resultado->getNumRows() > 0){
+            return $resultado->getNumRows() > 0;
+        }
+
+        $query = "SELECT * FROM clinica WHERE Email_clinica = '$email'";
+        $resultado = $this->db->query($query, $parametros);
+        if($resultado->getNumRows() > 0){
+            return 1000;
+        }
+        //return $resultado->getNumRows() > 0;
     }
 
     //dados usuarios| Perfil

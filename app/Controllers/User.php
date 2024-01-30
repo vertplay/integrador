@@ -132,7 +132,26 @@ class User extends BaseController{
                 </script>';
         return;
         }
-        
+        if ($possui_usuario === 1000) {
+            $this->session->setFlashdata('error_message', 'O email já está cadastrado.');
+            echo view('user/erro');
+            echo '<div class="alert alert-danger">O email já está cadastrado. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "O email já está cadastrado. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'/pp/registro";
+                     }
+                }, 1000);
+            </script>';
+            return;    
+        } 
+
         if ($possui_usuario) {
             $this->session->setFlashdata('error_message', 'O usuario já está cadastrado.');
             echo view('user/erro');
@@ -150,8 +169,10 @@ class User extends BaseController{
                      }
                 }, 1000);
             </script>';
-            return;    
-        } else {
+            return;
+            } 
+          
+        else {
             $inserir = new UserModel();
             $resultado = $inserir->cadastrarUsuario($dados);
  
