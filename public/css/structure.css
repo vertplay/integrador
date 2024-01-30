@@ -665,6 +665,11 @@ form[name="formComentario"] input[name="comentario"] {
 	border-color:var(--menu-color);
 	padding-bottom:2px;
 }
+
+.alert{
+	font-size: 30px;
+	color:#000;
+}
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
 	clear:both;
