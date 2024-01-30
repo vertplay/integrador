@@ -35,9 +35,10 @@
                         
                     <label for="forma_pagamento_cheque" class="forma_pagamento">Cheque</label>
                         <input type="checkbox" name="forma_pagamento_cheque" id="forma_pagamento_cheque" value="cheque">
-                        
-                        <label for="outro_campo">Outras formas: </label>
-                            <input type="text" name="outro_campo" id="outro_campo"> 
+
+                        <label for="outro_campo" class="forma_pagamento" id="outras_formas_pagamento">Outras formas: </label><br>
+                        <input type="checkbox" name="forma_pagamento_outro" id="forma_pagamento_outro" value="outro">
+                        <input type="text" name="outro_campo" id="outro_campo"> 
                     
                         <div class="error-message"></div>
                     <label for="especialidade_clinica">Especialidades médicas</label>
