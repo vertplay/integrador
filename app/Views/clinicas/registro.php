@@ -29,8 +29,13 @@
                     
                     <label for="forma_pagamento_cartao" class="forma_pagamento">Cartão de crédito/débito</label>
                         <input type="checkbox" name="forma_pagamento_cartao" id="forma_pagamento_cartao" value="cartao">
-                                   
-
+                               
+                    <label for="forma_pagamento_pix" class="forma_pagamento">PIX</label>
+                        <input type="checkbox" name="forma_pagamento_pix" id="forma_pagamento_pix" value="pix">
+                        
+                    <label for="forma_pagamento_cheque" class="forma_pagamento">Cheque</label>
+                        <input type="checkbox" name="forma_pagamento_cheque" id="forma_pagamento_cheque" value="cheque">
+                        
                         <label for="outro_campo">Outras formas: </label>
                             <input type="text" name="outro_campo" id="outro_campo"> 
                     
