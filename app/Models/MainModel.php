@@ -44,14 +44,14 @@ class MainModel extends Model{
 			LEFT JOIN possui_vinculo pv ON c.ID_clinica = pv.ID_clinica
 			LEFT JOIN medico m ON pv.ID_medico = m.ID_medico
 			WHERE c.Nome_fantasia_clinica LIKE '%$termo%'
-			   OR c.Especialidade_clinica LIKE '%$termo%'
 			   OR m.Nome_medico LIKE '%$termo%'
+			   OR m.Especialidade_medico LIKE '%$termo%'  
 			GROUP BY c.ID_clinica, c.Nome_fantasia_clinica
 			ORDER BY Media_Avaliacao DESC
 		")->getResultArray();
 		$db->close();
 		return $dados;
-	}
+	}	
 
 	public function setCodeRecuperacao($id, $codigo, $tipo, $datarec, $validade){
 		$dados;

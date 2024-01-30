@@ -115,11 +115,9 @@ class Home extends BaseController
 		$mainModel = new MainModel();
 		$enviar["endereco"] = $mainModel->getEndereco($enviar["clin"]["ID_endereco"]);
 
-		//$avaliacaoModel = new AvaliacaoModel();
-		//$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($id);
-		$enviar['avaliacoes'] = null; //enquanto não a parte de avaliações não for atualizada
+		$avaliacaoModel = new AvaliacaoModel();
+		$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($id);
 		
-
 		$this->session->set('avaliacao_clinica_id', $id);
 
         if ($this->session->has('ID_usuario')) {
@@ -129,7 +127,6 @@ class Home extends BaseController
 		else {
             $enviar["ID_usuario"] = null;
         }
-		//dd($enviar);
 		return view('clinica',$enviar);
 	}
 

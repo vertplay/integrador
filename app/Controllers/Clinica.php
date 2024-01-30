@@ -32,9 +32,9 @@ class Clinica extends BaseController{
 
             $mainModel = new MainModel();
             $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
-            //$avaliacaoModel = new AvaliacaoModel();
-		    //$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
-            //$dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
+            $avaliacaoModel = new AvaliacaoModel();
+		    $enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
+            $dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
 
             //dd($dados);
             return view('clinicas/perfil',$dados);
