@@ -4,6 +4,7 @@
         <script src="<?=base_url('js/mostrasenha.js')?>"></script>
         <script src="<?=base_url('js/checkusuario.js')?>"></script>
         <div class="reg-form formularios">
+        <div id="reg-link">Deseja registrar sua clínica? <a href="<?=base_url('pe/registro')?>">Registre-se</a></div>
             <h2>Registro</h2>
 			<form id = "userform" action="<?=base_url('pp/registro')?>" method="POST" enctype="multipart/form-data">
                 <label for="nome_completo">Nome Completo</label><br>
@@ -25,6 +26,7 @@
                         <input type= "number" name="telefone" id="telefone" pattern="[0-9]*" required>
                 </div>
                 <button type="submit" name="registrar">Cadastrar</button>
+                
 	    	</form>
 		</div>
     <?=$this->endSection()?>

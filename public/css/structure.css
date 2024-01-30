@@ -504,6 +504,20 @@ body{
 .formularios .forma_pagamento{
 	width:50%;
 }
+	.formularios #outras_formas_pagamento{
+		margin-right:30px;
+	}
+	.formularios #outro_campo{
+		padding-left:38px;
+	}
+	
+	.formularios #forma_pagamento_outro{
+		position:absolute;
+		margin-top:5px;
+		margin-left:1px;
+		height:35px;
+		width:35px;
+	}
 /*-----------------------AVALIAÇÃO----------------------------*/
 
 form[name="formComentario"] input[name="comentario"] {
