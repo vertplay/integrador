@@ -55,37 +55,6 @@ class Clinica extends BaseController{
     public function erro(){
         return view('clinicas/erro');
     }
-
-    public function logar(){
-        $email = $this->request->getPost('email');
-        $senha = $this->request->getPost('senha');
-        
-        $dados = $this->clinicaModel->login($email, $senha);
-        if($dados != null){
-            $session = session();
-            $session->set($dados[0]);
-            $session->set('tipo', 'pe');
-            return redirect()->to(base_url());
-        }
-        else{
-            $this->session->setFlashdata('error_message', 'Cadastro não encontrado no sistema, favor verificar os dados informados.');
-            echo view("clinicas/erro");
-            echo '<script>
-                    var seconds = 5; // Tempo de espera em segundos
-                    var message = document.querySelector(".alert-danger");
-                    message.innerHTML += " Aguarde " + seconds + " segundos...";
-                    setInterval(function() {
-                        seconds--;
-                    if (seconds > 0) {
-                        message.innerHTML = "Cadastro não encontrado no sistema, favor verificar os dados informados. Aguarde " + seconds + " segundos...";
-                    } else {
-                        window.location.href = "'.base_url('pe/login').'";
-                        }
-                    }, 1000);
-                </script>';
-        }
-        
-    }
    
     public function logout(){
         $session = session();

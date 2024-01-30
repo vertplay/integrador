@@ -4,7 +4,7 @@
         <script src= "<?=base_url('js/mostrasenhalogin.js')?>"> </script>
         <div class="login-form formularios">
             <h2>Entrar</h2>
-			<form action="<?=base_url('pe/login')?>" method="POST" enctype="multipart/form-data">
+			<form action="<?=base_url('/login')?>" method="POST" enctype="multipart/form-data">
                 <label for="email">Email</label><br>
                     <input type="text" name="email" id="email" required><br>
                 <label for="senha">Senha</label><br>
