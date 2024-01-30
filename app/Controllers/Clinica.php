@@ -196,7 +196,25 @@ class Clinica extends BaseController{
                 </script>';
         return;
         }
-    
+        if ($possui_clinica === 1000) {
+            $this->session->setFlashdata('error_message', 'O Email já está cadastrado.');
+            echo view('clinicas/erro');
+            echo '<div class="alert alert-danger">O Email já está cadastrado. Você será redirecionado em breve...</div>';
+            echo '<script>
+                    var seconds = 5; // Tempo de espera em segundos
+                    var message = document.querySelector(".alert-danger");
+                    message.innerHTML += " Aguarde " + seconds + " segundos...";
+                    setInterval(function() {
+                        seconds--;
+                        if (seconds > 0) {
+                            message.innerHTML = "O Email já está cadastrado. Aguarde " + seconds + " segundos...";
+                        } else {
+                         window.location.href = "'.base_url().'/pe/registro";
+                        }
+                    }, 1000);
+                </script>';
+            return;    
+        } 
 
         if ($possui_clinica) {
             $this->session->setFlashdata('error_message', 'A clínica já está cadastrada.');
@@ -216,7 +234,9 @@ class Clinica extends BaseController{
                     }, 1000);
                 </script>';
             return;    
-        } else {
+        } 
+        
+        else {
             $inserir = new ClinicaModel();
             $resultado = $inserir->cadastrarClinica($dados,$dados_formulario);
  
