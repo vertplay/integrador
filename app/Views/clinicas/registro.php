@@ -61,6 +61,12 @@
                     <label for="cep">Cep</label>
                         <input type="text" name="cep" id="cep" required/>
                         <div class="error-message"></div>
+                    <label for="estado">Estado</label>
+                        <input type="text" name="estado" id="estado" required/>
+                        <div class="error-message"></div>
+                    <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" required/>
+                        <div class="error-message"></div>
                     <label for="logradouro">Logradouro</label>
                         <input type="text" name="logradouro" id="logradouro" required/>
                         <div class="error-message"></div>

@@ -174,7 +174,7 @@
 				</div>
 		</div>
         <?php $this->endSection();
-				}elseif($session->has('ID_usuario') && $session->get('tipo') == "pe"){//caso usuário pessoa física
+				}elseif($session->has('ID_usuario') && $session->get('tipo') == "pp"){//caso usuário pessoa física
             		return redirect()->to(base_url('pp/perfil'));?>
         
     <?php } ?>
