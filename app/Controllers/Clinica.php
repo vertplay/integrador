@@ -28,14 +28,15 @@ class Clinica extends BaseController{
     public function index(){
         if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
             $dados = $this->clinicaModel->getClinica($this->session->get('ID_clinica'));
-            $dados = $dados[0];
-
-            $mainModel = new MainModel();
-            $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
+            
+            
             $avaliacaoModel = new AvaliacaoModel();
 		    $enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
             $dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
 
+            $dados = $dados[0];
+            $mainModel = new MainModel();
+            $dados["endereco"] = $mainModel->getEndereco($dados["ID_endereco"]);
             //dd($dados);
             return view('clinicas/perfil',$dados);
         }
