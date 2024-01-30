@@ -44,7 +44,7 @@
 					<div class="title"></div>
 					<div class="info">
 						<h3>Olá <?=$Nome_usuario ?></h3>
-					<p>&nbsp; No momento não funcionalidades agregadas ao perfil de usuário.</p>
+					<p>&nbsp; No momento não há funcionalidades agregadas ao perfil de usuário.</p>
 					</div>
 					<div class="info">
 						<br/>

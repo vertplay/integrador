@@ -247,7 +247,7 @@ class Clinica extends BaseController{
         $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
         $logradouro = $this->request->getPost('logradouro');
-        $forma_pagamento = $this->request->getPost('forma_pagamento');
+        $forma_pagamento; // = $this->request->getPost('forma_pagamento');
         //$especialidade = $this->request->getPost('especialidade_clinica');
         $plano_saude = $this->request->getPost('plano_saude_clinica');
         $convenio = $this->request->getPost('convenio_clinica');
@@ -263,6 +263,31 @@ class Clinica extends BaseController{
         $whatsapp = $this->request->getPost('whatsapp_clinica');
         $instagram = $this->request->getPost('instagram_clinica');
         
+        if($this->request->getPost()) {
+            // Cria um array associativo com os dados do formulário
+            $dados_pagamento = array();
+
+            if (!is_null($this->request->getPost('forma_pagamento_dinheiro'))) {
+                $dados_pagamento['dinheiro'] = $this->request->getPost('forma_pagamento_dinheiro');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_cartao'))) {
+                $dados_pagamento['cartao'] = $this->request->getPost('forma_pagamento_cartao');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_pix'))) {
+                $dados_pagamento['pix'] = $this->request->getPost('forma_pagamento_pix');
+            }
+            if (!is_null($this->request->getPost('forma_pagamento_cheque'))) {
+                $dados_pagamento['cheque'] = $this->request->getPost('forma_pagamento_cheque');
+            }
+            if (!is_null($this->request->getPost('outro_campo'))) {
+                $dados_pagamento['outro_campo'] = $this->request->getPost('outro_campo');
+            }
+
+            // Agora você pode passar esse array para o model
+            //$this->seu_model->sua_funcao($dados_formulario);
+            $forma_pagamento = implode(',', $dados_pagamento); // junta os dados do checkbox em uma string
+        }
+
         $dados=array(
             'CNPJ' => $cnpj,
             'Nome_fantasia_clinica' => $nome_fantasia,
