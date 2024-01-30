@@ -10,8 +10,20 @@ Nota_avaliacao FLOAT,
 Data_avaliacao VARCHAR(10)
 );
 
+CREATE TABLE Endereco (
+ID_endereco INTEGER PRIMARY KEY,
+Cidade VARCHAR(30),
+Estado VARCHAR(30),
+Numero VARCHAR(10),
+Rua VARCHAR(100),
+Complemento VARCHAR(50),
+CEP CHAR(9),
+Bairro VARCHAR(50)
+);
+
 CREATE TABLE Usuario (
 ID_usuario INTEGER PRIMARY KEY,
+ID_endereco INTEGER,    
 Nome_usuario VARCHAR(100),
 Senha_usuario VARCHAR(50),
 Whatsapp_usuario VARCHAR(15),
@@ -34,16 +46,6 @@ Especialidade_medico VARCHAR(50),
 CRM_medico VARCHAR(12)
 );
 
-CREATE TABLE Endereco (
-ID_endereco INTEGER PRIMARY KEY,
-Cidade VARCHAR(30),
-Estado VARCHAR(30),
-Numero VARCHAR(10),
-Rua VARCHAR(100),
-Complemento VARCHAR(50),
-CEP CHAR(9),
-Bairro VARCHAR(50)
-);
 
 CREATE TABLE clinica (
 ID_clinica INTEGER PRIMARY KEY,
