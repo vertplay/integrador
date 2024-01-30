@@ -16,7 +16,7 @@ class ClinicaModel extends Model{
         $this->builder = $this->db->table('clinica');
     }
 
-    public function cadastrarClinica($parametros) : array{
+    public function cadastrarClinica($parametros, $checkbox) : array{
         $erros = [];
         $query = 'INSERT INTO `endereco`(`Cidade`, `Estado`, `Numero`, `Rua`, `Complemento`, `CEP`, `Bairro`)
         VALUES(:cidade:, :estado:, :numero:, :logradouro:, :complemento:, :cep:, :bairro:);';
@@ -24,12 +24,15 @@ class ClinicaModel extends Model{
         $dados= $this->db->query($query, $parametros);
 
         $ultimoIdEndereco = $this->db->insertID();
-        $parametros['id_endereco'] = $ultimoIdEndereco;   
+        $parametros['id_endereco'] = $ultimoIdEndereco;
+        
+        $parametros['forma_pagamento'] = implode(',', $checkbox); // junta os dados do checkbox em uma string
 
         $query = 'INSERT INTO `clinica`(`ID_endereco`,`Forma_pagamento_clinica`, `Email_clinica`, `Senha_clinica`, `Telefone_clinica`, `Whatsapp_clinica`, `Instagram_clinica`, `CNPJ`, `foto_clinica`, `tipo_de_imagem_clinica`, `Plano_saude_clinica`, `Convenio_clinica`, `Nome_fantasia_clinica`,`Descricao_clinica`)
             VALUES(:id_endereco: ,:forma_pagamento:, :email:, :senha:, :telefone:, :whatsapp:, :instagram:, :cnpj:, :img:, :imgtype:, :plano_saude:, :convenio:, :nome:, :descricao:)';
            
         $dados = $this->db->query($query, $parametros);
+        
 
        // $query = "INSERT INTO `clinica` (`ID_endereco`) VALUES ('$ultimoIdEndereco')";
         //$this->db->query($query);
