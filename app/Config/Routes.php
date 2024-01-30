@@ -80,6 +80,9 @@ $routes->post('/pp/atualizar', 'User::atualizar_cadastro');
 $routes->post('/pe/excluir','Clinica::excluir_cadastro');
 $routes->post('/pp/excluir','User::excluir_cadastro');
 
+//Gerenciar Médicos
+$routes->get('/pe/gerenciar','Clinica::gerenciar_medicos');
+
 //gera imagem
 $routes->get('/img/(:num)','Home::img/$1');
 /*

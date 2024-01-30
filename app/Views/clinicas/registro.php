@@ -43,9 +43,6 @@
                         <input type="text" name="outro_campo" id="outro_campo"> 
                     
                         <div class="error-message"></div>
-                    <label for="especialidade_clinica">Especialidades médicas</label>
-                        <input type="text" name="especialidade_clinica" id="especialidade_clinica" required/>
-                        <div class="error-message"></div>
                     <label for="plano_saude_clinica">Planos de saúde aceitos</label>
                         <input type="text" name="plano_saude_clinica" id="plano_saude_clinica" required/>
                         <div class="error-message"></div>

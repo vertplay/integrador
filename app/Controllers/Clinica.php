@@ -359,4 +359,27 @@ class Clinica extends BaseController{
         }
         
     }
+
+    public function gerenciar_medicos(){
+
+        if($this->session->has('ID_clinica') && $this->session->get('ID_clinica') != null && $this->session->get('tipo')=="pe"){
+            $enviar['dados'] = $this->clinicaModel->lista_medicos($this->session->get('ID_clinica'));
+            //$dados = $dados[0];
+
+            
+            //$avaliacaoModel = new AvaliacaoModel();
+		    //$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($this->session->get('ID_clinica'));
+            //$dados[0]+=['avaliacoes' => $enviar['avaliacoes']];
+
+            //dd($dados);
+            return view('clinicas/medicos',$enviar);
+        }
+        else{
+            return redirect()->to(base_url());
+        }
+
+        return view('clinicas/medicos');
+    }
+
+
 }    

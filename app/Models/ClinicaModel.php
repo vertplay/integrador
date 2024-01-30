@@ -107,4 +107,15 @@ class ClinicaModel extends Model{
             return false;
         }
     }
+
+    public function lista_medicos($id){
+        $this->builder = $this->db->table('possui_vinculo');
+        $ids = $this->builder->getWhere(['ID_clinica' => $id])->getResultArray();
+        $this->builder = $this->db->table('medico');
+        $lista = array();
+        foreach($ids as $id_medico){
+            $lista []= $this->builder->getWhere(['ID_medico' => $id_medico['ID_medico']])->getResultArray();
+        }
+        return $lista;
+    }
 }

@@ -169,6 +169,7 @@
 						<button type="submit" id="editsenha_btn">Alterar Senha</button>
 					</form>
 					<button type="button" id="deleteperf_btn">Excluir Conta</button>
+					<a href="<?=base_url("/pe/gerenciar")?>"><buttom type="buttom"  id="gerenciar_med_btn">Gerenciar Médicos</buttom></a>
 					
 					
 					<div class="info">

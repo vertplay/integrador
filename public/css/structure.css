@@ -629,7 +629,8 @@ form[name="formComentario"] input[name="comentario"] {
 	font-family:'garet';
 	color:#ffffff;
 }
-#editsenha_btn{
+
+#editsenha_btn,  #gerenciar_med_btn{
 	display:inline-block;
 	width:120px;
 	height:30px;
@@ -637,6 +638,12 @@ form[name="formComentario"] input[name="comentario"] {
 	background-color:var(--menu-color);
 	font-family:'garet';
 	color:#ffffff;
+}
+#gerenciar_med_btn{
+	width:180px;
+	text-align:center;
+	padding-top:0.5px;
+	border:2px outset black; 
 }
 #form-alterasenha{
 	display:inline;
