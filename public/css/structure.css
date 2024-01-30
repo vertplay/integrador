@@ -447,7 +447,7 @@ body{
 	width:90px;
 	height:30px;
 	margin-top:10px;
-	background-color:#005d5d;
+	background-color:var(--menu-color);
 	font-family:'garet';
 	color:#ffffff;
 }
@@ -650,13 +650,20 @@ form[name="formComentario"] input[name="comentario"] {
 	width:50%;
 }
 #cancelardelete_btn{
-	background:#004e4e;
+	background:var(--menu-color);
 }
 #deleteaccbtn{
 	background:#a01212;
 }
 #deleteperf_btn{
 	background:#a01212;
+}
+
+.lista_medicos{
+	border-width:1px 0px 1px 0px;
+	border-style:inset;
+	border-color:var(--menu-color);
+	padding-bottom:2px;
 }
 /*------------------------FOOTER-----------------------------*/
 footer{/*RODAPÉ*/
