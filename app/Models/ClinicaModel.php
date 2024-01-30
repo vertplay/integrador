@@ -69,7 +69,7 @@ class ClinicaModel extends Model{
     }
     //obter dados da clinica pelo ID
     public function getClinica($id) : array{
-        $this->builder->select('ID_clinica, Nome_fantasia_clinica, Forma_pagamento_clinica, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica, Plano_saude_clinica, Descricao_clinica,  Convenio_clinica, Cep, Logradouro, Bairro, Numero, Complemento');
+        $this->builder->select('ID_clinica, ID_endereco, Nome_fantasia_clinica, Forma_pagamento_clinica, Email_clinica, Telefone_clinica, Whatsapp_clinica, Instagram_clinica, Plano_saude_clinica, Descricao_clinica, Convenio_clinica');
         $query = $this->builder->getWhere(['ID_clinica' => $id])->getResultArray();
         $this->db->close();
         return $query;

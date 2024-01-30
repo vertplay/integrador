@@ -110,11 +110,14 @@ class Home extends BaseController
 		if(empty($enviar["clin"])){
 			return view('errors/html/error_404');
 		}
-
-		$avaliacaoModel = new AvaliacaoModel();
-		$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($id);
-
 		$enviar["clin"] = $enviar["clin"][0];
+
+		$mainModel = new MainModel();
+		$enviar["endereco"] = $mainModel->getEndereco($enviar["clin"]["ID_endereco"]);
+
+		//$avaliacaoModel = new AvaliacaoModel();
+		//$enviar['avaliacoes'] = $avaliacaoModel->getComentariosPorClinica($id);
+		$enviar['avaliacoes'] = null; //enquanto não a parte de avaliações não for atualizada
 		
 
 		$this->session->set('avaliacao_clinica_id', $id);
@@ -126,7 +129,7 @@ class Home extends BaseController
 		else {
             $enviar["ID_usuario"] = null;
         }
-
+		//dd($enviar);
 		return view('clinica',$enviar);
 	}
 

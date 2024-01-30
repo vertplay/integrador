@@ -29,7 +29,7 @@
 				<div class="info">
 					</br>
 					<h3>Especialidades:</h3>
-					<p><?=$clin['Especialidade_clinica']?></p>
+					<p></p>
 				</div>
 
 				<div class="info">
@@ -45,7 +45,8 @@
 					</br>
 					<h3>Endereço</h3>
 					<p>
-					<?= $clin['Logradouro'] ?>, <?= $clin['Numero'] ?> - <?= $clin['Bairro'] ?>, <?= $clin['Complemento'] ?> - Araçuaí, MG, <?= $clin['Cep'] ?>.
+					<?= $endereco['Rua'] ?>, <?= $endereco['Numero'] ?> - <?= $endereco['Bairro'] ?>, <?= $endereco['Complemento'] ?> -
+					 <?=$endereco["Cidade"]?>, <?=$endereco["Estado"]?>, <?= $endereco['CEP'] ?>.
 					</p>
 
 				</div>
