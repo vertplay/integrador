@@ -2,96 +2,97 @@ CREATE DATABASE Araclin;
 USE Araclin; 
 
 CREATE TABLE avalia_avaliacao (
-ID_avaliacao INTEGER PRIMARY KEY,
-ID_clinica INTEGER,
-ID_usuario INTEGER,
-Texto_avaliacao TEXT,
-Nota_avaliacao FLOAT,
-Data_avaliacao VARCHAR(10)
+ID_avaliacao INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_clinica INTEGER DEFAULT NULL,
+ID_usuario INTEGER DEFAULT NULL, 
+Texto_avaliacao TEXT NOT NULL,
+Nota_avaliacao FLOAT NOT NULL,
+Data_avaliacao VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE Endereco (
-ID_endereco INTEGER PRIMARY KEY,
-Cidade VARCHAR(30),
-Estado VARCHAR(30),
-Numero VARCHAR(10),
-Rua VARCHAR(100),
+ID_endereco INTEGER PRIMARY KEY AUTO_INCREMENT,
+Cidade VARCHAR(30) NOT NULL,
+Estado VARCHAR(30) NOT NULL,
+Numero VARCHAR(10) NOT NULL,
+Rua VARCHAR(100) NOT NULL,
 Complemento VARCHAR(50),
-CEP CHAR(9),
-Bairro VARCHAR(50)
+CEP CHAR(9) NOT NULL,
+Bairro VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Usuario (
-ID_usuario INTEGER PRIMARY KEY,
-ID_endereco INTEGER,    
-Nome_usuario VARCHAR(100),
-Senha_usuario VARCHAR(50),
+ID_usuario INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_endereco INTEGER DEFAULT NULL,    
+Nome_usuario VARCHAR(100) NOT NULL,
+Senha_usuario VARCHAR(50) NOT NULL,
 Whatsapp_usuario VARCHAR(15),
-Email_usuario VARCHAR(50),
+Email_usuario VARCHAR(50) NOT NULL,
 Telefone_usuario VARCHAR(15)
 );
 
 CREATE TABLE Disponibilidade (
-ID_disponibilidade INTEGER PRIMARY KEY,
-ID_medico INTEGER,
-Dia_semana VARCHAR(15),
-Hora_inicio TIME,
-Hora_fim TIME
+ID_disponibilidade INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_medico INTEGER DEFAULT NULL,
+Dia_semana VARCHAR(15) NOT NULL,
+Hora_inicio TIME NOT NULL,
+Hora_fim TIME NOT NULL
 );
 
 CREATE TABLE medico (
-ID_medico INTEGER PRIMARY KEY,
-Nome_medico VARCHAR(100),
-Especialidade_medico VARCHAR(50),
-CRM_medico VARCHAR(12)
+ID_medico INTEGER PRIMARY KEY AUTO_INCREMENT,
+Nome_medico VARCHAR(100) NOT NULL,
+Especialidade_medico VARCHAR(50) NOT NULL,
+CRM_medico VARCHAR(12) NOT NULL
 );
 
 
 CREATE TABLE clinica (
-ID_clinica INTEGER PRIMARY KEY,
-ID_endereco INTEGER,
+ID_clinica INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_endereco INTEGER DEFAULT NULL,
 Whatsapp_clinica VARCHAR(15),
 Instagram_clinica VARCHAR(50),
-Senha_clinica VARCHAR(50),
+Senha_clinica VARCHAR(50) NOT NULL,
 Telefone_clinica VARCHAR(15),
-Convenio_clinica VARCHAR(100),
-CNPJ CHAR(14),
-Forma_pagamento_clinica VARCHAR(100),
-foto_clinica MEDIUMBLOB,
-Nome_fantasia_clinica VARCHAR(100),
-Descricao_clinica VARCHAR(200),
-Email_clinica VARCHAR(50),
-Plano_saude_clinica VARCHAR(100),
+Convenio_clinica VARCHAR(100) NOT NULL,
+CNPJ CHAR(14) NOT NULL,
+Forma_pagamento_clinica VARCHAR(100) NOT NULL,
+foto_clinica MEDIUMBLOB NOT NULL,
+tipo_de_imagem_clinica VARCHAR(10) NOT NULL,
+Nome_fantasia_clinica VARCHAR(100) NOT NULL,
+Descricao_clinica VARCHAR(200) NOT NULL,
+Email_clinica VARCHAR(50) NOT NULL,
+Plano_saude_clinica VARCHAR(100) NOT NULL,
 FOREIGN KEY(ID_endereco) REFERENCES Endereco (ID_endereco) ON UPDATE CASCADE ON DELETE SET NULL
 );
 
 
 CREATE TABLE Funcionamento (
-ID_funcionamento INTEGER PRIMARY KEY,
-ID_clinica INTEGER,
-Hora_fechamento TIME,
-Dia_semana VARCHAR(15),
-Hora_abertura TIME,
+ID_funcionamento INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_clinica INTEGER DEFAULT NULL,
+Hora_fechamento TIME NOT NULL,
+Dia_semana VARCHAR(15) NOT NULL,
+Hora_abertura TIME NOT NULL,
 FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
 CREATE TABLE Recuperacao (
-ID_recuperacao INTEGER PRIMARY KEY,
-ID_usuario INTEGER,
-ID_clinica INTEGER,
-Codigo_recuperacao VARCHAR(50),
-Data_recuperacao INTEGER,
-Status_recuperacao CHAR(1),
-Tipo_recuperacao CHAR(2),
-Validade_recuperacao DATETIME,
+ID_recuperacao INTEGER PRIMARY KEY AUTO_INCREMENT,
+ID_usuario INTEGER DEFAULT NULL,
+ID_clinica INTEGER DEFAULT NULL,
+Codigo_recuperacao VARCHAR(50) NOT NULL,
+Data_recuperacao INTEGER NOT NULL,
+Status_recuperacao CHAR(1) NOT NULL,
+Tipo_recuperacao CHAR(2) NOT NULL,
+Validade_recuperacao DATETIME NOT NULL,
 FOREIGN KEY(ID_usuario) REFERENCES Usuario (ID_usuario) ON UPDATE CASCADE ON DELETE CASCADE,
 FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE possui_vinculo (
-ID_medico INTEGER,
-ID_clinica INTEGER,
+ID_medico INTEGER DEFAULT NULL,
+ID_clinica INTEGER DEFAULT NULL,
 FOREIGN KEY(ID_medico) REFERENCES medico (ID_medico) ON UPDATE CASCADE ON DELETE CASCADE,
 FOREIGN KEY(ID_clinica) REFERENCES clinica (ID_clinica) ON UPDATE CASCADE ON DELETE CASCADE
 );
