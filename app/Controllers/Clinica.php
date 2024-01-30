@@ -263,7 +263,7 @@ class Clinica extends BaseController{
 
     ////Atualizar cadastro --- artur
     public function atualizar_cadastro(){
-        $cnpj = $this->request->getPost('cnpj');
+        //$cnpj = $this->request->getPost('cnpj');
         $nome_fantasia = $this->request->getPost('nome_fantasia');
         $senha = $this->request->getPost('formsenha');
         $img = $this->request->getFile('arquivo');
@@ -308,12 +308,10 @@ class Clinica extends BaseController{
             //$this->seu_model->sua_funcao($dados_formulario);
             $forma_pagamento = implode(',', $dados_pagamento); // junta os dados do checkbox em uma string
         }
-
         $dados=array(
-            'CNPJ' => $cnpj,
+            //'CNPJ' => $cnpj,
             'Nome_fantasia_clinica' => $nome_fantasia,
             'Senha_clinica' => $senha,
-            'Forma_pagamento_clinica' => $forma_pagamento,
             //'Especialidade_clinica' => $especialidade,
             'Plano_saude_clinica' => $plano_saude,
             'Convenio_clinica' => $convenio,
@@ -323,7 +321,9 @@ class Clinica extends BaseController{
             'Whatsapp_clinica' => $whatsapp,
             'Instagram_clinica' => $instagram
         );
-
+        if($forma_pagamento != null && $forma_pagamento != ""){//caso forma de pagamento tenha alguma seleção
+            $dados += ['Forma_pagamento_clinica' => $forma_pagamento];
+        }
         $dadosEndereco=array(
             'Cidade' =>$cidade,
             'Estado' =>$estado,
