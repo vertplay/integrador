@@ -236,7 +236,7 @@ class Clinica extends BaseController{
             'Senha_clinica' => $senha,
             'Logradouro' => $logradouro,
             'Forma_pagamento_clinica' => $forma_pagamento,
-            'Especialidade_clinica' => $especialidade,
+            //'Especialidade_clinica' => $especialidade,
             'Plano_saude_clinica' => $plano_saude,
             'Convenio_clinica' => $convenio,
             'Descricao_clinica' => $descricao,
