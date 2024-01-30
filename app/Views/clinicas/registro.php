@@ -22,7 +22,18 @@
                 <label for="informacoes" class="sub_bloco-titulo">Info</label>
                 <div class="sub_bloco" id="informacoes">
                     <label for="forma_pagamento">Formas de pagamento</label>
-                        <input type="text" name="forma_pagamento" id="forma_pagamento" required />
+                    <input type="checkbox" name="forma_pagamento_dinheiro" id="forma_pagamento_dinheiro" value="dinheiro">
+                    <label for="forma_pagamento_dinheiro">Dinheiro</label>
+
+                    <input type="checkbox" name="forma_pagamento_cartao" id="forma_pagamento_cartao" value="cartao">
+                        <label for="forma_pagamento_cartao">Cartão de crédito/débito</label>
+
+                    <input type="checkbox" name="forma_pagamento_pix" id="forma_pagamento_pix" value="pix">
+                        <label for="forma_pagamento_pix">PIX</label>
+
+                    <input type="checkbox" name="forma_pagamento_cheque" id="forma_pagamento_cheque" value="cheque">
+                        <label for="forma_pagamento_cheque">Cheque</label>    
+
                         <div class="error-message"></div>
                     <label for="especialidade_clinica">Especialidades médicas</label>
                         <input type="text" name="especialidade_clinica" id="especialidade_clinica" required/>
