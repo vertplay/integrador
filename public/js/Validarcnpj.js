@@ -1,3 +1,4 @@
+window.onload = function() {
 // Função para validar CNPJ
 function validarCNPJ(cnpj) {
    // Remover caracteres não numéricos
@@ -53,19 +54,19 @@ function validarCNPJ(cnpj) {
 
 // Função para mostrar mensagem de erro para o CNPJ
 function mostrarErroCNPJ(message) {
-    const alertaCnpj = document.getElementById('alerta_cnpj');
-    alertaCnpj.innerHTML = message;
-    alertaCnpj.style.color = 'red';
+    const alertacnpj = document.getElementById('alerta_cnpj');
+    alertacnpj.innerHTML = message ;
+    alertacnpj.style.color = 'red';   
+
 }
-
-
-window.onload = function() {
+    
     var userform = document.getElementById("userform");
     userform.onsubmit = function() {
         const cnpjInput = document.getElementById('cnpj');
 
-        if (!validarCNPJ(cnpjInput.value)) {
-            mostrarErroCNPJ('CNPJ inválido');
+        if (!validarCNPJ(cnpjInput.value)) {  
+            mostrarErroCNPJ('CNPJ inválido'); 
+            scrollTo(0,0);
             event.preventDefault();
         } else {
             mostrarErroCNPJ('');

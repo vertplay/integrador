@@ -3,6 +3,7 @@
 	<?=$this->section('content')?>
         <script src="<?=base_url('js/validarsenha.js')?>"></script>
         <script src="<?=base_url('js/mostrasenha.js')?>"></script>
+        <script src="<?=base_url('js/Validarcnpj.js')?>"></script>
         <div class="reg-form formularios">
         <div id="reg-link">Deseja registrar como usuário? <a href="<?=base_url('pp/registro')?>">Registre-se</a></div>
             <h2>Registro</h2>
