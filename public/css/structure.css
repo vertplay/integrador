@@ -424,6 +424,17 @@ body{
 	text-align:left;
 	color:red;
 }
+
+#alerta_cnpj{
+	display:inline-block;
+	width:70%;
+	height:20px;
+	max-height:auto;
+	margin:-5px auto 10px auto;
+	text-align:left;
+	color:red;
+}
+
 #mostrar_senha, #mostrar_senha2{
 	display:inline-block;
 	position:absolute;
@@ -482,8 +493,17 @@ body{
 	vertical-align:8px;
 	width:50%;
 }
-
-
+.formularios input[type=checkbox]{
+	width:30px;
+	height:30px;
+	margin:0;
+}
+	.formularios input[type=checkbox]:checked{
+		/*background-color:#005d5d;  ---------não funcionou*/
+	}
+.formularios .forma_pagamento{
+	width:50%;
+}
 /*-----------------------AVALIAÇÃO----------------------------*/
 
 form[name="formComentario"] input[name="comentario"] {
